@@ -9,47 +9,33 @@ import java.util.Date;
  */
 
 public class User {
-    private int id;
-    private String username;
+
+    private int id; //id
     private String password;
-    private String salt;
-    private String email;
-    private int type;
-    private int status;
-    private String activationCode;
-    private String headerUrl;
-    private Date createTime;
+    private String salt; //password + salt
+    private String email; //email
+    private int type; //0普通 1管理员
+    private int status; //0 未激活
+    private String activationCode; //激活码
+    private String headerUrl; //头像地址
+    private Date createTime; // 创建时间
+    private String nickname; //昵称
+    private Date modTime; // 修改时间
 
-    @Override
-    public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", username='" + username + '\'' +
-                ", password='" + password + '\'' +
-                ", salt='" + salt + '\'' +
-                ", email='" + email + '\'' +
-                ", type=" + type +
-                ", status=" + status +
-                ", activationCode='" + activationCode + '\'' +
-                ", headerUrl='" + headerUrl + '\'' +
-                ", createTime=" + createTime +
-                '}';
+    public Date getModTime() {
+        return modTime;
     }
 
-    public User() {
+    public void setModTime(Date modTime) {
+        this.modTime = modTime;
     }
 
-    public User(int id, String username, String password, String salt, String email, int type, int status, String activationCode, String headerUrl, Date createTime) {
-        this.id = id;
-        this.username = username;
-        this.password = password;
-        this.salt = salt;
-        this.email = email;
-        this.type = type;
-        this.status = status;
-        this.activationCode = activationCode;
-        this.headerUrl = headerUrl;
-        this.createTime = createTime;
+    public String getNickname() {
+        return nickname;
+    }
+
+    public void setNickname(String nickname) {
+        this.nickname = nickname;
     }
 
     public int getId() {
@@ -58,14 +44,6 @@ public class User {
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
     }
 
     public String getPassword() {

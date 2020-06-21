@@ -17,10 +17,9 @@ public class IndexController {
     public String index(){
         return "index";
     }
-
-
     @GetMapping("/case")
     public String example(){
         return "case/case";
     }
+
 }
