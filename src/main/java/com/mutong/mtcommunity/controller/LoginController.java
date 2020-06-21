@@ -92,7 +92,13 @@ public class LoginController {
      * @return 注册成功返回到激活成功页面，注册失败返回到注册页面，并且页面显示失败原因
      */
     @PostMapping("/register")
-    public String register(Model model, User user){
+    public String register(Model model, User user,String code,HttpSession session){
+        //从session里面获取验证码
+        String kaptcha = (String) session.getAttribute("kaptcha");
+        if (StringUtils.isBlank(code) || StringUtils.isBlank(kaptcha) || !kaptcha.equalsIgnoreCase(code)){
+            model.addAttribute("codeMsg","验证码不正确");
+            return "/user/reg";
+        }
         Map<String, Object> map = userService.register(user);
         if (map == null || map.isEmpty()) {
             model.addAttribute("msg", "注册成功,我们已经向您的邮箱发送了一封激活邮件,请尽快激活!");

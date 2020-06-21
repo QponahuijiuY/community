@@ -31,15 +31,16 @@
               <div class="layui-form-item">
                 <label for="L_email" class="layui-form-label">邮箱</label>
                 <div class="layui-input-inline">
-                  <input type="text" id="L_email" name="email" required lay-verify="email" autocomplete="off" class="layui-input">
+                  <input type="email" id="L_email" name="email" required lay-verify="email" autocomplete="off" class="layui-input">
                 </div>
-                <div class="layui-form-mid layui-word-aux">将会成为您唯一的登入名</div>
+                <div class="msg" th:text="${emailMsg}">将会成为您唯一的登入名</div>
               </div>
               <div class="layui-form-item">
                 <label for="L_username" class="layui-form-label">昵称</label>
                 <div class="layui-input-inline">
                   <input type="text" id="L_username" name="nickname" required lay-verify="required" autocomplete="off" class="layui-input">
                 </div>
+                <div class="msg" th:text="${nicknameMsg}"></div>
               </div>
               <div class="layui-form-item">
                 <label for="L_pass" class="layui-form-label">密码</label>
@@ -47,6 +48,7 @@
                   <input type="password" id="L_pass" name="password" required lay-verify="required" autocomplete="off" class="layui-input">
                 </div>
                 <div class="layui-form-mid layui-word-aux">6到16个字符</div>
+                <div class="msg" th:text="${passwordMsg}"></div>
               </div>
               <div class="layui-form-item">
                 <label for="L_repass" class="layui-form-label">确认密码</label>
@@ -62,6 +64,7 @@
                 <div class="col-sm-4">
                   <img th:src="@{/kaptcha}" id="kaptcha" style="width:100px;height:38px;" class="mr-2" onclick="refresh_kaptcha()"/>
                   <a href="javascript:refresh_kaptcha();" class="font-size-12 align-bottom">刷新验证码</a>
+                  <div class="msg" th:text="${codeMsg}"></div>
                 </div>
               </div>
               <div class="layui-form-item">

@@ -6,7 +6,6 @@ import cn.hutool.crypto.SecureUtil;
 import com.mutong.mtcommunity.mapper.UserMapper;
 import com.mutong.mtcommunity.model.User;
 import com.mutong.mtcommunity.utils.MailClient;
-import org.apache.maven.surefire.shade.org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.thymeleaf.TemplateEngine;
@@ -45,30 +44,14 @@ public class UserService {
      * @return
      */
     public Map<String, Object> register(User user) {
-        if (user == null) {
-            throw new IllegalArgumentException("参数不能为空!");
-        }
-        Map<String, Object> map = new HashMap<>();
-        if (StringUtils.isBlank(user.getNickname())) {
-            map.put("nicknameMsg", "昵称不能为空!");
-            return map;
-        }
-        if (StringUtils.isBlank(user.getPassword())) {
-            map.put("passwordMsg", "密码不能为空!");
-            return map;
-        }
-        if (StringUtils.isBlank(user.getEmail())) {
-            map.put("emailMsg", "邮箱不能为空!");
-            return map;
-        }
 
+        Map<String, Object> map = new HashMap<>();
         // 验证邮箱
         User u = userMapper.selectUserByEmail(user.getEmail());
         if (ObjectUtil.isNotEmpty(u) || ObjectUtil.isNotNull(u)) {
             map.put("emailMsg", "该邮箱已被注册!");
             return map;
         }
-
         //注册
         user.setSalt(IdUtil.simpleUUID().substring(0, 5));
         user.setPassword(SecureUtil.md5(user.getPassword() + user.getSalt()));

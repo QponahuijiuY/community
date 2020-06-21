@@ -553,5 +553,7 @@ body .fly-user-main{position: relative; min-height: 600px;}
   .site-mobile .site-mobile-shade{content: ''; position: fixed; top: 0; bottom: 0; left: 0; right: 0; background-color: rgba(0,0,0,.9); z-index: 999;}
 }
 .msg {
+  line-height:30px;
+  position:relative;
   color: red;
 }
