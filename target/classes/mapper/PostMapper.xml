@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mutong.mtcommunity.mapper.PostMapper">
+
+    <sql id="insertFields">
+        user_id, title, content, special_column,create_time,mod_time
+    </sql>
+    <insert id="insertPost" parameterType="com.mutong.mtcommunity.model.Post" keyProperty="id" >
+        insert into post (<include refid="insertFields"></include>)
+        values(#{userId}, #{title}, #{content}, #{specialColumn},#{createTime},#{modTime})
+    </insert>
+</mapper>

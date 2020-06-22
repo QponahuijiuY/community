@@ -84,4 +84,5 @@ public interface CommunityConstant {/**
      */
     String AUTGORITY_ADMIN = "admin";
 
+    Integer EXPIRED_SECONDS = 3600 * 12;
 }

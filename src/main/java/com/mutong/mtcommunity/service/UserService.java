@@ -3,8 +3,11 @@ package com.mutong.mtcommunity.service;
 import cn.hutool.core.util.IdUtil;
 import cn.hutool.core.util.ObjectUtil;
 import cn.hutool.crypto.SecureUtil;
+import com.mutong.mtcommunity.mapper.LoginTicketMapper;
 import com.mutong.mtcommunity.mapper.UserMapper;
+import com.mutong.mtcommunity.model.LoginTicket;
 import com.mutong.mtcommunity.model.User;
+import com.mutong.mtcommunity.utils.CommunityUtil;
 import com.mutong.mtcommunity.utils.MailClient;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
@@ -37,6 +40,8 @@ public class UserService {
     private TemplateEngine templateEngine;
     @Resource
     private MailClient mailClient;
+    @Resource
+    private LoginTicketMapper loginTicketMapper;
 
     /**
      * 用户注册
@@ -50,6 +55,11 @@ public class UserService {
         User u = userMapper.selectUserByEmail(user.getEmail());
         if (ObjectUtil.isNotEmpty(u) || ObjectUtil.isNotNull(u)) {
             map.put("emailMsg", "该邮箱已被注册!");
+            return map;
+        }
+        //密码长度校验
+        if (user.getPassword().length() <= 6 || user.getPassword().length() >= 15){
+            map.put("passwordMsg","密码的长度需大于6位且小于15位");
             return map;
         }
         //注册
@@ -110,6 +120,28 @@ public class UserService {
             return map;
         }
 
+        //生成登陆凭证
+        LoginTicket loginTicket = new LoginTicket();
+        loginTicket.setUserId(user.getId());
+        loginTicket.setTicket(CommunityUtil.generateUUID());
+        loginTicket.setStatus(0);
+        loginTicket.setExpired(new Date(System.currentTimeMillis() + EXPIRED_SECONDS * 1000));
+        loginTicketMapper.insertLoginTicket(loginTicket);
+//        String redisKey = RedisKeyUtil.getTicketKey(loginTicket.getTicket());
+//        redisTemplate.opsForValue().set(redisKey,loginTicket);
+        map.put("ticket" ,loginTicket.getTicket());
         return map;
+    }
+
+    public LoginTicket findLoginTicket(String ticket) {
+        return loginTicketMapper.findLoginTicket(ticket);
+    }
+
+    public User findUserById(Integer id) {
+        return userMapper.selectUserById(id);
+    }
+    public void logout(String ticket) {
+        loginTicketMapper.updateStatus(ticket, 1);
+
     }
 }
