@@ -90,7 +90,7 @@ public class LoginController implements CommunityConstant {
         }else {
             model.addAttribute("emailMsg",map.get("emailMsg"));
             model.addAttribute("passwordMsg",map.get("passwordMsg"));
-            return "/user/login";
+            return "user/login";
         }
 
     }
@@ -107,18 +107,18 @@ public class LoginController implements CommunityConstant {
         String kaptcha = (String) session.getAttribute("kaptcha");
         if (StringUtils.isBlank(code) || StringUtils.isBlank(kaptcha) || !kaptcha.equalsIgnoreCase(code)){
             model.addAttribute("codeMsg","验证码不正确");
-            return "/user/reg";
+            return "user/reg";
         }
         Map<String, Object> map = userService.register(user);
         if (map == null || map.isEmpty()) {
             model.addAttribute("msg", "注册成功,我们已经向您的邮箱发送了一封激活邮件,请尽快激活!");
             model.addAttribute("target", "/");
-            return "/user/operate-result";
+            return "user/operate-result";
         } else {
             model.addAttribute("nicknameMsg", map.get("usernameMsg"));
             model.addAttribute("passwordMsg", map.get("passwordMsg"));
             model.addAttribute("emailMsg", map.get("emailMsg"));
-            return "/user/reg";
+            return "user/reg";
         }
     }
 
@@ -142,7 +142,7 @@ public class LoginController implements CommunityConstant {
             model.addAttribute("msg", "激活失败,您提供的激活码不正确!");
             model.addAttribute("target", "/index");
         }
-        return "/user/operate-result";
+        return "user/operate-result";
     }
 
     /**

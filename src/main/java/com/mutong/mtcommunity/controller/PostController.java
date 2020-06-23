@@ -33,7 +33,7 @@ public class PostController {
             model.addAttribute("loginMsg","你还没有登陆");
             return "redirect:/login";
         }
-        return "/jie/add";
+        return "jie/add";
 
     }
 
