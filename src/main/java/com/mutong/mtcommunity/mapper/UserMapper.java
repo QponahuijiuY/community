@@ -20,7 +20,7 @@ public interface UserMapper {
 
     User selectUserByName(String username);
 
-    User selectUserById(int id);
+    User selectUserById(@Param("id") int id);
 
     void updateStatus(@Param("id") int id, @Param("status") int status);
 }

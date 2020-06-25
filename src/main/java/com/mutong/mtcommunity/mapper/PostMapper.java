@@ -2,7 +2,10 @@ package com.mutong.mtcommunity.mapper;
 
 import com.mutong.mtcommunity.model.Post;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
+
+import java.util.List;
 
 /**
  * @description:
@@ -13,4 +16,7 @@ import org.springframework.stereotype.Repository;
 @Mapper
 public interface PostMapper {
     void insertPost(Post post);
+
+    List<Post> selectPosts(@Param("userId") int userId, @Param("offset") int offset, @Param("limit") int limit,@Param("orderModel") int orderModel);
+
 }

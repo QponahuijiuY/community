@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.util.HtmlUtils;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * @description:
@@ -21,6 +22,13 @@ public class PostService {
     @Resource
     private PostMapper postMapper;
 
+
+
+
+    /**
+     * 插入帖子
+     * @param post
+     */
     public void insertPost(Post post){
         if (post == null){
             throw new IllegalArgumentException("参数不能为空");
@@ -32,5 +40,17 @@ public class PostService {
         post.setTitle(sensitiveFilter.filter(post.getTitle()));
         post.setContent(sensitiveFilter.filter(post.getContent()));
         postMapper.insertPost(post);
+    }
+
+    /**
+     * 首页显示所有的帖子
+     * @param userId 用户id
+     * @param offset sql 限制
+     * @param limit sql 限制
+     * @return
+     */
+    public List<Post> findAllPosts(int userId,  int offset ,  int limit,int orderModel){
+        return postMapper.selectPosts(userId, offset, limit,orderModel);
+
     }
 }
