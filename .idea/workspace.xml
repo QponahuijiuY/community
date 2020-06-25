@@ -1,35 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="43828271-bdc9-4bde-a3de-1bf027e30423" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/utils/Page.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/controller/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/controller/IndexController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/controller/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/controller/PostController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/mapper/PostMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/mapper/PostMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/mapper/UserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/model/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/model/Post.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/service/PostService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/service/PostService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/utils/CommunityConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/utils/CommunityConstant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/PostMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/PostMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/global.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/global.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/common/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/common/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/jie/add.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/jie/add.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/controller/IndexController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/controller/IndexController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/controller/PostController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/controller/PostController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/mapper/PostMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/mapper/PostMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/mapper/UserMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/mapper/UserMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/model/Post.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/model/Post.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/service/PostService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/service/PostService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/utils/CommunityConstant.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/utils/CommunityConstant.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/PostMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/PostMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/global.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/global.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/common/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/common/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/index.html" afterDir="false" />
-    </list>
+    <list default="true" id="43828271-bdc9-4bde-a3de-1bf027e30423" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -682,7 +654,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1593054528468" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1593054680564" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -753,12 +725,12 @@
       <workItem from="1592889215591" duration="1462000" />
       <workItem from="1593002603466" duration="6523000" />
       <workItem from="1593044108299" duration="7057000" />
-      <workItem from="1593051254848" duration="3046000" />
+      <workItem from="1593051254848" duration="3335000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="93052000" />
+    <option name="totallyTimeSpent" value="93341000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -771,7 +743,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.9112426" visible="true" weight="0.19029851" />
       <window_info id="Structure" order="1" sideWeight="0.088757396" side_tool="true" weight="0.17430703" />
@@ -784,12 +755,12 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4989339" weight="0.329718" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.329718" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.329718" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.329718" />
       <window_info anchor="bottom" id="Spring" order="7" weight="0.329718" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49946696" weight="0.12242687" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.49946696" visible="true" weight="0.47939262" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5010661" side_tool="true" weight="0.6475054" />
       <window_info anchor="bottom" id="Problems" order="11" />
