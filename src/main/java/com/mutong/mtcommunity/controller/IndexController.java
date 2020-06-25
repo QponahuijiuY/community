@@ -75,10 +75,10 @@ public class IndexController {
 
 //    @GetMapping("/error")
 //    public String getErrorPage(){
-//        return "/error/500";
+//        return "other/500";
 //    }
-//    @RequestMapping(value = "/denied", method = RequestMethod.GET)
-//    public String getDeniedPage(){
-//        return "/error/404";
-//    }
+    @GetMapping(value = "/denied")
+    public String getDeniedPage(){
+        return "other/404";
+    }
 }
