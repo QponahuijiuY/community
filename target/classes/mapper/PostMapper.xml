@@ -5,14 +5,14 @@
 <mapper namespace="com.mutong.mtcommunity.mapper.PostMapper">
 
     <sql id="insertFields">
-        user_id, title, content, special_column,create_time,mod_time,comment_count,page_view,type,status,score
+        user_id, title, content, special_column,create_time,mod_time,comment_count,page_view,type,status,score,like_count
     </sql>
     <sql id="selectFields">
-        id,title,content,special_column,user_id,create_time,mod_time,comment_count,page_view,type,status,score
+        id,title,content,special_column,user_id,create_time,mod_time,comment_count,page_view,type,status,score,like_count
     </sql>
     <insert id="insertPost" parameterType="com.mutong.mtcommunity.model.Post" keyProperty="id" >
         insert into post (<include refid="insertFields"></include>)
-        values(#{userId}, #{title}, #{content}, #{specialColumn},#{createTime},#{modTime},#{commentCount},#{pageView},#{type},#{status},#{score})
+        values(#{userId}, #{title}, #{content}, #{specialColumn},#{createTime},#{modTime},#{commentCount},#{pageView},#{type},#{status},#{score},#{likeCount})
     </insert>
     <select id="selectPosts" resultType="com.mutong.mtcommunity.model.Post">
         select *
@@ -22,17 +22,19 @@
         <if test="orderModel == 0">
             order by create_time desc
         </if>
-        <!--精华页面-->
+        <!--置顶页面-->
         <if test="orderModel == 1">
-            order by type desc, score desc ,create_time desc
+            and type = 2
+            order by create_time desc
         </if>
-        <!--周榜页面-->
+        <!--点赞排行榜页面-->
         <if test="orderModel == 2">
-            order by type desc, score desc ,create_time desc
+            order by like_count desc, score desc ,create_time desc
         </if>
-        <!--月榜页面-->
+        <!--精华页面-->
         <if test="orderModel == 3">
             and type = 1
+            order by create_time desc
         </if>
         <!--按照最新-->
         <if test="orderModel == 4">
@@ -49,5 +51,20 @@
         </if>
 
         LIMIT #{offset}, #{limit}
+    </select>
+
+    <select id="selectPostById" resultType="com.mutong.mtcommunity.model.Post">
+        select *
+        from post
+        where id = #{id}
+    </select>
+    
+    <select id="selectPostRows" resultType="Integer" parameterType="Integer">
+        select count(id)
+        from post
+        where status != 0
+        <if test="userId!=0">
+            and user_id = #{userId}
+        </if>
     </select>
 </mapper>

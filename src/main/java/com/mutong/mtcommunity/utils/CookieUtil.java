@@ -4,7 +4,7 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 
 /**
- * @description:
+ * @description: cookieutil
  * @Author: gengchen.jing@yoyi.com.cn
  * @Date: 2020-06-22 12:24
  */

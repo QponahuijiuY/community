@@ -14,7 +14,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @description:
+ * @description: 敏感词过滤功能
  * @Author: gengchen.jing@yoyi.com.cn
  * @Date: 2020-06-22 17:46
  */

@@ -15,98 +15,72 @@
 <body>
 <div th:insert="~{common/header :: nav}"></div>
 
-<div class="fly-panel fly-column">
-  <div class="layui-container">
-    <ul class="layui-clear">
-      <li class="layui-hide-xs layui-this"><a href="/">首页</a></li>
-      <li><a href="jie/index.html">提问</a></li>
-      <li><a href="jie/index.html">分享<span class="layui-badge-dot"></span></a></li>
-      <li><a href="jie/index.html">讨论</a></li>
-      <li><a href="jie/index.html">建议</a></li>
-      <li><a href="jie/index.html">公告</a></li>
-      <li><a href="jie/index.html">动态</a></li>
-      <li class="layui-hide-xs layui-hide-sm layui-show-md-inline-block"><span class="fly-mid"></span></li>
-
-      <!-- 用户登入后显示 -->
-      <li class="layui-hide-xs layui-hide-sm layui-show-md-inline-block"><a href="user/index.html">我发表的贴</a></li>
-      <li class="layui-hide-xs layui-hide-sm layui-show-md-inline-block"><a href="user/index.html#collection">我收藏的贴</a></li>
-    </ul>
-
-    <div class="fly-column-right layui-hide-xs">
-      <span class="fly-search"><i class="layui-icon"></i></span>
-      <a th:href="@{/add}" class="confirmTrans layui-btn">发表新帖</a>
-
-    </div>
-    <div class="layui-hide-sm layui-show-xs-block" style="margin-top: -10px; padding-bottom: 10px; text-align: center;">
-      <a th:href="@{/add}" class="layui-btn">发表新帖</a>
-    </div>
-  </div>
-</div>
+<div th:insert="~{common/column :: column}"></div>
 
 <div class="layui-container">
   <div class="layui-row layui-col-space15">
     <!--左侧导航-->
     <div class="layui-col-md8">
       <!--图片轮播-->
-      <!--<div class="test10 layui-carousel fly-panel" id="test10" >-->
-        <!--<div carousel-item="">-->
-          <!--<div><img src="//res.layui.com/images/layui/demo/1.png"></div>-->
-          <!--<div><img src="//res.layui.com/images/layui/demo/2.png"></div>-->
-          <!--<div><img src="//res.layui.com/images/layui/demo/3.png"></div>-->
-          <!--<div><img src="//res.layui.com/images/layui/demo/4.png"></div>-->
-          <!--<div><img src="//res.layui.com/images/layui/demo/5.png"></div>-->
-          <!--<div><img src="//res.layui.com/images/layui/demo/6.png"></div>-->
-          <!--<div><img src="//res.layui.com/images/layui/demo/7.png"></div>-->
-        <!--</div>-->
-      <!--</div>-->
-      <!--置顶导航-->
-      <div class="fly-panel">
-        <div class="fly-panel-title fly-filter">
-          <a>置顶</a>
-          <a href="#signin" class="layui-hide-sm layui-show-xs-block fly-right" id="LAY_goSignin" style="color: #FF5722;">去签到</a>
+      <div class="test10 layui-carousel fly-panel" id="test10" >
+        <div carousel-item="">
+          <div><img src="//res.layui.com/images/layui/demo/1.png"></div>
+          <div><img src="//res.layui.com/images/layui/demo/2.png"></div>
+          <div><img src="//res.layui.com/images/layui/demo/3.png"></div>
+          <div><img src="//res.layui.com/images/layui/demo/4.png"></div>
+          <div><img src="//res.layui.com/images/layui/demo/5.png"></div>
+          <div><img src="//res.layui.com/images/layui/demo/6.png"></div>
+          <div><img src="//res.layui.com/images/layui/demo/7.png"></div>
         </div>
-        <ul class="fly-list"  >
-          <li th:each="map:${posts}" th:if="${map.post.type == 2}">
-            <a href="user/home.html" class="fly-avatar">
-              <img th:src="${map.user.headerUrl}" alt="贤心">
-            </a>
-            <h2>
-              <a class="layui-badge" th:text="${map.post.specialColumn}">动态</a>
-              <a href="jie/detail.html" th:text="${map.post.title}">基于 layui 的极简社区页面模版</a>
-            </h2>
-            <div class="fly-list-info">
-              <a href="user/home.html" link>
-                <cite th:text="${map.user.nickname}">贤心</cite>
-                <i class="iconfont icon-renzheng" title="认证信息：XXX"></i>
-                <i class="layui-badge fly-badge-vip">VIP3</i>
-              </a>
-              <span th:text="${#dates.format(map.post.modTime,'yyyy-MM-dd HH:mm')}">刚刚</span>
-
-              <span class="fly-list-kiss layui-hide-xs" title="悬赏飞吻"><i class="iconfont icon-kiss"></i> 60</span>
-              <span class="layui-badge fly-badge-accept layui-hide-xs">已结</span>
-              <span class="fly-list-nums">
-                <i class="iconfont icon-pinglun1" title="回答"></i> <i th:text="${map.post.commentCount}">66</i>
-              </span>
-            </div>
-            <div class="fly-list-badge">
-              <!--
-              <span class="layui-badge layui-bg-black">置顶</span>
-              <span class="layui-badge layui-bg-red">精帖</span>
-              -->
-            </div>
-          </li>
-
-        </ul>
       </div>
+      <!--置顶导航-->
+      <!--<div class="fly-panel">-->
+        <!--<div class="fly-panel-title fly-filter">-->
+          <!--<a>置顶</a>-->
+          <!--<a href="#signin" class="layui-hide-sm layui-show-xs-block fly-right" id="LAY_goSignin" style="color: #FF5722;">去签到</a>-->
+        <!--</div>-->
+        <!--<ul class="fly-list"  >-->
+          <!--<li th:each="map:${posts}" th:if="${map.post.type == 2}">-->
+            <!--<a href="user/home.html" class="fly-avatar">-->
+              <!--<img th:src="${map.user.headerUrl}" alt="贤心">-->
+            <!--</a>-->
+            <!--<h2>-->
+              <!--<a class="layui-badge" th:text="${map.post.specialColumn}">动态</a>-->
+              <!--<a th:href="@{|/detail/${map.post.id}|}" th:text="${map.post.title}">欢迎大家来到Mutong社区</a>-->
+            <!--</h2>-->
+            <!--<div class="fly-list-info">-->
+              <!--<a href="user/home.html" link>-->
+                <!--<cite th:text="${map.user.nickname}">贤心</cite>-->
+                <!--<i class="iconfont icon-renzheng" title="认证信息：XXX"></i>-->
+                <!--<i class="layui-badge fly-badge-vip">VIP3</i>-->
+              <!--</a>-->
+              <!--<span th:text="${#dates.format(map.post.modTime,'yyyy-MM-dd HH:mm')}">刚刚</span>-->
+
+              <!--<span class="fly-list-kiss layui-hide-xs" title="悬赏飞吻"><i class="iconfont icon-kiss"></i> 60</span>-->
+              <!--<span class="layui-badge fly-badge-accept layui-hide-xs">已结</span>-->
+              <!--<span class="fly-list-nums">-->
+                <!--<i class="iconfont icon-pinglun1" title="回答"></i> <i th:text="${map.post.commentCount}">66</i>-->
+              <!--</span>-->
+            <!--</div>-->
+            <!--<div class="fly-list-badge">-->
+              <!--&lt;!&ndash;-->
+              <!--<span class="layui-badge layui-bg-black">置顶</span>-->
+              <!--<span class="layui-badge layui-bg-red">精帖</span>-->
+              <!--&ndash;&gt;-->
+            <!--</div>-->
+          <!--</li>-->
+
+        <!--</ul>-->
+      <!--</div>-->
       <!--普通导航-->
       <div class="fly-panel" style="margin-bottom: 0;">
 
         <div class="fly-panel-title fly-filter">
           <a th:href="@{/index(orderModel=0)}" th:class="${orderModel == 0 ? 'layui-this' : ''}">综合</a>
           <span class="fly-mid"></span>
-          <a th:href="@{/index(orderModel=1)}" th:class="${orderModel == 1 ? 'layui-this' : ''}">未结</a>
+          <a th:href="@{/index(orderModel=1)}" th:class="${orderModel == 1 ? 'layui-this' : ''}">置顶</a>
           <span class="fly-mid"></span>
-          <a th:href="@{/index(orderModel=2)}" th:class="${orderModel == 2 ? 'layui-this' : ''}">已结</a>
+          <a th:href="@{/index(orderModel=2)}" th:class="${orderModel == 2 ? 'layui-this' : ''}">最赞</a>
           <span class="fly-mid"></span>
           <a th:href="@{/index(orderModel=3)}" th:class="${orderModel == 3 ? 'layui-this' : ''}">精华</a>
           <span class="fly-filter-right layui-hide-xs">
@@ -123,7 +97,7 @@
             </a>
             <h2>
               <a class="layui-badge" th:text="${map.post.specialColumn}">分享</a>
-              <a href="jie/detail.html" th:text="${map.post.title}">基于 layui 的极简社区页面模版</a>
+              <a th:href="@{|/detail/${map.post.id}|}" th:text="${map.post.title}">基于 layui 的极简社区页面模版</a>
             </h2>
             <div class="fly-list-info">
               <a href="user/home.html" link>
@@ -185,7 +159,7 @@
     </div>
     <!--右侧导航-->
     <div class="layui-col-md4">
-
+      <!--温馨通道-->
       <div class="fly-panel">
         <h3 class="fly-panel-title">温馨通道</h3>
         <ul class="fly-panel-main fly-list-static">
@@ -211,7 +185,7 @@
         </ul>
       </div>
 
-
+      <!--签到，说明-->
       <div class="fly-panel fly-signin">
         <div class="fly-panel-title">
           签到
@@ -233,6 +207,7 @@
         </div>
       </div>
 
+      <!--回帖-->
       <div class="fly-panel fly-rank fly-rank-reply" id="LAY_replyRank">
         <h3 class="fly-panel-title">回贴周榜</h3>
         <dl>
@@ -299,56 +274,17 @@
           </dd>
         </dl>
       </div>
+      <!--QQ群-->
+      <div class="fly-panel">
+        <div class="fly-panel-title">
+          欢迎加入Mutong社区官方交流群
+        </div>
+        <div class="fly-panel-main">
+          <a href="http://layim.layui.com/?from=fly" target="_blank" class="fly-zanzhu" time-limit="2017.09.25-2099.01.01" style="background-color: #5FB878;">LayIM 3.0 - layui 旗舰之作</a>
+        </div>
+      </div>
 
-      <dl class="fly-panel fly-list-one">
-        <dt class="fly-panel-title">本周热议</dt>
-        <dd>
-          <a href="jie/detail.html">基于 layui 的极简社区页面模版</a>
-          <span><i class="iconfont icon-pinglun1"></i> 16</span>
-        </dd>
-        <dd>
-          <a href="jie/detail.html">基于 layui 的极简社区页面模版</a>
-          <span><i class="iconfont icon-pinglun1"></i> 16</span>
-        </dd>
-        <dd>
-          <a href="jie/detail.html">基于 layui 的极简社区页面模版</a>
-          <span><i class="iconfont icon-pinglun1"></i> 16</span>
-        </dd>
-        <dd>
-          <a href="jie/detail.html">基于 layui 的极简社区页面模版</a>
-          <span><i class="iconfont icon-pinglun1"></i> 16</span>
-        </dd>
-        <dd>
-          <a href="jie/detail.html">基于 layui 的极简社区页面模版</a>
-          <span><i class="iconfont icon-pinglun1"></i> 16</span>
-        </dd>
-        <dd>
-          <a href="jie/detail.html">基于 layui 的极简社区页面模版</a>
-          <span><i class="iconfont icon-pinglun1"></i> 16</span>
-        </dd>
-        <dd>
-          <a href="jie/detail.html">基于 layui 的极简社区页面模版</a>
-          <span><i class="iconfont icon-pinglun1"></i> 16</span>
-        </dd>
-        <dd>
-          <a href="jie/detail.html">基于 layui 的极简社区页面模版</a>
-          <span><i class="iconfont icon-pinglun1"></i> 16</span>
-        </dd>
-        <dd>
-          <a href="jie/detail.html">基于 layui 的极简社区页面模版</a>
-          <span><i class="iconfont icon-pinglun1"></i> 16</span>
-        </dd>
-        <dd>
-          <a href="jie/detail.html">基于 layui 的极简社区页面模版</a>
-          <span><i class="iconfont icon-pinglun1"></i> 16</span>
-        </dd>
-
-        <!-- 无数据时 -->
-        <!--
-        <div class="fly-none">没有相关数据</div>
-        -->
-      </dl>
-
+      <!--广告位-->
       <div class="fly-panel">
         <div class="fly-panel-title">
           这里可作为广告区域
@@ -358,6 +294,7 @@
         </div>
       </div>
 
+      <!--友情链接-->
       <div class="fly-panel fly-link">
         <h3 class="fly-panel-title">友情链接</h3>
         <dl class="fly-panel-main">

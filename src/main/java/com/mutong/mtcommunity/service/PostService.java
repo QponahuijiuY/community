@@ -53,4 +53,16 @@ public class PostService {
         return postMapper.selectPosts(userId, offset, limit,orderModel);
 
     }
+
+    public Post findPostById(int postId) {
+        return postMapper.selectPostById(postId);
+    }
+
+    public int findPostRows(int userId) {
+//        if (userId == 0){
+//            return postRowsCache.get(userId);
+//        }
+//        logger.debug("从数据库里面取总行数数据");
+        return postMapper.selectPostRows(userId);
+    }
 }

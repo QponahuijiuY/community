@@ -1,7 +1,7 @@
 package com.mutong.mtcommunity.utils;
 
 /**
- * @description:
+ * @description: 页面工具类
  * @Author: gengchen.jing@yoyi.com.cn
  * @Date: 2020-06-24 20:53
  */

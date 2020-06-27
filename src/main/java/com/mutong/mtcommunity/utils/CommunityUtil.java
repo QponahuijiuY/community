@@ -8,7 +8,7 @@ import java.util.Map;
 import java.util.UUID;
 
 /**
- * @description:
+ * @description: 字符串util
  * @Author: gengchen.jing@yoyi.com.cn
  * @Date: 2020-06-15 17:27
  */

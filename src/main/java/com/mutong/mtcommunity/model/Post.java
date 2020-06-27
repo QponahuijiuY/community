@@ -32,6 +32,16 @@ public class Post {
     private Integer status;
     // 帖子分数
     private Integer score;
+    //点赞数
+    private Integer likeCount;
+
+    public Integer getLikeCount() {
+        return likeCount;
+    }
+
+    public void setLikeCount(Integer likeCount) {
+        this.likeCount = likeCount;
+    }
 
     public Integer getScore() {
         return score;

@@ -19,4 +19,7 @@ public interface PostMapper {
 
     List<Post> selectPosts(@Param("userId") int userId, @Param("offset") int offset, @Param("limit") int limit,@Param("orderModel") int orderModel);
 
+    Post selectPostById(@Param("id") int id);
+
+    int selectPostRows(@Param("userId") Integer userId);
 }

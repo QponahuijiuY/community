@@ -1,7 +1,7 @@
 package com.mutong.mtcommunity.utils;
 
 /**
- * @description:
+ * @description: 定义常量
  * @Author: gengchen.jing@yoyi.com.cn
  * @Date: 2020-06-16 0:07
  */
