@@ -38,6 +38,10 @@
 
 首先显示置顶帖子
 
+#### 6.27 根据标签显示页面
+
+主要的标签是置顶，加精，最赞，按最热，按最新
+
 ### 🎓帮助文档
 
 [1.0 Spring Boot整合 kaptcha 实现验证码的功能 ](https://blog.csdn.net/weixin_34221276/article/details/89657736)

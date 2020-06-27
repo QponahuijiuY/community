@@ -16,8 +16,13 @@
     </insert>
     <select id="selectPosts" resultType="com.mutong.mtcommunity.model.Post">
         select * from post
-
         where status != 0
+        <if test="userId != 0">
+            and user_id = #{userId}
+        </if>
+        <if test="specialColumn != 0">
+            and special_column = #{specialColumn}
+        </if>
         <!--综合页面，按照发帖的时间排序-->
         <if test="orderModel == 0">
             order by create_time desc
@@ -44,11 +49,8 @@
         <if test="orderModel == 5">
             order by comment_count desc,score desc ,create_time desc
         </if>
-        <!--如果有用户，那么查看的就是用户所发的帖子-->
-        <!--如果userid为0，说明需要查询所有的帖子-->
-        <if test="userId != 0">
-            and user_id = #{userId},
-        </if>
+
+
 
         LIMIT #{offset}, #{limit}
     </select>
@@ -66,5 +68,11 @@
         <if test="userId!=0">
             and user_id = #{userId}
         </if>
+    </select>
+
+    <select id="selectPostBySpecialColumn" resultType="com.mutong.mtcommunity.model.Post">
+        select * from post
+        where status != 0 and specialColumn = #{specialColumn}
+        order by create_time desc
     </select>
 </mapper>

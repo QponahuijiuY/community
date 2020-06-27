@@ -17,9 +17,11 @@ import java.util.List;
 public interface PostMapper {
     void insertPost(Post post);
 
-    List<Post> selectPosts(@Param("userId") int userId, @Param("offset") int offset, @Param("limit") int limit,@Param("orderModel") int orderModel);
+    List<Post> selectPosts(@Param("userId") int userId, @Param("offset") int offset, @Param("limit") int limit,@Param("orderModel") int orderModel,@Param("specialColumn")int specialColumn);
 
     Post selectPostById(@Param("id") int id);
 
     int selectPostRows(@Param("userId") Integer userId);
+
+    List<Post> selectPostBySpecialColumn(@Param("offset") int offset, @Param("limit") int limit, @Param("specialColumn") Integer specialColumn);
 }

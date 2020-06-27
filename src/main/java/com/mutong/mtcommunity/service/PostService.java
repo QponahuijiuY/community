@@ -49,8 +49,8 @@ public class PostService {
      * @param limit sql 限制
      * @return
      */
-    public List<Post> findAllPosts(int userId,  int offset ,  int limit,int orderModel){
-        return postMapper.selectPosts(userId, offset, limit,orderModel);
+    public List<Post> findAllPosts(int userId,  int offset ,  int limit,int orderModel,int specialColumn){
+        return postMapper.selectPosts(userId, offset, limit,orderModel,specialColumn);
 
     }
 
@@ -64,5 +64,10 @@ public class PostService {
 //        }
 //        logger.debug("从数据库里面取总行数数据");
         return postMapper.selectPostRows(userId);
+    }
+
+    public List<Post> findPostBySpecialColumn(int offset, int limit, Integer specialColumn) {
+
+        return postMapper.selectPostBySpecialColumn(offset,limit,specialColumn);
     }
 }
