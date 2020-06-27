@@ -15,8 +15,8 @@
         values(#{userId}, #{title}, #{content}, #{specialColumn},#{createTime},#{modTime},#{commentCount},#{pageView},#{type},#{status},#{score},#{likeCount})
     </insert>
     <select id="selectPosts" resultType="com.mutong.mtcommunity.model.Post">
-        select *
-        from post
+        select * from post
+
         where status != 0
         <!--综合页面，按照发帖的时间排序-->
         <if test="orderModel == 0">

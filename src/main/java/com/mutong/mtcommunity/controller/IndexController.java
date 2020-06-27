@@ -41,8 +41,9 @@ public class IndexController {
 
     /**
      *
-     * @param model
-     * @param page 页面
+     * @param model 页面
+     * @param page 页码
+     * @param orderModel 标签
      * @return
      */
     @GetMapping("/index")
@@ -56,7 +57,7 @@ public class IndexController {
         List<Post> list = postService.findAllPosts(0, page.getOffset(), page.getLimit(),orderModel);
         List<Map<String, Object>> posts = new ArrayList<>();
         if (list != null){
-            //遍历得到每一个discusspost
+            //遍历得到每一个post
             for (Post post : list) {
                 HashMap<String, Object> map = new HashMap<>();
                 //遍历得到的post对象信息放到map里面
@@ -68,7 +69,7 @@ public class IndexController {
             }
         }
         model.addAttribute("posts",posts);
-//        model.addAttribute("orderModel",orderModel);
+        model.addAttribute("orderModel",orderModel);
 
         return "index";
     }

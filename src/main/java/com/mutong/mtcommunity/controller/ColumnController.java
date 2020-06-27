@@ -10,4 +10,9 @@ import org.springframework.stereotype.Controller;
 
 @Controller
 public class ColumnController {
+
+//    @GetMapping("")
+//    public String column(@RequestParam("column")String column){
+//
+//    }
 }
