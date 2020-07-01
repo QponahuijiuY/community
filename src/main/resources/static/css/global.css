@@ -191,7 +191,9 @@ pre{padding: 10px 15px; margin: 10px 0; font-size: 12px; border-left: 6px solid 
 .fly-column-right{position: absolute; right: 0; top: 0;}
 .fly-column-right .layui-btn{vertical-align: initial;}
 .fly-column .layui-badge-dot{position: absolute; top: 50%; left: 50%; margin: -4px 0 0 20px;}
-
+.layui-this {
+  color: #5FB878 !important;
+}
 /* 搜索 */
 .fly-search{display: inline-block; vertical-align: top; width: 50px; height: 50px; margin-right: 10px; text-align: center; cursor: pointer; font-size: 20px;}
 .fly-search .layui-icon{font-size: 20px;}
@@ -203,6 +205,7 @@ pre{padding: 10px 15px; margin: 10px 0; font-size: 12px; border-left: 6px solid 
 .fly-filter a.layui-this{color: #5FB878;}
 .fly-filter .fly-mid{margin: 0 8px;}
 .fly-filter-right{position: absolute; right: 10px; top: 0;}
+
 
 /* Tab */
 .fly-tab{position: relative; padding-top: 3px;}

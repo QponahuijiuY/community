@@ -71,14 +71,16 @@ public class IndexController {
 
         model.addAttribute("posts",posts);
         model.addAttribute("orderModel",orderModel);
+        model.addAttribute("specialColumn",specialColumn);
+
 
         return "index";
     }
 
-//    @GetMapping("/error")
-//    public String getErrorPage(){
-//        return "other/500";
-//    }
+    @GetMapping("/error")
+    public String getErrorPage(){
+        return "other/500";
+    }
     @GetMapping(value = "/denied")
     public String getDeniedPage(){
         return "other/404";

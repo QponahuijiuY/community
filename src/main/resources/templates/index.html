@@ -78,15 +78,15 @@
         <div class="fly-panel-title fly-filter">
           <a th:href="@{/index(orderModel=0)}" th:class="${orderModel == 0 ? 'layui-this' : ''}">综合</a>
           <span class="fly-mid"></span>
-          <a th:href="@{/index(orderModel=1)}" th:class="${orderModel == 1 ? 'layui-this' : ''}">置顶</a>
+          <a th:href="@{/index(orderModel=1,specialColumn=${specialColumn})}" th:class="${orderModel == 1 ? 'layui-this' : ''}">置顶</a>
           <span class="fly-mid"></span>
-          <a th:href="@{/index(orderModel=2)}" th:class="${orderModel == 2 ? 'layui-this' : ''}">最赞</a>
+          <a th:href="@{/index(orderModel=2,specialColumn=${specialColumn})}" th:class="${orderModel == 2 ? 'layui-this' : ''}">最赞</a>
           <span class="fly-mid"></span>
-          <a th:href="@{/index(orderModel=3)}" th:class="${orderModel == 3 ? 'layui-this' : ''}">精华</a>
+          <a th:href="@{/index(orderModel=3,specialColumn=${specialColumn})}" th:class="${orderModel == 3 ? 'layui-this' : ''}">精华</a>
           <span class="fly-filter-right layui-hide-xs">
-            <a th:href="@{/index(orderModel=4)}" th:class="${orderModel == 4 ? 'layui-this' : ''}">按最新</a>
+            <a th:href="@{/index(orderModel=4,specialColumn=${specialColumn})}" th:class="${orderModel == 4 ? 'layui-this' : ''}">按最新</a>
             <span class="fly-mid"></span>
-            <a th:href="@{/index(orderModel=5)}" th:class="${orderModel == 5 ? 'layui-this' : ''}">按热议</a>
+            <a th:href="@{/index(orderModel=5,specialColumn=${specialColumn})}" th:class="${orderModel == 5 ? 'layui-this' : ''}">按热议</a>
           </span>
         </div>
 

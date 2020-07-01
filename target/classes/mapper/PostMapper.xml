@@ -7,13 +7,6 @@
     <sql id="insertFields">
         user_id, title, content, special_column,create_time,mod_time,comment_count,page_view,type,status,score,like_count
     </sql>
-    <sql id="selectFields">
-        id,title,content,special_column,user_id,create_time,mod_time,comment_count,page_view,type,status,score,like_count
-    </sql>
-    <insert id="insertPost" parameterType="com.mutong.mtcommunity.model.Post" keyProperty="id" >
-        insert into post (<include refid="insertFields"></include>)
-        values(#{userId}, #{title}, #{content}, #{specialColumn},#{createTime},#{modTime},#{commentCount},#{pageView},#{type},#{status},#{score},#{likeCount})
-    </insert>
     <select id="selectPosts" resultType="com.mutong.mtcommunity.model.Post">
         select * from post
         where status != 0
@@ -51,9 +44,17 @@
         </if>
 
 
-
-        LIMIT #{offset}, #{limit}
+        <if test="offset != 0 and limit != 0">
+            LIMIT #{offset}, #{limit}
+        </if>
     </select>
+    <sql id="selectFields">
+        id,title,content,special_column,user_id,create_time,mod_time,comment_count,page_view,type,status,score,like_count
+    </sql>
+    <insert id="insertPost" parameterType="com.mutong.mtcommunity.model.Post" keyProperty="id" >
+        insert into post (<include refid="insertFields"></include>)
+        values(#{userId}, #{title}, #{content}, #{specialColumn},#{createTime},#{modTime},#{commentCount},#{pageView},#{type},#{status},#{score},#{likeCount})
+    </insert>
 
     <select id="selectPostById" resultType="com.mutong.mtcommunity.model.Post">
         select *

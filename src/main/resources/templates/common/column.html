@@ -14,15 +14,14 @@
 <div class="fly-panel fly-column" th:fragment="column">
   <div class="layui-container">
     <ul class="layui-clear">
-      <li class="layui-hide-xs layui-this"><a href="/">首页</a></li>
-      <li><a href="jie/index.html">提问</a></li>
-      <li><a href="jie/index.html">分享<span class="layui-badge-dot"></span></a></li>
-      <li><a href="jie/index.html">讨论</a></li>
-      <li><a href="jie/index.html">建议</a></li>
-      <li><a href="jie/index.html">公告</a></li>
-      <li><a href="jie/index.html">动态</a></li>
+      <li th:class="${specialColumn == 0 ? 'layui-this layui-hide-xs' : 'layui-hide-xs'}"><a href="/">首页</a></li>
+      <li><a th:href="@{/index(orderModel=${orderModel},specialColumn=1)}" th:class="${specialColumn == 1 ? 'layui-this' : '' }">提问</a></li>
+      <li><a th:href="@{/index(orderModel=${orderModel},specialColumn=2)}" th:class="${specialColumn == 2 ? 'layui-this' : '' }">分享</a></li>
+      <li><a th:href="@{/index(orderModel=${orderModel},specialColumn=3)}" th:class="${specialColumn == 3 ? 'layui-this' : '' }">讨论</a></li>
+      <li><a th:href="@{/index(orderModel=${orderModel},specialColumn=4)}" th:class="${specialColumn == 4 ? 'layui-this' : '' }">建议</a></li>
+      <li><a th:href="@{/index(orderModel=${orderModel},specialColumn=5)}" th:class="${specialColumn == 5 ? 'layui-this' : '' }">公告</a></li>
+      <li><a th:href="@{/index(orderModel=${orderModel},specialColumn=6)}" th:class="${specialColumn == 6 ? 'layui-this' : '' }">动态</a></li>
       <li class="layui-hide-xs layui-hide-sm layui-show-md-inline-block"><span class="fly-mid"></span></li>
-
       <!-- 用户登入后显示 -->
       <li class="layui-hide-xs layui-hide-sm layui-show-md-inline-block"><a href="user/index.html">我发表的贴</a></li>
       <li class="layui-hide-xs layui-hide-sm layui-show-md-inline-block"><a href="user/index.html#collection">我收藏的贴</a></li>
