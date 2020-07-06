@@ -42,7 +42,6 @@ public class UserService {
     private MailClient mailClient;
     @Resource
     private LoginTicketMapper loginTicketMapper;
-
     /**
      * 用户注册
      * @param user
