@@ -96,7 +96,7 @@
               <img th:src="${map.user.headerUrl}" alt="贤心">
             </a>
             <h2>
-              <a class="layui-badge" th:text="${map.post.title}">分享</a>
+              <a class="layui-badge" th:text="${map.column.column}">分享</a>
               <a th:href="@{|/detail/${map.post.id}|}" th:text="${map.post.title}">基于 layui 的极简社区页面模版</a>
             </h2>
             <div class="fly-list-info">
@@ -209,7 +209,7 @@
 
       <!--回帖-->
       <div class="fly-panel fly-rank fly-rank-reply" id="LAY_replyRank">
-        <h3 class="fly-panel-title">回贴周榜</h3>
+        <h3 class="fly-panel-title">最近访问</h3>
         <dl>
           <!--<i class="layui-icon fly-loading">&#xe63d;</i>-->
           <dd>

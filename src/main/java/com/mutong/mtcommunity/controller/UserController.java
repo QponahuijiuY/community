@@ -17,7 +17,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @description: 用户相关
+ * @description: 用户相关controller
  * @Author: gengchen.jing@yoyi.com.cn
  * @Date: 2020-06-25 17:33
  */

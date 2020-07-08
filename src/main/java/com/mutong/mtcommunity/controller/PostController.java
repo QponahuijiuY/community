@@ -22,7 +22,7 @@ import javax.servlet.http.HttpSession;
 import java.util.Date;
 
 /**
- * @description:
+ * @description: 文章相关Controller
  * @Author: gengchen.jing@yoyi.com.cn
  * @Date: 2020-06-22 16:16
  */
@@ -46,6 +46,15 @@ public class PostController implements CommunityConstant {
         return "jie/add";
 
     }
+
+//    @GetMapping
+//    public String editPost(){
+//
+//    }
+
+
+
+
 
     @PostMapping("/add")
     public String add(@RequestParam("title") String title, @RequestParam("description") String content, @RequestParam("quiz") Integer specialColumn, Model model, HttpSession session,@RequestParam("code") String code){

@@ -1,7 +1,9 @@
 package com.mutong.mtcommunity.controller;
 
+import com.mutong.mtcommunity.model.Column;
 import com.mutong.mtcommunity.model.Post;
 import com.mutong.mtcommunity.model.User;
+import com.mutong.mtcommunity.service.ColumnService;
 import com.mutong.mtcommunity.service.PostService;
 import com.mutong.mtcommunity.service.UserService;
 import com.mutong.mtcommunity.utils.Page;
@@ -18,7 +20,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @description:
+ * @description: 主页显示controller
  * @Author: gengchen.jing@yoyi.com.cn
  * @Date: 2020-06-11 10:37
  */
@@ -27,6 +29,8 @@ public class IndexController {
 
     @Resource
     private PostService postService;
+    @Resource
+    private ColumnService columnService;
 
     public static void main(String[] args) {
 
@@ -68,6 +72,8 @@ public class IndexController {
                 //根据post获取用户的相关信息
                 User user = userService.findUserById(post.getUserId());
                 map.put("user",user);
+                Column column = columnService.findSpecialColumn(post.getSpecialColumn());
+                map.put("column",column);
                 posts.add(map);
             }
         }

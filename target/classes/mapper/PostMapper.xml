@@ -76,4 +76,8 @@
         where status != 0 and specialColumn = #{specialColumn}
         order by create_time desc
     </select>
+
+    <update id="updatePageView" parameterType="Integer">
+        UPDATE post SET page_view = page_view + 1  WHERE id = #{id}
+    </update>
 </mapper>
