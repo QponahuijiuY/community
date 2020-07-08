@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 <html lang="zh" xmlns:th="http://www.thymeleaf.org">
 <head>
+
   <meta charset="utf-8">
   <title>Fly Template v3.0，基于 layui 的极简社区页面模版</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -10,6 +11,11 @@
   <meta name="description" content="Fly社区是模块化前端UI框架Layui的官网社区，致力于为web开发提供强劲动力">
   <link th:rel="stylesheet" th:href="@{/layui/css/layui.css}">
   <link th:rel="stylesheet" th:href="@{/css/global.css}">
+  <link rel="stylesheet" href="../../static/css/editormd.preview.css">
+  <script th:src="@{/mods/jquery.min.js}"></script>
+  <script th:src="@{/mods/editormd.min.js}"></script>
+  <script th:src="@{/editormd/lib/prettify.min.js}"></script>
+  <script th:src="@{/editormd/lib/marked.min.js}"></script>
 </head>
 <body>
 
@@ -64,9 +70,16 @@
             <span class="layui-btn layui-btn-xs jie-admin" type="edit"><a href="add.html">编辑此贴</a></span>
           </div>
         </div>
-        <div class="detail-body photos">
-          <p th:text="${post.content}"> content</p>
-        </div>
+
+           <div class="detail-body photos" id="content-view">
+             <textarea style="display:none;" th:text="${post.content}">### Hello world!</textarea>
+           </div>
+          <script type="text/javascript">
+              $(function() {
+                  editormd.markdownToHTML("content-view", {});
+              });
+          </script>
+
       </div>
 
       <div class="fly-panel detail-box" id="flyReply">

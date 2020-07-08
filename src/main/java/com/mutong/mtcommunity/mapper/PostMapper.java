@@ -24,4 +24,6 @@ public interface PostMapper {
     int selectPostRows(@Param("userId") Integer userId);
 
     List<Post> selectPostBySpecialColumn(@Param("offset") int offset, @Param("limit") int limit, @Param("specialColumn") Integer specialColumn);
+
+    void updatePageView(@Param("id") int id);
 }

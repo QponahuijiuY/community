@@ -4,6 +4,7 @@ import com.mutong.mtcommunity.model.Post;
 import com.mutong.mtcommunity.model.User;
 import com.mutong.mtcommunity.service.PostService;
 import com.mutong.mtcommunity.service.UserService;
+import com.mutong.mtcommunity.utils.HostHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -26,6 +27,8 @@ public class UserController {
     private UserService userService;
     @Resource
     private PostService postService;
+    @Resource
+    private HostHolder hostHolder;
     @GetMapping("/user/{userId}")
     public String detail(@PathVariable("userId")Integer userId, Model model, HttpServletRequest request){
         User user = userService.findUserById(userId);
@@ -37,5 +40,41 @@ public class UserController {
         model.addAttribute("user",user);
         model.addAttribute("posts",posts);
         return "/user/home";
+    }
+    @GetMapping("/user")
+    public String index(Model model){
+        User user = hostHolder.getUser();
+        if (user != null){
+            List<Post> posts = postService.findAllPosts(user.getId(), 0, 15, 0, 0);
+            model.addAttribute("posts",posts);
+            model.addAttribute("user",user);
+            return "user/index";
+        }
+        //findAllPosts(int userId,  int offset ,  int limit,int orderModel,int specialColumn){
+        return "redirect:/";
+    }
+    @GetMapping("/collection")
+    public String collection(Model model){
+        User user = hostHolder.getUser();
+        if(user != null){
+            model.addAttribute("user",user);
+            return "user/collection";
+        }
+        return "redirect:/";
+
+    }
+    @GetMapping("/set")
+    public String setting(Model model){
+        User user = hostHolder.getUser();
+        model.addAttribute("user",user);
+
+        return "user/set";
+    }
+    @GetMapping("/message")
+    public String message(Model model){
+        User user = hostHolder.getUser();
+        model.addAttribute("user",user);
+
+        return "user/message";
     }
 }

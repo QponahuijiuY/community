@@ -14,7 +14,7 @@
 <div class="fly-header layui-bg-black" th:fragment="nav">
   <div class="layui-container">
     <a class="fly-logo" th:href="@{/}">
-      <img th:src="@{/images/logo.png}" alt="layui">
+      <img th:src="@{/images/logo.png}" alt="layui" style="height: 33px;">
     </a>
     <ul class="layui-nav fly-nav layui-hide-xs">
       <li class="layui-nav-item layui-this">
@@ -52,8 +52,8 @@
       <!-- 登入后的状态 -->
       <th:block th:if="${loginUser!=null}">
         <li class="layui-nav-item" >
-          <a class="fly-nav-avatar" href="javascript:;">
-            <cite class="layui-hide-xs" th:text="${loginUser.nickname}">贤心</cite>
+          <a class="fly-nav-avatar" th:href="@{/user}">
+            <cite th:text="${loginUser.nickname}" >贤心</cite>
             <i class="iconfont icon-renzheng layui-hide-xs" title="认证信息：layui 作者"></i>
             <i class="layui-badge fly-badge-vip layui-hide-xs">VIP3</i>
             <img th:src="${loginUser.headerUrl}">

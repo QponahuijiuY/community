@@ -23,12 +23,16 @@
       <li><a th:href="@{/index(orderModel=${orderModel},specialColumn=6)}" th:class="${specialColumn == 6 ? 'layui-this' : '' }">动态</a></li>
       <li class="layui-hide-xs layui-hide-sm layui-show-md-inline-block"><span class="fly-mid"></span></li>
       <!-- 用户登入后显示 -->
-      <li class="layui-hide-xs layui-hide-sm layui-show-md-inline-block"><a href="user/index.html">我发表的贴</a></li>
-      <li class="layui-hide-xs layui-hide-sm layui-show-md-inline-block"><a href="user/index.html#collection">我收藏的贴</a></li>
+      <th:block th:if="${loginUser != null}">
+        <li class="layui-hide-xs layui-hide-sm layui-show-md-inline-block"><a th:href="@{/user}">我发表的贴</a></li>
+        <li class="layui-hide-xs layui-hide-sm layui-show-md-inline-block"><a th:href="@{/collection}">我收藏的贴</a></li>
+      </th:block>
     </ul>
 
     <div class="fly-column-right layui-hide-xs">
-      <span class="fly-search"><i class="layui-icon"></i></span>
+      <span class="fly-search">
+        <i class="layui-icon"></i>
+      </span>
       <a th:href="@{/add}" class="confirmTrans layui-btn">发表新帖</a>
 
     </div>

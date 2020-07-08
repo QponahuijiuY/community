@@ -70,4 +70,9 @@ public class PostService {
 
         return postMapper.selectPostBySpecialColumn(offset,limit,specialColumn);
     }
+
+    public void increasePageView(int id) {
+
+        postMapper.updatePageView(id);
+    }
 }

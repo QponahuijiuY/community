@@ -10,6 +10,7 @@ import com.mutong.mtcommunity.utils.HostHolder;
 import com.mutong.mtcommunity.utils.Page;
 import org.apache.maven.surefire.shade.org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Controller;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -57,11 +58,11 @@ public class PostController implements CommunityConstant {
         model.addAttribute("title",title);
         model.addAttribute("description",content);
         model.addAttribute("quiz",specialColumn);
-        String defaultDescription = "<p id=\"descriptionP\"></p>";
-        content = content.replaceAll("<p id=\"descriptionP\"></p>", ""); //剔出每次编辑产生的冗余p标签
-        content = content.replaceAll("<p id=\"descriptionP\" class=\"video\"></p>", ""); //剔出每次的冗余p标签
-        content = content.replaceAll("<p class=\"video\" id=\"descriptionP\"></p>", ""); //剔出每次的冗余p标签
-        content = content.replaceAll("qs.niter", "qcdn.niter"); //剔出每次编辑产生的冗余p标签
+//        String defaultDescription = "<p id=\"descriptionP\"></p>";
+//        content = content.replaceAll("<p id=\"descriptionP\"></p>", ""); //剔出每次编辑产生的冗余p标签
+//        content = content.replaceAll("<p id=\"descriptionP\" class=\"video\"></p>", ""); //剔出每次的冗余p标签
+//        content = content.replaceAll("<p class=\"video\" id=\"descriptionP\"></p>", ""); //剔出每次的冗余p标签
+//        content = content.replaceAll("qs.niter", "qcdn.niter"); //剔出每次编辑产生的冗余p标签
         title = title.trim();
         User user = hostHolder.getUser();
         Post post = new Post();
@@ -82,20 +83,35 @@ public class PostController implements CommunityConstant {
         return "redirect:/";
     }
 
+    @Transactional
     @GetMapping("/detail/{postId}")
     public String getPost(@PathVariable("postId") int postId, Model model, Page page){
+        //访问量加一
+        postService.increasePageView(postId);
         //获取帖子信息
         Post post = postService.findPostById(postId);
-        String content = post.getContent();
-        content = content.replaceAll("</?[^>]+>", ""); //剔出<html>的标签
-        content = content.replaceAll("<a>\\s*|\t|\r|\n</a>", "");//去除字符串中的空格,回车,换行符,制表符
-        content = content.replaceAll("&nbsp;", "");//去除&nbsp;
-//        if(content.length()>100) content=content.substring(0,100);
-        post.setContent(content);
+//        String content = post.getContent();
+//        content = content.replaceAll("</?[^>]+>", ""); //剔出<html>的标签
+//        content = content.replaceAll("<a>\\s*|\t|\r|\n</a>", "");//去除字符串中的空格,回车,换行符,制表符
+//        content = content.replaceAll("&nbsp;", "");//去除&nbsp;
+//        String content1 = EscapeUtil.unescape(content);
+//        model.addAttribute("content",content1);
         model.addAttribute("post",post);
         //获取作者信息
         User user = userService.findUserById(post.getUserId());
         model.addAttribute("user",user);
         return "jie/detail";
     }
+
+//    public static void main(String[] args) {
+//        Html4Escape html4Escape = new Html4Escape();
+//        String a = "<p id=\"descriptionP\"></p><h1><b><font color=\"#c24f4a\"><u><strike>test</strike></u></font></b></h1>";
+//        //5Lym5a625piv5LiA5Liq6Z2e5bi46ZW/55qE5a2X56ym5Liy
+//        String escape = EscapeUtil.escape(a);
+//        System.out.println(escape);
+//
+//        String unescape = EscapeUtil.unescape(escape);
+//        System.out.println(unescape);
+//
+//    }
 }

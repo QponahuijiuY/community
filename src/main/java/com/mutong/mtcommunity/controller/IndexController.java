@@ -28,6 +28,9 @@ public class IndexController {
     @Resource
     private PostService postService;
 
+    public static void main(String[] args) {
+
+    }
     @Resource
     private UserService userService;
     @RequestMapping("/")
