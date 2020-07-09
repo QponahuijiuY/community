@@ -85,7 +85,6 @@
     <orderEntry type="library" name="Maven: nekohtml:xercesMinimal:1.9.6.2" level="project" />
     <orderEntry type="library" name="Maven: nekohtml:nekohtml:1.9.6.2" level="project" />
     <orderEntry type="library" name="Maven: commons-httpclient:commons-httpclient:3.1" level="project" />
-    <orderEntry type="library" name="Maven: commons-codec:commons-codec:1.14" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: org.apache.maven.wagon:wagon-webdav-jackrabbit:1.0-beta-6" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: org.apache.jackrabbit:jackrabbit-webdav:1.5.0" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: org.apache.jackrabbit:jackrabbit-jcr-commons:1.5.0" level="project" />
@@ -159,5 +158,19 @@
     <orderEntry type="library" name="Maven: org.mybatis:mybatis:3.5.1" level="project" />
     <orderEntry type="library" name="Maven: org.mybatis:mybatis-spring:2.0.1" level="project" />
     <orderEntry type="library" name="Maven: cn.hutool:hutool-all:5.1.0" level="project" />
+    <orderEntry type="library" name="Maven: com.aliyun.oss:aliyun-sdk-oss:3.10.2" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.httpcomponents:httpclient:4.5.12" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.httpcomponents:httpcore:4.4.13" level="project" />
+    <orderEntry type="library" name="Maven: commons-codec:commons-codec:1.14" level="project" />
+    <orderEntry type="library" name="Maven: org.jdom:jdom2:2.0.6" level="project" />
+    <orderEntry type="library" name="Maven: org.codehaus.jettison:jettison:1.1" level="project" />
+    <orderEntry type="library" name="Maven: stax:stax-api:1.0.1" level="project" />
+    <orderEntry type="library" name="Maven: com.aliyun:aliyun-java-sdk-core:3.4.0" level="project" />
+    <orderEntry type="library" name="Maven: com.aliyun:aliyun-java-sdk-ram:3.0.0" level="project" />
+    <orderEntry type="library" name="Maven: com.aliyun:aliyun-java-sdk-sts:3.0.0" level="project" />
+    <orderEntry type="library" name="Maven: com.aliyun:aliyun-java-sdk-ecs:4.2.0" level="project" />
+    <orderEntry type="library" name="Maven: com.aliyun:aliyun-java-sdk-kms:2.7.0" level="project" />
+    <orderEntry type="library" name="Maven: com.google.code.gson:gson:2.8.6" level="project" />
+    <orderEntry type="library" name="Maven: com.alibaba.cloud:spring-cloud-starter-alicloud-oss:unknown" level="project" />
   </component>
 </module>

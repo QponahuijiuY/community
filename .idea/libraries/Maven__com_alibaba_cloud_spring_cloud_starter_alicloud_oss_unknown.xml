@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.alibaba.cloud:spring-cloud-starter-alicloud-oss:unknown">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/alibaba/cloud/spring-cloud-starter-alicloud-oss/unknown/spring-cloud-starter-alicloud-oss-unknown.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/alibaba/cloud/spring-cloud-starter-alicloud-oss/unknown/spring-cloud-starter-alicloud-oss-unknown-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/alibaba/cloud/spring-cloud-starter-alicloud-oss/unknown/spring-cloud-starter-alicloud-oss-unknown-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

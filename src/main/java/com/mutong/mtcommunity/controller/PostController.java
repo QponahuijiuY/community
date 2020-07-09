@@ -1,8 +1,10 @@
 package com.mutong.mtcommunity.controller;
 
 import cn.hutool.core.util.ObjectUtil;
+import com.mutong.mtcommunity.model.Column;
 import com.mutong.mtcommunity.model.Post;
 import com.mutong.mtcommunity.model.User;
+import com.mutong.mtcommunity.service.ColumnService;
 import com.mutong.mtcommunity.service.PostService;
 import com.mutong.mtcommunity.service.UserService;
 import com.mutong.mtcommunity.utils.CommunityConstant;
@@ -33,6 +35,9 @@ public class PostController implements CommunityConstant {
 
     @Resource
     private PostService postService;
+
+    @Resource
+    private ColumnService columnService;
 
     @Resource
     private UserService userService;
@@ -106,8 +111,11 @@ public class PostController implements CommunityConstant {
 //        String content1 = EscapeUtil.unescape(content);
 //        model.addAttribute("content",content1);
         model.addAttribute("post",post);
+        Column column = columnService.findSpecialColumn(post.getSpecialColumn());
         //获取作者信息
         User user = userService.findUserById(post.getUserId());
+
+        model.addAttribute("column",column);
         model.addAttribute("user",user);
         return "jie/detail";
     }
