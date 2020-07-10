@@ -1,5 +1,9 @@
 package com.mutong.mtcommunity.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import java.util.Date;
 
 /**
@@ -7,6 +11,10 @@ import java.util.Date;
  * @Author: gengchen.jing@yoyi.com.cn
  * @Date: 2020-06-22 17:35
  */
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class Post {
     //主键
     private Integer id;
@@ -35,108 +43,6 @@ public class Post {
     //点赞数
     private Integer likeCount;
 
-    public Integer getLikeCount() {
-        return likeCount;
-    }
 
-    public void setLikeCount(Integer likeCount) {
-        this.likeCount = likeCount;
-    }
-
-    public Integer getScore() {
-        return score;
-    }
-
-    public void setScore(Integer score) {
-        this.score = score;
-    }
-
-    public Integer getType() {
-        return type;
-    }
-
-    public void setType(Integer type) {
-        this.type = type;
-    }
-
-    public Integer getStatus() {
-        return status;
-    }
-
-    public void setStatus(Integer status) {
-        this.status = status;
-    }
-
-    public Integer getSpecialColumn() {
-        return specialColumn;
-    }
-
-    public void setSpecialColumn(Integer specialColumn) {
-        this.specialColumn = specialColumn;
-    }
-
-    public Integer getCommentCount() {
-        return commentCount;
-    }
-
-    public void setCommentCount(Integer commentCount) {
-        this.commentCount = commentCount;
-    }
-
-    public Integer getPageView() {
-        return pageView;
-    }
-
-    public void setPageView(Integer pageView) {
-        this.pageView = pageView;
-    }
-
-    public Date getCreateTime() {
-        return createTime;
-    }
-
-    public void setCreateTime(Date createTime) {
-        this.createTime = createTime;
-    }
-
-    public Date getModTime() {
-        return modTime;
-    }
-
-    public void setModTime(Date modTime) {
-        this.modTime = modTime;
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public Integer getUserId() {
-        return userId;
-    }
-
-    public void setUserId(Integer userId) {
-        this.userId = userId;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public String getContent() {
-        return content;
-    }
-
-    public void setContent(String content) {
-        this.content = content;
-    }
 
 }

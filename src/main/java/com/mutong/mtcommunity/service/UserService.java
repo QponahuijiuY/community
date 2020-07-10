@@ -9,16 +9,15 @@ import com.mutong.mtcommunity.model.LoginTicket;
 import com.mutong.mtcommunity.model.User;
 import com.mutong.mtcommunity.utils.CommunityUtil;
 import com.mutong.mtcommunity.utils.MailClient;
+import com.mutong.mtcommunity.utils.RedisKeyUtil;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.context.Context;
 
 import javax.annotation.Resource;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Random;
+import java.util.*;
 
 import static com.mutong.mtcommunity.utils.CommunityConstant.*;
 
@@ -28,7 +27,7 @@ import static com.mutong.mtcommunity.utils.CommunityConstant.*;
  * @Date: 2020-06-12 9:58
  */
 @Service
-public class UserService {
+public class UserService extends RedisKeyUtil {
 
     @Resource
     private UserMapper userMapper;
@@ -42,6 +41,8 @@ public class UserService {
     private MailClient mailClient;
     @Resource
     private LoginTicketMapper loginTicketMapper;
+    @Resource
+    private RedisTemplate redisTemplate;
     /**
      * 用户注册
      * @param user
@@ -70,6 +71,7 @@ public class UserService {
         user.setHeaderUrl(String.format("http://images.nowcoder.com/head/%dt.png", new Random().nextInt(1000)));
         user.setCreateTime(new Date());
         user.setModTime(new Date());
+        user.setLoginTime(new Date());
         userMapper.insertUser(user);
 
         //账号通过邮箱激活
@@ -129,6 +131,9 @@ public class UserService {
 //        String redisKey = RedisKeyUtil.getTicketKey(loginTicket.getTicket());
 //        redisTemplate.opsForValue().set(redisKey,loginTicket);
         map.put("ticket" ,loginTicket.getTicket());
+
+        //修改登陆时间
+        userMapper.updateLoginTime(user.getId(),new Date());
         return map;
     }
 
@@ -159,5 +164,12 @@ public class UserService {
 
     public int updateHeaderUrl(int id, String url) {
        return userMapper.updateHeaderUrl(id,url);
+    }
+
+    public void updateLoginTime(int id, Date date) {
+        userMapper.updateLoginTime(id,date);
+    }
+    public List<User> findUserByTime(int offset,int limit){
+        return userMapper.selectUserByTime(offset,limit);
     }
 }

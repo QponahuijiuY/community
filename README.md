@@ -55,7 +55,10 @@
 更新个人头像。本地上传。接口测试成功。
 
 #### 7.10 最近访问
-
+最近访问三种思路(采用第2种)
+1. 使用redis的list类型，主要的目的是控制list的大小，list可以设置key的进出，当list里面key的大小为12时，再次添加key就要删除尾部的key，永远保持key的大小为12
+2. 直接查表，在数据库里面添加一个login_time字段，每次登陆 或者，每次通过cookie直接登陆的时候，都会重新更新登陆时间，然后根据登陆时间直接order by
+3. Redis Ltrim 命令
 ### 🎓帮助文档
 
 [1.0 Spring Boot整合 kaptcha 实现验证码的功能 ](https://blog.csdn.net/weixin_34221276/article/details/89657736)

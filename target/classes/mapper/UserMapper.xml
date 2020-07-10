@@ -4,11 +4,11 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.mutong.mtcommunity.mapper.UserMapper">
     <sql id="insertFields">
-         password, salt, email, type, status, activation_code, header_url, create_time ,nickname,mod_time,address,signature
+         password, salt, email, type, status, activation_code, header_url, create_time ,nickname,mod_time,address,signature,login_time
     </sql>
 
     <sql id="selectFields">
-        id, password, salt, email, type, status, activation_code, header_url, create_time,nickname,mod_time,address,signature
+        id, password, salt, email, type, status, activation_code, header_url, create_time,nickname,mod_time,address,signature,login_time
     </sql>
 
     <select id="selectUserById" resultType="User" parameterType="Integer">
@@ -31,7 +31,7 @@
 
     <insert id="insertUser" parameterType="User" keyProperty="id">
         insert into user (<include refid="insertFields"></include>)
-        values(#{password}, #{salt}, #{email}, #{type}, #{status}, #{activationCode}, #{headerUrl}, #{createTime},#{nickname},#{modTime},#{address},#{signature})
+        values(#{password}, #{salt}, #{email}, #{type}, #{status}, #{activationCode}, #{headerUrl}, #{createTime},#{nickname},#{modTime},#{address},#{signature}),#{loginTime}
     </insert>
 
     <update id="updateStatus" >
@@ -75,4 +75,11 @@
     <update id="updateHeaderUrl">
         update user set header_url = #{headerUrl} where id = #{id}
     </update>
+
+    <update id="updateLoginTime">
+        update user set login_time = #{date} where id = #{id}
+    </update>
+    <select id="selectUserByTime" resultType="User" parameterType="Integer">
+        select * from user order by login_time desc limit #{offset}, #{limit}
+    </select>
 </mapper>

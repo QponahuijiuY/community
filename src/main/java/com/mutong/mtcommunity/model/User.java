@@ -1,5 +1,9 @@
 package com.mutong.mtcommunity.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import java.util.Date;
 
 /**
@@ -7,7 +11,9 @@ import java.util.Date;
  * @Author: gengchen.jing@yoyi.com.cn
  * @Date: 2020-06-11 16:58
  */
-
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class User {
 
     private int id; //id
@@ -21,111 +27,9 @@ public class User {
     private Date createTime; // 创建时间
     private String nickname; //昵称
     private Date modTime; // 修改时间
-    private String address;
-    private String signature;
+    private String address; //城市
+    private String signature;//个性签名
+    private Date loginTime;//登陆时间
 
 
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public String getSignature() {
-        return signature;
-    }
-
-    public void setSignature(String signature) {
-        this.signature = signature;
-    }
-
-    public Date getModTime() {
-        return modTime;
-    }
-
-    public void setModTime(Date modTime) {
-        this.modTime = modTime;
-    }
-
-    public String getNickname() {
-        return nickname;
-    }
-
-    public void setNickname(String nickname) {
-        this.nickname = nickname;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public String getSalt() {
-        return salt;
-    }
-
-    public void setSalt(String salt) {
-        this.salt = salt;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public int getType() {
-        return type;
-    }
-
-    public void setType(int type) {
-        this.type = type;
-    }
-
-    public int getStatus() {
-        return status;
-    }
-
-    public void setStatus(int status) {
-        this.status = status;
-    }
-
-    public String getActivationCode() {
-        return activationCode;
-    }
-
-    public void setActivationCode(String activationCode) {
-        this.activationCode = activationCode;
-    }
-
-    public String getHeaderUrl() {
-        return headerUrl;
-    }
-
-    public void setHeaderUrl(String headerUrl) {
-        this.headerUrl = headerUrl;
-    }
-
-    public Date getCreateTime() {
-        return createTime;
-    }
-
-    public void setCreateTime(Date createTime) {
-        this.createTime = createTime;
-    }
 }

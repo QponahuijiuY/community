@@ -6,6 +6,7 @@ import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.Date;
+import java.util.List;
 
 /**
  * @description:
@@ -33,4 +34,8 @@ public interface UserMapper {
     void updatePassword(@Param("id") int id, @Param("password") String password);
 
     Integer updateHeaderUrl(@Param("id") Integer id, @Param("headerUrl") String headerUrl);
+
+    void updateLoginTime(@Param("id") Integer id,@Param("date") Date date);
+
+    List<User> selectUserByTime(@Param("offset") Integer offset,@Param("limit") Integer limit);
 }

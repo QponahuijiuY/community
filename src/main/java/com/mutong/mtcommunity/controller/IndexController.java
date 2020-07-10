@@ -74,10 +74,19 @@ public class IndexController {
                 map.put("user",user);
                 Column column = columnService.findSpecialColumn(post.getSpecialColumn());
                 map.put("column",column);
+
                 posts.add(map);
             }
         }
 
+        List<User> lastActivityUserList = userService.findUserByTime(0, 12);
+        if (lastActivityUserList != null){
+            for (User user : lastActivityUserList) {
+
+            }
+        }
+
+        model.addAttribute("users",lastActivityUserList);
         model.addAttribute("posts",posts);
         model.addAttribute("orderModel",orderModel);
         model.addAttribute("specialColumn",specialColumn);
