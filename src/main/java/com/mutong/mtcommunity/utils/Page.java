@@ -10,7 +10,7 @@ public class Page {
     //当前页码
     private int current = 1;
     //页码上限
-    private int limit = 10;
+    private int limit = 12;
     //数据总量
     private int rows;
     //查询路径
