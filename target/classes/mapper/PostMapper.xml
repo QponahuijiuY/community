@@ -42,11 +42,7 @@
         <if test="orderModel == 5">
             order by comment_count desc,score desc ,create_time desc
         </if>
-
-
-        <if test="offset != 0 and limit != 0">
-            LIMIT #{offset}, #{limit}
-        </if>
+        limit #{offset}, #{limit}
     </select>
     <sql id="selectFields">
         id,title,content,special_column,user_id,create_time,mod_time,comment_count,page_view,type,status,score,like_count

@@ -47,6 +47,14 @@
 富文本编辑器的支持，试错，最后采用了Editer.md的文本编辑器，回显问题主要解决是通过js代码解决
 专栏显示，重新建一张comlun表，，post表里面的columnid 做外键与 column表相关联，显示的时候查column表即可
 
+#### 7.9 富文本编辑器 图片上传 更新个人资料 
+更新编辑器为Editer.md富文本编辑器，图片上传使用阿里云oss对象存储。支持网络地址和本地上传。
+
+用户设置模块，支持更新个人资料，包括 邮箱，密码，昵称，城市，个性签名(有bug，textarea无法回显后台数据问题)。
+
+更新个人头像。本地上传。接口测试成功。
+
+#### 7.10 最近访问
 
 ### 🎓帮助文档
 
@@ -65,3 +73,5 @@
 [7.0 Editer.md 官方文档](http://editor.md.ipandao.com/)
 
 [8.0 Editer.md Github地址](https://github.com/pandao/editor.md)
+
+[9.0 jquery里面执行post请求格式](https://www.cnblogs.com/AChongi/p/11368819.html)

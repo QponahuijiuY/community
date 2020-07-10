@@ -9,6 +9,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
@@ -76,5 +78,36 @@ public class UserController {
         model.addAttribute("user",user);
 
         return "user/message";
+    }
+
+    @PostMapping("/user/update")
+    public String updateUser(String email,String nickname,String city,String signature){
+        User loginUser = hostHolder.getUser();
+        userService.updateUser(loginUser.getId(),email,nickname,city,signature);
+        return "redirect:/set";
+    }
+
+    @PostMapping("/user/updatepass")
+    public String updatePass(String pass,String repass){
+        User user = hostHolder.getUser();
+        userService.updatePassword(user.getId(),pass);
+        return "redirect:/set";
+    }
+
+    @PostMapping("/user/updateHeaderUrl")
+    @ResponseBody
+    public Map<String,Object> updateHeaderUrl(String header){
+        Map<String,Object> map = new HashMap<>();
+        User user = hostHolder.getUser();
+        int i = userService.updateHeaderUrl(user.getId(), header);
+        if(i==1) {
+            map.put("code",200);
+            map.put("msg","恭喜您，头像修改成功！！！");
+        }
+        else{
+            map.put("code",500);
+            map.put("msg","修改头像出问题啦！");
+        }
+        return map;
     }
 }

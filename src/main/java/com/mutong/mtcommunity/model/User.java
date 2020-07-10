@@ -21,6 +21,25 @@ public class User {
     private Date createTime; // 创建时间
     private String nickname; //昵称
     private Date modTime; // 修改时间
+    private String address;
+    private String signature;
+
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getSignature() {
+        return signature;
+    }
+
+    public void setSignature(String signature) {
+        this.signature = signature;
+    }
 
     public Date getModTime() {
         return modTime;

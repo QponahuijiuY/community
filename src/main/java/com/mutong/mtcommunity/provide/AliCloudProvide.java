@@ -30,7 +30,7 @@ public class AliCloudProvide {
 
     private  String key = ""+System.currentTimeMillis();
 
-    public  String UploadFile(InputStream inputStream,String fileType,String fileName) throws IOException {
+    public  String uploadFile(InputStream inputStream,String fileType,String fileName) throws IOException {
         //创建oss客户端
         OSS client = new OSSClientBuilder().build(endpoint, accessKeyId, accessKeySecret);
         try {
@@ -90,4 +90,6 @@ public class AliCloudProvide {
 
         reader.close();
     }
+
+
 }

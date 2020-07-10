@@ -143,4 +143,21 @@ public class UserService {
         loginTicketMapper.updateStatus(ticket, 1);
 
     }
+
+    public void updateUser(Integer id,String email,String nickname ,String address,String signature) {
+//        User updateUser(@Param("id") Integer id, @Param("password")String password, @Param("headerUrl") String headerUrl, @Param("email") String email, @Param("nickname") String nickname, @Param("address") String address, @Param("signature") String signature, @Param("type") Integer type, @Param("modTime") Date modTime);
+
+        userMapper.updateUser(id,null,null,email,nickname,address,signature,null,new Date());
+    }
+
+
+    public void updatePassword(int id, String pass) {
+        User user = userMapper.selectUserById(id);
+        String newpass = SecureUtil.md5(pass + user.getSalt())  ;
+        userMapper.updatePassword(id,newpass);
+    }
+
+    public int updateHeaderUrl(int id, String url) {
+       return userMapper.updateHeaderUrl(id,url);
+    }
 }
