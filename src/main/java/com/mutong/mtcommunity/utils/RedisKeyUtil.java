@@ -9,9 +9,13 @@ public class RedisKeyUtil {
 
     //分割线
     private static final String SPLIT = ":";
-    //最近访问的人
-    private static final String PREFIX_LASTACTIVITY = "lastActivity";
-    public static String getLastActivityKey(){
-        return PREFIX_LASTACTIVITY + SPLIT ;
+    // redis key
+    private static final String PREFIX_COLLECTION_USER = "collection:user";
+
+
+    //每个用户收藏的key
+    public static String getCollectionUserKey(int userId){
+        return PREFIX_COLLECTION_USER + SPLIT + userId;
     }
+
 }

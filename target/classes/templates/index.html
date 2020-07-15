@@ -11,6 +11,7 @@
   <link rel="stylesheet" th:href="@{/layui/css/layui.css}">
   <link rel="stylesheet" th:href="@{/css/global.css}">
   <script th:src="@{/layui/layui.js}"></script>
+  <link rel="stylesheet" th:href="@{/css/community.css}">
 </head>
 <body>
 <div th:insert="~{common/header :: nav}"></div>
@@ -92,7 +93,7 @@
 
         <ul class="fly-list">
           <li th:each="map:${posts}">
-            <a th:href="@{|/user/${map.user.id}|}" class="fly-avatar">
+            <a th:href="@{|/user/${map.user.id}|}" class="mt-avatar fly-avatar ">
               <img th:src="${map.user.headerUrl}" alt="贤心">
             </a>
             <h2>
@@ -100,23 +101,22 @@
               <a th:href="@{|/detail/${map.post.id}|}" th:text="${map.post.title}">基于 layui 的极简社区页面模版</a>
             </h2>
             <div class="fly-list-info">
-              <a href="user/home.html" link>
+              <a th:href="@{|/user/${map.user.id}|}" link>
                 <cite th:text="${map.user.nickname}">贤心</cite>
-                <!--
-                <i class="iconfont icon-renzheng" title="认证信息：XXX"></i>
-                <i class="layui-badge fly-badge-vip">VIP3</i>
-                -->
               </a>
               <span th:text="${#dates.format(map.post.modTime,'yyyy-MM-dd HH:mm')}"></span>
 
-              <span class="fly-list-kiss layui-hide-xs" title="悬赏飞吻"><i class="iconfont icon-kiss"></i> 60</span>
+              <!--<span class="fly-list-kiss layui-hide-xs" title="悬赏飞吻"><i class="iconfont icon-kiss"></i> 60</span>-->
               <!--<span class="layui-badge fly-badge-accept layui-hide-xs">已结</span>-->
               <span class="fly-list-nums">
                 <i class="iconfont icon-pinglun1" title="回答"></i> </i> <i th:text="${map.post.commentCount}">66</i>
               </span>
             </div>
-            <div class="fly-list-badge">
-              <!--<span class="layui-badge layui-bg-red">精帖</span>-->
+            <div class="fly-list-badge" th:if="${map.post.type == 1}">
+              <span class="layui-badge layui-bg-red">精帖</span>
+            </div>
+            <div class="fly-list-badge" th:if="${map.post.type == 2}">
+              <span class="layui-badge layui-bg-orange">置顶</span>
             </div>
           </li>
         </ul>
@@ -180,7 +180,7 @@
         <div class="fly-panel-title">
           签到
           <i class="fly-mid"></i>
-          <a href="javascript:;" class="fly-link" id="LAY_signinHelp">说明</a>
+          <a href="javascript:;" class="fly-link"  id="LAY_signinHelp">关于我</a>
           <i class="fly-mid"></i>
           <a href="javascript:;" class="fly-link" id="LAY_signinTop">活跃榜<span class="layui-badge-dot"></span></a>
           <span class="fly-signin-days">已连续签到<cite>16</cite>天</span>
@@ -197,14 +197,18 @@
         </div>
       </div>
 
+
+
+
+
       <!--最近访问-->
       <div class="fly-panel fly-rank fly-rank-reply" id="LAY_replyRank">
         <h3 class="fly-panel-title">最近访问</h3>
         <dl>
           <!--<i class="layui-icon fly-loading">&#xe63d;</i>-->
           <dd th:each="user:${users}">
-            <a th:href="@{|/user/${user.id}|}">
-              <img th:src="${user.headerUrl}"><cite th:text="${user.nickname}">贤心</cite><i th:text="${#dates.format(user.loginTime,'yyyy-MM-dd HH:mm')}"></i>
+            <a th:href="@{|/user/${user.id}|}" class="mt-avatar">
+              <img th:src="${user.headerUrl}" ><cite th:text="${user.nickname}">贤心</cite><i th:text="${#dates.format(user.loginTime,'yyyy-MM-dd HH:mm')}"></i>
             </a>
           </dd>
 
@@ -250,22 +254,7 @@
 <div th:insert="~{common/footer :: footer}"></div>
 
 <script th:src="@{/layui/layui.js}"></script>
-<script>
-    layui.cache.page = '';
-    layui.cache.user = {
-        username: '游客'
-        ,uid: -1
-        ,avatar: '../static/images/avatar/00.jpg'
-        ,experience: 83
-        ,sex: '男'
-    };
-    layui.config({
-        version: "3.0.0"
-        ,base: '../static/mods/' //这里实际使用时，建议改成绝对路径
-    }).extend({
-        fly: 'index'
-    }).use('fly');
-</script>
+
 <script>
     layui.use('layer', function(){ //独立版的layer无需执行这一句
         var $ = layui.jquery, layer = layui.layer; //独立版的layer无需执行这一句
@@ -299,37 +288,15 @@
                         layer.setTop(layero); //重点2
                     }
                 });
-            }
-            ,confirmTrans: function(){
+            } ,
+            confirmTrans: function(){
                 //配置一个透明的询问框
                 layer.msg('你还没有登陆', {
                     time: 2000, //20s后自动关闭
                     // btn: ['明白了', '知道了', '哦']
                 });
-            }
-            ,notice: function(){
-                //示范一个公告层
-                layer.open({
-                    type: 1
-                    ,title: false //不显示标题栏
-                    ,closeBtn: false
-                    ,area: '300px;'
-                    ,shade: 0.8
-                    ,id: 'LAY_layuipro' //设定一个id，防止重复弹出
-                    ,btn: ['火速围观', '残忍拒绝']
-                    ,btnAlign: 'c'
-                    ,moveType: 1 //拖拽模式，0或者1
-                    ,content: '<div style="padding: 50px; line-height: 22px; background-color: #393D49; color: #fff; font-weight: 300;">你知道吗？亲！<br>layer ≠ layui<br><br>layer只是作为Layui的一个弹层模块，由于其用户基数较大，所以常常会有人以为layui是layerui<br><br>layer虽然已被 Layui 收编为内置的弹层模块，但仍然会作为一个独立组件全力维护、升级。<br><br>我们此后的征途是星辰大海 ^_^</div>'
-                    ,success: function(layero){
-                        var btn = layero.find('.layui-layer-btn');
-                        btn.find('.layui-layer-btn0').attr({
-                            href: 'http://www.layui.com/'
-                            ,target: '_blank'
-                        });
-                    }
-                });
-            }
-            ,offset: function(othis){
+            },
+            offset: function(othis){
                 var type = othis.data('type')
                     ,text = othis.text();
 
@@ -347,8 +314,29 @@
                 });
             }
         };
-
-        $('#layerDemo .layui-btn').on('click', function(){
+        $("#LAY_signinHelp").click(function () {
+            //示范一个公告层
+            layer.open({
+                type: 1
+                ,title: false //不显示标题栏
+                ,closeBtn: false
+                ,area: '300px;'
+                ,shade: 0.8
+                ,id: 'LAY_layuipro' //设定一个id，防止重复弹出
+                ,btn: ['瞧瞧这小样', '残忍拒绝']
+                ,btnAlign: 'c'
+                ,moveType: 1 //拖拽模式，0或者1
+                ,content: '<div style="padding: 50px; line-height: 22px; background-color: #393D49; color: #fff; font-weight: 300;">各位小伙伴们~<br>木同社区欢迎你们的到来~<br><br>木同社区作为一个小的互动社区，希望大家在这里留下自己的痕迹，来到这里我们就是缘分(嘻嘻^_^) <br><br>不妨交个朋友，大家相互学习，准大四软件工程专业菜鸡一枚。多多指教<br><br>感谢访问 ^_^</div>'
+                ,success: function(layero){
+                    var btn = layero.find('.layui-layer-btn');
+                    btn.find('.layui-layer-btn0').attr({
+                        href: 'https://github.com/QponahuijiuY'
+                        ,target: '_blank'
+                    });
+                }
+            });
+        });
+        $('#layerDemo .fly-link').on('click', function(){
             var othis = $(this), method = othis.data('method');
             active[method] ? active[method].call(this, othis) : '';
         });

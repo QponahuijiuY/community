@@ -75,4 +75,8 @@ public class PostService {
 
         postMapper.updatePageView(id);
     }
+
+    public void increaseCollectionCount() {
+
+    }
 }

@@ -59,6 +59,24 @@
 1. 使用redis的list类型，主要的目的是控制list的大小，list可以设置key的进出，当list里面key的大小为12时，再次添加key就要删除尾部的key，永远保持key的大小为12
 2. 直接查表，在数据库里面添加一个login_time字段，每次登陆 或者，每次通过cookie直接登陆的时候，都会重新更新登陆时间，然后根据登陆时间直接order by
 3. Redis Ltrim 命令
+
+#### 7.11 主页显示问题
+
+页面显示问题的bug修改
+
+置顶加精显示问题
+
+收藏功能 
+
+#### 7.12 收藏功能 redis乱码问题
+
+收藏功能，根据每次收藏功能的class，'收藏' 是一个class '已收藏'是一个class 进行AJAX请求的处理。
+
+Spring Boot & ControllerAdvice  全局处理异常 有bug
+
+#### 7.15 收藏功能
+
+
 ### 🎓帮助文档
 
 [1.0 Spring Boot整合 kaptcha 实现验证码的功能 ](https://blog.csdn.net/weixin_34221276/article/details/89657736)
@@ -78,3 +96,7 @@
 [8.0 Editer.md Github地址](https://github.com/pandao/editor.md)
 
 [9.0 jquery里面执行post请求格式](https://www.cnblogs.com/AChongi/p/11368819.html)
+
+[10.0 Spring Boot & ControllerAdvice  全局处理异常](https://blog.csdn.net/qq_29550537/article/details/96336131?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.nonecase&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.nonecase)
+
+[11.0 Redis乱码问题 没有序列化key和value](https://www.cnblogs.com/liuchuanfeng/p/7009027.html)

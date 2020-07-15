@@ -18,7 +18,7 @@
         </if>
         <!--综合页面，按照发帖的时间排序-->
         <if test="orderModel == 0">
-            order by create_time desc
+            order by type desc , create_time desc
         </if>
         <!--置顶页面-->
         <if test="orderModel == 1">

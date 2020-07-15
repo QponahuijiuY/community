@@ -37,11 +37,10 @@ public class UserController {
         if (user == null){
             throw new RuntimeException("该用户不存在");
         }
-        Map<String,Object> map = new HashMap<>();
         List<Post> posts = postService.findAllPosts(userId, 0, 0, 0, 0);
         model.addAttribute("user",user);
         model.addAttribute("posts",posts);
-        return "/user/home";
+        return "user/home";
     }
     @GetMapping("/user")
     public String index(Model model){
@@ -55,7 +54,7 @@ public class UserController {
         //findAllPosts(int userId,  int offset ,  int limit,int orderModel,int specialColumn){
         return "redirect:/";
     }
-    @GetMapping("/collection")
+    @GetMapping("/user/collection")
     public String collection(Model model){
         User user = hostHolder.getUser();
         if(user != null){

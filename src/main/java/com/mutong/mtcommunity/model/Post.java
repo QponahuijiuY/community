@@ -42,7 +42,8 @@ public class Post {
     private Integer score;
     //点赞数
     private Integer likeCount;
-
+    //收藏数
+    private Integer collectionCount;
 
 
 }

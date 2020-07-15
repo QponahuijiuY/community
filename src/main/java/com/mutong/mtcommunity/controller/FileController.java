@@ -27,7 +27,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @description:
+ * @description: 文件传输controller
  * @Author: gengchen.jing@yoyi.com.cn
  * @Date: 2020-07-08 15:25
  */
@@ -60,7 +60,7 @@ public class FileController {
     public Map<String, Object> uploadHeaderUrl(HttpServletRequest request, @RequestParam("file") MultipartFile file) throws IOException {
         Map<String, Object> map = new HashMap<>();
         // String uploadDir = "F:/kdgc_project/Student_Attendence_Application/src/main/webapp/resources/upload/";
-        try {
+
             User user = hostHolder.getUser();
             if (user == null) {
                 map.put("status", 500);
@@ -74,14 +74,7 @@ public class FileController {
             map.put("url",url);
 
             return map;
-        } catch (Exception e) {
-            e.printStackTrace();
-            map.put("status",500);
-            map.put("msg","上传失败");
-            map.put("url",null);
 
-            return map;
-        }
     }
 
 

@@ -71,6 +71,8 @@ public class UserService extends RedisKeyUtil {
         user.setHeaderUrl(String.format("http://images.nowcoder.com/head/%dt.png", new Random().nextInt(1000)));
         user.setCreateTime(new Date());
         user.setModTime(new Date());
+        user.setAddress(null);
+        user.setSignature(null);
         user.setLoginTime(new Date());
         userMapper.insertUser(user);
 
@@ -80,7 +82,7 @@ public class UserService extends RedisKeyUtil {
         // http://localhost:8080/community/activation/101/code 激活链接
         String url = domain + contextPath + "/activation/" + user.getId() + "/" + user.getActivationCode();
         context.setVariable("url", url);
-        String content = templateEngine.process("/mail/activation", context);
+        String content = templateEngine.process("mail/activation", context);
         mailClient.sendMail(user.getEmail(), "激活您的木同社区账号", content);
         return map;
     }

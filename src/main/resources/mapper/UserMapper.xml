@@ -31,7 +31,7 @@
 
     <insert id="insertUser" parameterType="User" keyProperty="id">
         insert into user (<include refid="insertFields"></include>)
-        values(#{password}, #{salt}, #{email}, #{type}, #{status}, #{activationCode}, #{headerUrl}, #{createTime},#{nickname},#{modTime},#{address},#{signature}),#{loginTime}
+        values(#{password}, #{salt}, #{email}, #{type}, #{status}, #{activationCode}, #{headerUrl}, #{createTime},#{nickname},#{modTime},#{address},#{signature},#{loginTime})
     </insert>
 
     <update id="updateStatus" >

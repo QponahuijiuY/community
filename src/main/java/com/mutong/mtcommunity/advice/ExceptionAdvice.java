@@ -19,13 +19,16 @@ import java.io.PrintWriter;
  */
 @ControllerAdvice(annotations = Controller.class)
 public class ExceptionAdvice {
-
     private static final Logger logger = LoggerFactory.getLogger(ExceptionAdvice.class);
+
+    public ExceptionAdvice(){
+        System.out.println("ExceptionAdvice");
+    }
     @ExceptionHandler({Exception.class})
     public void handleException(Exception e,
-                                HttpServletRequest request,
-                                HttpServletResponse response) throws IOException {
-
+                                        HttpServletRequest request,
+                                        HttpServletResponse response) throws IOException {
+        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
         logger.error("服务器发送异常: "+ e.getMessage());
         for (StackTraceElement element : e.getStackTrace()){
             logger.error(element.toString());
@@ -36,7 +39,9 @@ public class ExceptionAdvice {
             PrintWriter writer = response.getWriter();
             writer.write(CommunityUtil.getJSONString(1,"服务器异常!"));
         }else {
-            response.sendRedirect(request.getContextPath() + "/error");
+            System.out.println(request.getContextPath());
+            response.sendRedirect(request.getContextPath()+"/errer");
         }
+//        return new ModelAndView("404");
     }
 }
