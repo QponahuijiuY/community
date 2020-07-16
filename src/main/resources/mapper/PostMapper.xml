@@ -84,4 +84,10 @@
     <update id="decreaseCollectionCount" parameterType="Integer">
         update post set collection_count = collection_count - 1 where id = #{postId}
     </update>
+
+    <update id="updatePost" >
+        update post
+        set title = #{title},content = #{content}, special_column= #{specialColumn}
+        where id = #{postId}
+    </update>
 </mapper>

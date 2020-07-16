@@ -66,16 +66,20 @@
 
 置顶加精显示问题
 
-收藏功能 
+收藏功能 redis中key的设计：connection：user：1;   当收藏的时候吧帖子id放到set集合里面，方面查询每一个用户收藏了多少帖子
 
 #### 7.12 收藏功能 redis乱码问题
 
 收藏功能，根据每次收藏功能的class，'收藏' 是一个class '已收藏'是一个class 进行AJAX请求的处理。
 
-Spring Boot & ControllerAdvice  全局处理异常 有bug
+Spring Boot & ControllerAdvice  全局处理异常 
 
-#### 7.15 收藏功能
+#### 7.15 收藏功能 点赞功能
 
+用reids 的set类型实现
+
+
+    
 
 ### 🎓帮助文档
 

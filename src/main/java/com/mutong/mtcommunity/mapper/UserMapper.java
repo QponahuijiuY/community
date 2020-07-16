@@ -38,4 +38,6 @@ public interface UserMapper {
     void updateLoginTime(@Param("id") Integer id,@Param("date") Date date);
 
     List<User> selectUserByTime(@Param("offset") Integer offset,@Param("limit") Integer limit);
+
+    void increaseScore(@Param("id") Integer id, @Param("score") int score);
 }

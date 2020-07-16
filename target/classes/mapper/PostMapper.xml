@@ -5,7 +5,7 @@
 <mapper namespace="com.mutong.mtcommunity.mapper.PostMapper">
 
     <sql id="insertFields">
-        user_id, title, content, special_column,create_time,mod_time,comment_count,page_view,type,status,score,like_count
+        user_id, title, content, special_column,create_time,mod_time,comment_count,page_view,type,status,score,like_count,collection_count
     </sql>
     <select id="selectPosts" resultType="com.mutong.mtcommunity.model.Post">
         select * from post
@@ -45,11 +45,11 @@
         limit #{offset}, #{limit}
     </select>
     <sql id="selectFields">
-        id,title,content,special_column,user_id,create_time,mod_time,comment_count,page_view,type,status,score,like_count
+        id,title,content,special_column,user_id,create_time,mod_time,comment_count,page_view,type,status,score,like_count,collection_count
     </sql>
     <insert id="insertPost" parameterType="com.mutong.mtcommunity.model.Post" keyProperty="id" >
         insert into post (<include refid="insertFields"></include>)
-        values(#{userId}, #{title}, #{content}, #{specialColumn},#{createTime},#{modTime},#{commentCount},#{pageView},#{type},#{status},#{score},#{likeCount})
+        values(#{userId}, #{title}, #{content}, #{specialColumn},#{createTime},#{modTime},#{commentCount},#{pageView},#{type},#{status},#{score},#{likeCount},#{collectionCount})
     </insert>
 
     <select id="selectPostById" resultType="com.mutong.mtcommunity.model.Post">
@@ -75,5 +75,19 @@
 
     <update id="updatePageView" parameterType="Integer">
         UPDATE post SET page_view = page_view + 1  WHERE id = #{id}
+    </update>
+
+    <update id="increaseCollectionCount" parameterType="Integer">
+        update post set collection_count = collection_count + 1 where id = #{postId}
+    </update>
+
+    <update id="decreaseCollectionCount" parameterType="Integer">
+        update post set collection_count = collection_count - 1 where id = #{postId}
+    </update>
+
+    <update id="updatePost" >
+        update post
+        set title = #{title},content = #{content}, special_column= #{specialColumn}
+        where id = #{postId}
     </update>
 </mapper>

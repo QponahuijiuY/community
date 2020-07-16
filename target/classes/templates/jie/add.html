@@ -3,6 +3,7 @@
 <html lang="zh" xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="utf-8">
+  <base href="http://127.0.0.1:8090/">
   <title>发表问题 编辑问题 公用</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="keywords" content="fly,layui,前端社区">
@@ -11,7 +12,7 @@
     <link rel="stylesheet" th:href="@{/layui/css/layui.css}">
     <link rel="stylesheet" th:href="@{/css/global.css}">
     <script th:src="@{/mods/global.js}"></script>
-  <script th:src="@{/mods/editormd.min.js}"></script>
+  <script src="mods/editormd.min.js"></script>
   <link rel="stylesheet" th:href="@{/css/editormd.css}">
 </head>
 <body>
@@ -42,7 +43,7 @@
 
                 <div class="layui-form-item layui-form-text">
                   <div id="editor">
-                    <textarea style="display:none;" name="description" id="description" th:value="${description}">### 你可以在这里输入Markdown格式的文本</textarea>
+                    <textarea style="display:none;" name="description" id="description" th:text="${description}"></textarea>
                   </div>
                   <script type="text/javascript">
                       $(function() {

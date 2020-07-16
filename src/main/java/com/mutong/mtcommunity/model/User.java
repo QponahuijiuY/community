@@ -30,6 +30,8 @@ public class User {
     private String address; //城市
     private String signature;//个性签名
     private Date loginTime;//登陆时间
+    private int score;//分数
+
 
 
 }

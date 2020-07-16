@@ -79,4 +79,8 @@ public class PostService {
     public void increaseCollectionCount() {
 
     }
+
+    public void updatePost(int postId, String title, String content, Integer specialColumn) {
+        postMapper.updatePost(postId,title,content,specialColumn);
+    }
 }

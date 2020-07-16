@@ -5,6 +5,8 @@ import com.mutong.mtcommunity.model.User;
 import com.mutong.mtcommunity.service.PostService;
 import com.mutong.mtcommunity.service.UserService;
 import com.mutong.mtcommunity.utils.HostHolder;
+import com.mutong.mtcommunity.utils.RedisKeyUtil;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,9 +16,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * @description: 用户相关controller
@@ -24,13 +24,15 @@ import java.util.Map;
  * @Date: 2020-06-25 17:33
  */
 @Controller
-public class UserController {
+public class UserController extends RedisKeyUtil {
     @Resource
     private UserService userService;
     @Resource
     private PostService postService;
     @Resource
     private HostHolder hostHolder;
+    @Resource
+    private RedisTemplate redisTemplate;
     @GetMapping("/user/{userId}")
     public String detail(@PathVariable("userId")Integer userId, Model model, HttpServletRequest request){
         User user = userService.findUserById(userId);
@@ -47,6 +49,8 @@ public class UserController {
         User user = hostHolder.getUser();
         if (user != null){
             List<Post> posts = postService.findAllPosts(user.getId(), 0, 15, 0, 0);
+            int rows = postService.findPostRows(user.getId());
+            model.addAttribute("rows",rows);
             model.addAttribute("posts",posts);
             model.addAttribute("user",user);
             return "user/index";
@@ -58,6 +62,19 @@ public class UserController {
     public String collection(Model model){
         User user = hostHolder.getUser();
         if(user != null){
+            String collectionUserKey = getCollectionUserKey(user.getId());
+            Long size = redisTemplate.opsForSet().size(collectionUserKey);
+            Set<Integer> postIds = redisTemplate.opsForSet().members(collectionUserKey);
+            List<Post> lists = new ArrayList<>();
+            for (Integer postId : postIds) {
+                Post post = postService.findPostById(postId);
+                lists.add(post);
+            }
+
+            int rows = postService.findPostRows(user.getId());
+            model.addAttribute("lists",lists);
+            model.addAttribute("size",size);
+            model.addAttribute("rows",rows);
             model.addAttribute("user",user);
             return "user/collection";
         }

@@ -63,7 +63,7 @@
     <div class="layui-tab layui-tab-brief" lay-filter="user">
       <ul class="layui-tab-title" id="LAY_mine">
         <li  class="layui-this" data-type="mine-jie" lay-id="index">
-          <a th:href="@{/user}">我发的帖（<span>89</span>）</a>
+          <a th:href="@{/user}">我发的帖（<span th:text="${rows}"></span>）</a>
 
         </li>
         <li data-type="collection" data-url="/collection/find/"  lay-id="collection" th:href="@{/collection}">
@@ -77,7 +77,7 @@
             <li th:each="post:${posts}">
               <a  th:href="@{|/detail/${post.id}|}" class="jie-title" target="_blank" th:text="${post.title}">基于 layui 的极简社区页面模版</a>
               <i th:text="${#dates.format(post.modTime,'yyyy-MM-dd HH:mm')}">2017/3/14 上午8:30:00</i>
-              <a class="mine-edit" href="/jie/edit/8116">编辑</a>
+              <a class="mine-edit" th:href="@{|/add/${post.id}|}">编辑</a>
               <em><i th:text="${post.pageView}">661</i>阅 &nbsp;/&nbsp; <i th:text="${post.commentCount}">10</i>答</em>
             </li>
           </ul>

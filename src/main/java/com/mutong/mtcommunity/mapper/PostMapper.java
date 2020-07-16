@@ -30,4 +30,7 @@ public interface PostMapper {
     void increaseCollectionCount(@Param("postId") int postId);
 
     void decreaseCollectionCount(@Param("postId") int postId);
+
+
+    void updatePost(@Param("postId") int postId, @Param("title") String title, @Param("content") String content, @Param("specialColumn") Integer specialColumn);
 }

@@ -4,10 +4,7 @@ import cn.hutool.core.util.ObjectUtil;
 import com.mutong.mtcommunity.model.Column;
 import com.mutong.mtcommunity.model.Post;
 import com.mutong.mtcommunity.model.User;
-import com.mutong.mtcommunity.service.CollectionService;
-import com.mutong.mtcommunity.service.ColumnService;
-import com.mutong.mtcommunity.service.PostService;
-import com.mutong.mtcommunity.service.UserService;
+import com.mutong.mtcommunity.service.*;
 import com.mutong.mtcommunity.utils.CommunityConstant;
 import com.mutong.mtcommunity.utils.HostHolder;
 import com.mutong.mtcommunity.utils.Page;
@@ -42,6 +39,8 @@ public class PostController implements CommunityConstant {
 
     @Resource
     private CollectionService collectionService;
+    @Resource
+    private LikeService likeService;
 
     @Resource
     private UserService userService;
@@ -55,15 +54,6 @@ public class PostController implements CommunityConstant {
         return "jie/add";
 
     }
-
-//    @GetMapping
-//    public String editPost(){
-//
-//    }
-
-
-
-
 
     @PostMapping("/add")
     public String add(@RequestParam("title") String title, @RequestParam("description") String content, @RequestParam("quiz") Integer specialColumn, Model model, HttpSession session,@RequestParam("code") String code){
@@ -97,6 +87,23 @@ public class PostController implements CommunityConstant {
         return "redirect:/";
     }
 
+
+    @PostMapping("/edit")
+    public String edit(@RequestParam("id") int postId, @RequestParam("title") String title, @RequestParam("description") String content, @RequestParam("quiz") Integer specialColumn, Model model, HttpSession session, @RequestParam("code") String code){
+        //从session里面获取验证码
+        String kaptcha = (String) session.getAttribute("kaptcha");
+        if (StringUtils.isBlank(code) || StringUtils.isBlank(kaptcha) || !kaptcha.equalsIgnoreCase(code)){
+            model.addAttribute("codeMsg","验证码不正确");
+            return "jie/edit";
+        }
+        model.addAttribute("title",title);
+        model.addAttribute("description",content);
+        model.addAttribute("quiz",specialColumn);
+        title = title.trim();
+        postService.updatePost(postId,title,content,specialColumn);
+        return "redirect:/";
+
+    }
     @Transactional
     @GetMapping("/detail/{postId}")
     public String getPost(@PathVariable("postId") int postId, Model model, Page page){
@@ -109,15 +116,35 @@ public class PostController implements CommunityConstant {
         //获取这篇帖子作者信息
         User user = userService.findUserById(post.getUserId());
         boolean hasCollection = false;
+        boolean hasLike = false;
         if (hostHolder.getUser() != null){
             hasCollection = collectionService.hasCollection(hostHolder.getUser().getId(), postId);
+            hasLike = likeService.hasLike(hostHolder.getUser().getId(), postId);
         }
+        long likePostKeySize = likeService.findLikePostKeySize(postId);
 
+
+        model.addAttribute("likePostKeySize",likePostKeySize);
+        model.addAttribute("hasLike",hasLike);
         model.addAttribute("post",post);
         model.addAttribute("hasCollection",hasCollection);
         model.addAttribute("column",column);
         model.addAttribute("user",user);
         return "jie/detail";
+    }
+
+
+    @GetMapping("/add/{postId}")
+    public String getEditPage(@PathVariable("postId")int postId,Model model){
+        Post post = postService.findPostById(postId);
+        if (hostHolder.getUser().getId() != post.getUserId()){
+            return "other/500";
+        }else{
+            model.addAttribute("title",post.getTitle());
+            model.addAttribute("description",post.getContent());
+            model.addAttribute("id",post.getId());
+        }
+        return "jie/edit";
     }
 
 
