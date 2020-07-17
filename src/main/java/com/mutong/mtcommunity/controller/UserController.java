@@ -39,7 +39,7 @@ public class UserController extends RedisKeyUtil {
         if (user == null){
             throw new RuntimeException("该用户不存在");
         }
-        List<Post> posts = postService.findAllPosts(userId, 0, 0, 0, 0);
+        List<Post> posts = postService.findPostByUserId(userId);
         model.addAttribute("user",user);
         model.addAttribute("posts",posts);
         return "user/home";
@@ -50,6 +50,9 @@ public class UserController extends RedisKeyUtil {
         if (user != null){
             List<Post> posts = postService.findAllPosts(user.getId(), 0, 15, 0, 0);
             int rows = postService.findPostRows(user.getId());
+            String collectionUserKey = getCollectionUserKey(user.getId());
+            Long size = redisTemplate.opsForSet().size(collectionUserKey);
+            model.addAttribute("size",size);
             model.addAttribute("rows",rows);
             model.addAttribute("posts",posts);
             model.addAttribute("user",user);

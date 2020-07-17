@@ -74,9 +74,10 @@
                 <a th:href="@{|/add/${post.id}|}">编辑此贴</a>
               </span>
                             <span th:class="|layui-btn layui-btn-xs jie-admin collection ${hasCollection?'layui-bg-red':'layui-bg-green'}|" id="collection">
-                  <a th:onclick="|collection(this,${post.id});|" th:text="${hasCollection} ? '已藏' : '收藏'" th:class="${hasCollection} ? 'collection' : 'unCollection'">此贴</a>
+                  <a th:onclick="|collection(this,${post.id});|" th:text="${hasCollection}? '已藏' : '收藏'" th:class="${hasCollection} ? 'collection' : 'unCollection'"></a>
               </span>
                             <script>
+
                                 function collection(btn,postId) {
                                     if($(btn).hasClass("unCollection"))
                                     {
@@ -87,8 +88,9 @@
                                             function (data) {
                                                 data = $.parseJSON(data);
                                                 if (data.code == 0) {
-                                                    $("#collection").load(location.href + " #collection")
-                                                    // window.location.reload();
+                                                    // $("#collection").load(location.href + " #collection")
+                                                    window.location.reload();
+                                                    $(btn).text(data)
                                                 } else {
                                                     alert(data.msg);
                                                 }
@@ -102,14 +104,15 @@
                                             function (data) {
                                                 data = $.parseJSON(data);
                                                 if (data.code == 0) {
-                                                    $("#collection").load(location.href + " #collection")
-                                                    // window.location.reload();
+                                                    // $("#collection").load(location.href + " #collection")
+                                                    window.location.reload();
                                                 } else {
                                                     alert(data.msg);
                                                 }
                                             }
                                         );
                                     }};
+
                             </script>
                             <span th:class="|layui-btn layui-btn-xs jie-admin like ${hasLike?'layui-bg-red':'layui-bg-green'} |" id="like">
                 <a th:onclick="|like(this,${post.id});|" th:text="${hasLike}? '已赞' : '点赞'" th:class="${hasLike} ? 'like' : 'unLike'"></a>
@@ -125,8 +128,8 @@
                                             function (data) {
                                                 data = $.parseJSON(data);
                                                 if (data.code == 0) {
-                                                    $("#like").load(location.href + " #like")
-                                                    // window.location.reload();
+                                                    // $("#like").load(location.href + " #like")
+                                                    window.location.reload();
                                                 } else {
                                                     alert(data.msg);
                                                 }
@@ -140,8 +143,8 @@
                                             function (data) {
                                                 data = $.parseJSON(data);
                                                 if (data.code == 0) {
-                                                    $("#like").load(location.href + " #like")
-                                                    // window.location.reload();
+                                                    // $("#like").load(location.href + " #like")
+                                                    window.location.reload();
                                                 } else {
                                                     alert(data.msg);
                                                 }

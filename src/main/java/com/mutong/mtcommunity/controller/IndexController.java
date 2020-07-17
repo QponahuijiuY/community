@@ -5,7 +5,9 @@ import com.mutong.mtcommunity.model.Post;
 import com.mutong.mtcommunity.model.User;
 import com.mutong.mtcommunity.service.ColumnService;
 import com.mutong.mtcommunity.service.PostService;
+import com.mutong.mtcommunity.service.SignInService;
 import com.mutong.mtcommunity.service.UserService;
+import com.mutong.mtcommunity.utils.HostHolder;
 import com.mutong.mtcommunity.utils.Page;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -32,7 +34,8 @@ public class IndexController {
     private PostService postService;
     @Resource
     private ColumnService columnService;
-
+    @Resource
+    private SignInService signInService;
     public static void main(String[] args) {
 
     }
@@ -42,6 +45,8 @@ public class IndexController {
     public String index(){
         return "redirect:/index";
     }
+    @Resource
+    private HostHolder hostHolder;
     @GetMapping("/case")
     public String example(){
         return "case/case";
@@ -87,7 +92,12 @@ public class IndexController {
             }
         }
 
+        boolean sigined = false;
+        if (hostHolder.getUser() != null){
+            sigined = signInService.isSigined(hostHolder.getUser().getId());
+        }
 
+        model.addAttribute("sigined",sigined);
         model.addAttribute("users",lastActivityUserList);
         model.addAttribute("posts",posts);
         model.addAttribute("orderModel",orderModel);

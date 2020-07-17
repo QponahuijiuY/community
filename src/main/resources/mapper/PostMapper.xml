@@ -51,6 +51,9 @@
         insert into post (<include refid="insertFields"></include>)
         values(#{userId}, #{title}, #{content}, #{specialColumn},#{createTime},#{modTime},#{commentCount},#{pageView},#{type},#{status},#{score},#{likeCount},#{collectionCount})
     </insert>
+    <select id="selectPostByUserId" resultType="com.mutong.mtcommunity.model.Post">
+        select * from post where user_id = #{userId}
+    </select>
 
     <select id="selectPostById" resultType="com.mutong.mtcommunity.model.Post">
         select *

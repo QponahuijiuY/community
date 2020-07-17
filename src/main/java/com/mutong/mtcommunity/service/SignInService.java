@@ -42,13 +42,17 @@ public class SignInService extends RedisKeyUtil {
         return new ResultTypeDTO().okOf();
 
 
-
-
     }
 
     private void increaseScore(Integer id, ScoreType signIn) {
         userMapper.increaseScore(id,signIn.getType());
     }
+
+    /**
+     * 判断是否签到
+     * @param id
+     * @return
+     */
     public boolean isSigined(int id) {
         String signInDayKey = getSignInDay(new Date());
         Boolean sismember = redisTemplate.opsForSet().isMember(signInDayKey, id);

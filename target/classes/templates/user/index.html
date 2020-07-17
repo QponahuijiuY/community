@@ -68,7 +68,7 @@
         </li>
         <li data-type="collection" data-url="/collection/find/"  lay-id="collection" th:href="@{/collection}">
 
-          <a th:href="@{/user/collection}">我收藏的帖（<span>16</span>）</a>
+          <a th:href="@{/user/collection}">我收藏的帖（<span th:text="${size}">16</span>）</a>
         </li>
       </ul>
       <div class="layui-tab-content" style="padding: 20px 0;">

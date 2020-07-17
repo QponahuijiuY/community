@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
-import javax.servlet.http.HttpServletRequest;
 
 /**
  * @description:
@@ -24,14 +23,30 @@ public class SignInController {
     @Resource
     private SignInService signInService;
 
+
     @ResponseBody
     @GetMapping("/signIn")
-    public ResultTypeDTO signIn(HttpServletRequest request){
+    public ResultTypeDTO signIn(){
         User user = hostHolder.getUser();
         if(user == null){
             return new ResultTypeDTO().errorOf(CustomizeErrorCode.USER_NO_LOGIN);
         }
         ResultTypeDTO resultTypeDTO= signInService.signIn(user.getId());
         return resultTypeDTO;
+    }
+
+    @ResponseBody
+    @GetMapping("/sigIned")
+    public ResultTypeDTO isSigined(){
+        User user = hostHolder.getUser();
+        if(user == null){
+            return new ResultTypeDTO().okOf().addMsg("sigined","0");
+        }else {
+            boolean sigined= signInService.isSigined(user.getId());
+            if(sigined){
+                return new ResultTypeDTO().okOf().addMsg("sigined","1");
+            }
+        }
+        return new ResultTypeDTO().okOf().addMsg("sigined","0");
     }
 }

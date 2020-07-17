@@ -51,7 +51,10 @@ public class PostService {
      */
     public List<Post> findAllPosts(int userId,  int offset ,  int limit,int orderModel,int specialColumn){
         return postMapper.selectPosts(userId, offset, limit,orderModel,specialColumn);
+    }
 
+    public List<Post> findPostByUserId(int userId){
+        return postMapper.selectPostByUserId(userId);
     }
 
     public Post findPostById(int postId) {

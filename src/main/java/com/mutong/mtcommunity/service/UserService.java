@@ -74,7 +74,7 @@ public class UserService extends RedisKeyUtil {
         user.setAddress(null);
         user.setSignature(null);
         user.setLoginTime(new Date());
-        user.setScore(0);
+        user.setScore(10);
         userMapper.insertUser(user);
 
         //账号通过邮箱激活
