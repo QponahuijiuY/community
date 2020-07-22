@@ -8,10 +8,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="keywords" content="fly,layui,前端社区">
   <meta name="description" content="Fly社区是模块化前端UI框架Layui的官网社区，致力于为web开发提供强劲动力">
-  <script th:src="@{/mods/jquery.min.js}"></script>
-  <link rel="stylesheet" th:href="@{/layui/css/layui.css}">
-  <link rel="stylesheet" th:href="@{/css/global.css}">
   <script th:src="@{/layui/layui.js}"></script>
+  <script th:src="@{/mods/jquery.min.js}"></script>
+  <link rel="stylesheet" th:href="@{/layui/css/layui.css}" media="all">
+  <link rel="stylesheet" th:href="@{/css/global.css}">
   <link rel="stylesheet" th:href="@{/css/community.css}">
   <script th:src="@{/mods/index.js}"></script>
   <script th:src="@{/mods/sweetalert.min.js}"></script>
@@ -86,28 +86,32 @@
           </li>
         </ul>
         <div style="text-align: center">
-          <!-- 分页 -->
-          <nav class="mt-5" th:if="${page.rows>0}" th:fragment="pagination">
-            <ul class="pagination justify-content-center">
-              <li class="page-item">
-                <a class="page-link" th:href="@{${page.path}(current=1)}">首页</a>
-              </li>
-              <li th:class="|page-item ${page.current==1?'disabled':''}|">
-                <a class="page-link" th:href="@{${page.path}(current=${page.current-1})}">上一页</a></li>
-              <li th:class="|page-item ${i==page.current?'active':''}|" th:each="i:${#numbers.sequence(page.from,page.to)}">
-                <a class="page-link" th:href="@{${page.path}(current=${i})}" th:text="${i}">1</a>
-              </li>
-              <li th:class="|page-item ${page.current==page.total?'disabled':''}|">
-                <a class="page-link" th:href="@{${page.path}(current=${page.current+1})}">下一页</a>
-              </li>
-              <li class="page-item">
-                <a class="page-link" th:href="@{${page.path}(current=${page.total})}">末页</a>
-              </li>
-            </ul>
-          </nav>
-          <!--<div class="laypage-main">-->
-            <!--<a href="jie/index.html" class="laypage-next">更多求解</a>-->
-          <!--</div>-->
+
+          <div class="laypage-main">
+            <ul class="flow-default" id="LAY_demo2">更多帖子</ul>
+          </div>
+
+          <script>
+              layui.use('flow', function(){
+                  var flow = layui.flow;
+                  flow.load({
+                      elem: '#LAY_demo2' //流加载容器
+                      ,scrollElem: '#LAY_demo2' //滚动条所在元素，一般不用填，此处只是演示需要。
+                      ,isAuto: false
+                      ,isLazyimg: true
+                      ,done: function(page, next){ //加载下一页
+                          //模拟插入
+                          setTimeout(function(){
+                              var lis = [];
+                              for(var i = 0; i < 6; i++){
+                                  lis.push('123'+ ( (page-1)*6 + i + 1 ) +'"></li>')
+                              }
+                              next(lis.join(''), page < 6); //假设总页数为 6
+                          }, 500);
+                      }
+                  });
+              });
+          </script>
         </div>
 
       </div>

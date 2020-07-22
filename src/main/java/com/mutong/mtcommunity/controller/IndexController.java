@@ -60,11 +60,11 @@ public class IndexController {
      * @return
      */
     @GetMapping("/index")
-    public String getIndexPage(HttpServletRequest request, Model model , Page page, @RequestParam(name = "orderModel", defaultValue = "0") int orderModel, @RequestParam(value = "specialColumn",defaultValue = "0")Integer specialColumn/*,@RequestParam("key") String key*/){
+    public String getIndexPage(HttpServletRequest request, Model model ,@RequestParam(value = "pageId",defaultValue = "1") String pageId, Page page, @RequestParam(name = "orderModel", defaultValue = "0") int orderModel, @RequestParam(value = "specialColumn",defaultValue = "0")Integer specialColumn/*,@RequestParam("key") String key*/){
         //方法调用之前,SpringMVC会自动实例化Model和Page,并且将page自动注入给Model
         //所以在thymeleaf中可以直接访问Page对象中的数据.
         page.setRows(postService.findPostRows(0));
-        page.setPath("/index?orderModel="+orderModel);
+        page.setPath("/index?orderModel="+orderModel+"&current=" + specialColumn);
 
         //list返回一个查询列表
         List<Post> orderModelList = postService.findAllPosts(0, page.getOffset(), page.getLimit(),orderModel,specialColumn);
