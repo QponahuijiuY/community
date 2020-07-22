@@ -122,25 +122,10 @@
       <div class="fly-panel">
         <h3 class="fly-panel-title">温馨通道</h3>
         <ul class="fly-panel-main fly-list-static">
-          <li>
-            <a href="http://fly.layui.com/jie/4281/" target="_blank">layui 的 GitHub 及 Gitee (码云) 仓库，欢迎Star</a>
+          <li th:each="top:${topPost}">
+            <a th:href="@{|/detail/${top.id}|}" target="_blank" th:text="${top.title}">layui 的 GitHub 及 Gitee (码云) 仓库，欢迎Star</a>
           </li>
-          <li>
-            <a href="http://fly.layui.com/jie/5366/" target="_blank">
-              layui 常见问题的处理和实用干货集锦
-            </a>
-          </li>
-          <li>
-            <a href="http://fly.layui.com/jie/4281/" target="_blank">layui 的 GitHub 及 Gitee (码云) 仓库，欢迎Star</a>
-          </li>
-          <li>
-            <a href="http://fly.layui.com/jie/5366/" target="_blank">
-              layui 常见问题的处理和实用干货集锦
-            </a>
-          </li>
-          <li>
-            <a href="http://fly.layui.com/jie/4281/" target="_blank">layui 的 GitHub 及 Gitee (码云) 仓库，欢迎Star</a>
-          </li>
+
         </ul>
       </div>
 
@@ -165,14 +150,8 @@
             <button class="layui-btn layui-btn-disabled" th:if="${sigined}">今日已签到</button>
             <span>今日获得了<cite>5</cite>飞吻</span>
           </th:block>
-
-
         </div>
       </div>
-
-
-
-
 
       <!--最近访问-->
       <div class="fly-panel fly-rank fly-rank-reply" id="LAY_replyRank">

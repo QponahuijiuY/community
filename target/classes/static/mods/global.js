@@ -1,1 +1,0 @@
-var Context_Path = "";

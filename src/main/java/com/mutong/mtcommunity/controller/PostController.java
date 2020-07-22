@@ -20,6 +20,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
 import java.util.Date;
+import java.util.List;
 
 /**
  * @description: 文章相关Controller
@@ -123,7 +124,9 @@ public class PostController implements CommunityConstant {
         }
         long likePostKeySize = likeService.findLikePostKeySize(postId);
 
+        List<Post> topCommentPost = postService.findPostByComment();
 
+        model.addAttribute("topCommentPost",topCommentPost);
         model.addAttribute("likePostKeySize",likePostKeySize);
         model.addAttribute("hasLike",hasLike);
         model.addAttribute("post",post);

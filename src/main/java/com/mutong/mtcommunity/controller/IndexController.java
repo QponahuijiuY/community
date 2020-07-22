@@ -84,7 +84,7 @@ public class IndexController {
                 posts.add(map);
             }
         }
-
+        List<Post> topPost = postService.findPostByType(2);
         List<User> lastActivityUserList = userService.findUserByTime(0, 12);
         if (lastActivityUserList != null){
             for (User user : lastActivityUserList) {
@@ -96,7 +96,7 @@ public class IndexController {
         if (hostHolder.getUser() != null){
             sigined = signInService.isSigined(hostHolder.getUser().getId());
         }
-
+        model.addAttribute("topPost",topPost);
         model.addAttribute("sigined",sigined);
         model.addAttribute("users",lastActivityUserList);
         model.addAttribute("posts",posts);

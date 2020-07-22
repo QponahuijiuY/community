@@ -86,4 +86,12 @@ public class PostService {
     public void updatePost(int postId, String title, String content, Integer specialColumn) {
         postMapper.updatePost(postId,title,content,specialColumn);
     }
+
+    public List<Post> findPostByType(int type) {
+        return postMapper.selectPostByType(type);
+    }
+
+    public List<Post> findPostByComment() {
+        return postMapper.selectPostByComment();
+    }
 }

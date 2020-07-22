@@ -93,4 +93,18 @@
         set title = #{title},content = #{content}, special_column= #{specialColumn}
         where id = #{postId}
     </update>
+
+    <select id="selectPostByType" resultType="com.mutong.mtcommunity.model.Post" parameterType="Integer">
+        select * from post
+        where status != 0 and type  = #{type}
+        order by create_time desc
+        limit 0,5;
+    </select>
+
+    <select id="selectPostByComment" resultType="com.mutong.mtcommunity.model.Post">
+        select * from post
+        where status != 0
+        order by comment_count desc
+        limit 0,10;
+    </select>
 </mapper>
