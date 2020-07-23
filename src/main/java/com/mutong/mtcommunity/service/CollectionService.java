@@ -24,7 +24,7 @@ public class CollectionService extends RedisKeyUtil {
      * @param userId
      * @param postId
      */
-    public void collection(int userId,int postId){
+    public final void collection(int userId,int postId){
         String collectionUserKey = getCollectionUserKey(userId);
         //true 已经收藏了 false 未收藏
         boolean hasCollection = hasCollection(userId,postId);
