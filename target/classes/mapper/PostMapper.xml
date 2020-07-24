@@ -107,4 +107,9 @@
         order by comment_count desc
         limit 0,10;
     </select>
+
+
+    <update id="updateCommentCount">
+        update post set comment_count = #{count} where id = #{id}
+    </update>
 </mapper>

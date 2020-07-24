@@ -94,4 +94,9 @@ public class PostService {
     public List<Post> findPostByComment() {
         return postMapper.selectPostByComment();
     }
+
+    public void updateCommentCount(int id, int count) {
+        postMapper.updateCommentCount(id,count);
+
+    }
 }

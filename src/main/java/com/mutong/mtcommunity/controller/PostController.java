@@ -2,6 +2,7 @@ package com.mutong.mtcommunity.controller;
 
 import cn.hutool.core.util.ObjectUtil;
 import com.mutong.mtcommunity.model.Column;
+import com.mutong.mtcommunity.model.Comment;
 import com.mutong.mtcommunity.model.Post;
 import com.mutong.mtcommunity.model.User;
 import com.mutong.mtcommunity.service.*;
@@ -19,8 +20,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 /**
  * @description: 文章相关Controller
@@ -31,6 +31,9 @@ import java.util.List;
 public class PostController implements CommunityConstant {
     @Resource
     private HostHolder hostHolder;
+
+    @Resource
+    private CommentService commentService;
 
     @Resource
     private PostService postService;
@@ -125,7 +128,46 @@ public class PostController implements CommunityConstant {
         long likePostKeySize = likeService.findLikePostKeySize(postId);
 
         List<Post> topCommentPost = postService.findPostByComment();
+        page.setLimit(5);
+        page.setPath("/discuss/detail/" + postId);
+        page.setRows(post.getCommentCount());
+        List<Comment> commentList = commentService.findCommentByEntity(ENTITY_TYPE_POST, post.getId(), page.getOffset(), page.getLimit());
+        List<Map<String,Object>> commentVoList = new ArrayList<>();
+        if (commentList != null){
+            for (Comment comment : commentList) {
+                Map<String,Object> commentVo = new HashMap<>();
+                //获取评论信息
+                commentVo.put("comment",comment);
+                //获取评论作者
+                User commentUser = userService.findUserById(comment.getUserId());
+                commentVo.put("user",commentUser);
+                //回复列表
+                List<Comment> replyList = commentService.findCommentByEntity(ENTITY_TYPE_COMMENT, comment.getUserId(), 0, Integer.MAX_VALUE);
 
+                //回复列表
+                List<Map<String,Object>> replyVoList = new ArrayList<>();
+                if (replyList != null){
+                    for (Comment reply : replyList) {
+                        Map<String,Object> replyVo = new HashMap<>();
+                        //回复内容
+                        replyVo.put("reply",reply);
+                        //回复作者
+                        User replyUser = userService.findUserById(reply.getUserId());
+                        replyVo.put("user",replyUser);
+                        //回复的目标
+                        User targer = reply.getTargetId() == 0 ? null : userService.findUserById(reply.getTargetId());
+                        replyVo.put("target",targer);
+                        replyVoList.add(replyVo);
+                    }
+                }
+                commentVo.put("replys",replyVoList);
+
+                int count = commentService.findCommentCount(ENTITY_TYPE_COMMENT,comment.getId());
+                commentVo.put("replyCount",count);
+                commentVoList.add(commentVo);
+            }
+        }
+        model.addAttribute("comments",commentVoList);
         model.addAttribute("topCommentPost",topCommentPost);
         model.addAttribute("likePostKeySize",likePostKeySize);
         model.addAttribute("hasLike",hasLike);

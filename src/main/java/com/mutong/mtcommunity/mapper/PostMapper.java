@@ -39,4 +39,6 @@ public interface PostMapper {
     List<Post> selectPostByType(@Param("type") int type);
 
     List<Post> selectPostByComment();
+
+    void updateCommentCount(@Param("id") int id, @Param("count") int count);
 }
