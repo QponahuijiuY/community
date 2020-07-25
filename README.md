@@ -78,7 +78,15 @@ Spring Boot & ControllerAdvice  全局处理异常
 
 用reids 的set类型实现
 
+每一个帖子一个key，把
 
+#### 7.24 评论功能
+
+实现评论功能雏形
+
+#### 7.25 消息通知
+
+使用kafka实现消息通知
     
 
 ### 🎓帮助文档
@@ -104,3 +112,5 @@ Spring Boot & ControllerAdvice  全局处理异常
 [10.0 Spring Boot & ControllerAdvice  全局处理异常](https://blog.csdn.net/qq_29550537/article/details/96336131?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.nonecase&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.nonecase)
 
 [11.0 Redis乱码问题 没有序列化key和value](https://www.cnblogs.com/liuchuanfeng/p/7009027.html)
+
+[12.0 Spring Boot集成Kafka](https://www.cnblogs.com/asker009/p/9990088.html)

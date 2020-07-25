@@ -9,7 +9,6 @@ import com.mutong.mtcommunity.service.*;
 import com.mutong.mtcommunity.utils.CommunityConstant;
 import com.mutong.mtcommunity.utils.HostHolder;
 import com.mutong.mtcommunity.utils.Page;
-import org.apache.maven.surefire.shade.org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.Model;
@@ -62,11 +61,11 @@ public class PostController implements CommunityConstant {
     @PostMapping("/add")
     public String add(@RequestParam("title") String title, @RequestParam("description") String content, @RequestParam("quiz") Integer specialColumn, Model model, HttpSession session,@RequestParam("code") String code){
         //从session里面获取验证码
-        String kaptcha = (String) session.getAttribute("kaptcha");
-        if (StringUtils.isBlank(code) || StringUtils.isBlank(kaptcha) || !kaptcha.equalsIgnoreCase(code)){
-            model.addAttribute("codeMsg","验证码不正确");
-            return "jie/add";
-        }
+//        String kaptcha = (String) session.getAttribute("kaptcha");
+//        if (StringUtils.isBlank(code) || StringUtils.isBlank(kaptcha) || !kaptcha.equalsIgnoreCase(code)){
+//            model.addAttribute("codeMsg","验证码不正确");
+//            return "jie/add";
+//        }
         model.addAttribute("title",title);
         model.addAttribute("description",content);
         model.addAttribute("quiz",specialColumn);
@@ -95,11 +94,11 @@ public class PostController implements CommunityConstant {
     @PostMapping("/edit")
     public String edit(@RequestParam("id") int postId, @RequestParam("title") String title, @RequestParam("description") String content, @RequestParam("quiz") Integer specialColumn, Model model, HttpSession session, @RequestParam("code") String code){
         //从session里面获取验证码
-        String kaptcha = (String) session.getAttribute("kaptcha");
-        if (StringUtils.isBlank(code) || StringUtils.isBlank(kaptcha) || !kaptcha.equalsIgnoreCase(code)){
-            model.addAttribute("codeMsg","验证码不正确");
-            return "jie/edit";
-        }
+//        String kaptcha = (String) session.getAttribute("kaptcha");
+//        if (StringUtils.isBlank(code) || StringUtils.isBlank(kaptcha) || !kaptcha.equalsIgnoreCase(code)){
+//            model.addAttribute("codeMsg","验证码不正确");
+//            return "jie/edit";
+//        }
         model.addAttribute("title",title);
         model.addAttribute("description",content);
         model.addAttribute("quiz",specialColumn);

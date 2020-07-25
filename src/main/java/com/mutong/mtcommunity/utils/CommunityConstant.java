@@ -58,6 +58,10 @@ public interface CommunityConstant {/**
      * 主题:点赞
      */
     String TOPIC_LIKE = "like";
+    /**
+     * 主题：收藏
+     */
+    String TOPIC_COLLECTION = "collection";
 
     /**
      * 发帖

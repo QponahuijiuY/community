@@ -21,6 +21,7 @@ public class RedisKeyUtil {
 
     private static final String PREFIX_SIGN_IN_DAY = "sign:in:day";
 
+    private static final String PREFIX_LIKE_COMMENT = "like:comment";
     //每个用户收藏的key
     public static String getCollectionUserKey(int userId){
         return PREFIX_COLLECTION_USER + SPLIT + userId;
@@ -31,10 +32,15 @@ public class RedisKeyUtil {
         return PREFIX_LIKE_POST + SPLIT + postId;
     }
 
+    public static String getLikeCommentKey(int commentId){
+        return PREFIX_LIKE_COMMENT + SPLIT + commentId;
+    }
+
     public static String getSignInDay(Date day){
         String format = simpleDateFormat.format(day);
         return PREFIX_SIGN_IN_DAY + SPLIT + format;
 
     }
+
 
 }

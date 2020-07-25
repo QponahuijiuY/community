@@ -123,7 +123,7 @@
                                     {
                                         // 点赞
                                         $.post(
-                                            Context_Path + "/like",
+                                            Context_Path + "/likePost",
                                             {"postId": postId},
                                             function (data) {
                                                 data = $.parseJSON(data);
@@ -138,7 +138,7 @@
                                     }else {
                                         //取消收藏
                                         $.post(
-                                            Context_Path + "/like",
+                                            Context_Path + "/likePost",
                                             {"postId": postId},
                                             function (data) {
                                                 data = $.parseJSON(data);

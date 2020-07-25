@@ -21,13 +21,25 @@ public class LikeController {
     private HostHolder hostHolder;
     @Resource
     private LikeService likeService;
-
-
-    @PostMapping("/like")
+    /**
+     * @param postId
+     * @return
+     */
+    @PostMapping("/likePost")
     @ResponseBody
-    public String like(int postId){
+    public String likePost(int postId){
         User user = hostHolder.getUser();
-        likeService.like(user.getId(),postId);
+        likeService.likePost(user.getId(),postId);
+
         return CommunityUtil.getJSONString(0,"操作成功!");
+    }
+
+
+    @PostMapping("/likeComment")
+    @ResponseBody
+    public String likeComment(int commentId){
+        User user = hostHolder.getUser();
+        likeService.likeComment(user.getId(),commentId);
+        return CommunityUtil.getJSONString(0,"操作成功！");
     }
 }
