@@ -7,8 +7,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="keywords" content="fly,layui,前端社区">
   <meta name="description" content="Fly社区是模块化前端UI框架Layui的官网社区，致力于为web开发提供强劲动力">
-  <link rel="stylesheet" th:href="@{/layui/css/layui.css}">
-  <link rel="stylesheet" th:href="@{/css/global.css}">
+  <script th:src="@{/mods/jquery.min.js}"></script>
+  <link th:rel="stylesheet" th:href="@{/layui/css/layui.css}">
+  <link th:rel="stylesheet" th:href="@{/css/global.css}">
+  <link rel="stylesheet" href="../../static/css/editormd.preview.css">
+  <script th:src="@{/mods/editormd.min.js}"></script>
+  <script th:src="@{/editormd/lib/prettify.min.js}"></script>
+  <script th:src="@{/editormd/lib/marked.min.js}"></script>
+  <script th:src="@{/mods/global.js}"></script>
+  <link rel="stylesheet" th:href="@{/css/community.css}">
+  <script th:src="@{/mods/sweetalert.min.js}"></script>
+  <script th:src="@{/mods/message.js}"></script>
 </head>
 <body>
 
@@ -55,7 +64,7 @@
   
   <div class="fly-panel fly-panel-user" pad20>
 	  <div class="layui-tab layui-tab-brief" lay-filter="user" id="LAY_msg" style="margin-top: 15px;">
-	    <button class="layui-btn layui-btn-danger" id="LAY_delallmsg">清空全部消息</button>
+	    <button class="layui-btn layui-btn-danger" id="LAY_delallmsg" th:onclick="|readAll1(this,${user.id});|">清空全部消息</button>
 	    <div  id="LAY_minemsg" style="margin-top: 10px;">
         <!--<div class="fly-none">您暂时没有最新消息</div>-->
         <ul class="mine-msg">
@@ -70,9 +79,13 @@
               <a th:if="${message.content == 1}" target="_blank" th:href="@{|/detail/${message.post.id}|}" th:text="${message.post.title}"></a>
 
               <i th:if="${message.content == 2}" style="color: black;">评论</i>
-              <a th:if="${message.content == 2}" target="_blank" th:href="@{|/detail/${message.comment.id}|}" th:text="${message.comment.content}"></a>
+              <a th:if="${message.content == 2}" target="_blank" th:text="${message.comment.content}"></a>
             </blockquote>
-            <p><span th:text="${#dates.format(message.createTime,'yyyy-MM-dd HH:mm')}">1小时前</span><a href="javascript:;" class="layui-btn layui-btn-small layui-btn-danger fly-delete" th:onclick="|delete1(this,${message.id});|">删除</a></p>
+            <p><span th:text="${#dates.format(message.createTime,'yyyy-MM-dd HH:mm')}">1小时前</span>
+              <button href="javascript:;" class="layui-btn layui-btn-small layui-btn-danger fly-delete"
+                 th:onclick="|read(this,${message.message.id});|">已读
+              </button>
+            </p>
           </li>
 
         </ul>
@@ -85,23 +98,7 @@
 
 <div th:insert="~{common/footer :: footer}"></div>
 
-<script src="../../static/layui/layui.js"></script>
-<script>
-layui.cache.page = 'user';
-layui.cache.user = {
-  username: '游客'
-  ,uid: -1
-  ,avatar: '../../static/images/avatar/00.jpg'
-  ,experience: 83
-  ,sex: '男'
-};
-layui.config({
-  version: "3.0.0"
-  ,base: '../../static/mods/'
-}).extend({
-  fly: 'index'
-}).use('fly');
-</script>
+
 
 </body>
 </html>

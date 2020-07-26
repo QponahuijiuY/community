@@ -8,10 +8,14 @@ import com.mutong.mtcommunity.service.CommentService;
 import com.mutong.mtcommunity.service.MessageService;
 import com.mutong.mtcommunity.service.PostService;
 import com.mutong.mtcommunity.service.UserService;
+import com.mutong.mtcommunity.utils.CommunityUtil;
 import com.mutong.mtcommunity.utils.HostHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
 import java.util.ArrayList;
@@ -69,8 +73,32 @@ public class MessageController {
             map.put("createTime",message.getCreateTime());
             list.add(map);
         }
+
         model.addAttribute("user",user);
         model.addAttribute("list",list);
         return "user/message";
+    }
+
+
+    @PostMapping("/message/delete/{id}")
+    @ResponseBody
+    public Object deleteMessage(@PathVariable("id")int id){
+        int row = messageService.deleteCommentById(id,1);
+        if (row > 0){
+            return CommunityUtil.getJSONString(0,"操作成功!");
+        }else {
+            return CommunityUtil.getJSONString(1,"删除失败");
+        }
+    }
+
+    @PostMapping("/message/deleteAll/{toId}")
+    @ResponseBody
+    public Object deleteMessageAll(@PathVariable("toId")int toId){
+        int row = messageService.deleteCommentAll(toId,1);
+        if (row > 0){
+            return CommunityUtil.getJSONString(0,"操作成功!");
+        }else {
+            return CommunityUtil.getJSONString(1,"删除失败");
+        }
     }
 }

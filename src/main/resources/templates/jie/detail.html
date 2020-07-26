@@ -9,7 +9,7 @@
     <script th:src="@{/mods/jquery.min.js}"></script>
     <link th:rel="stylesheet" th:href="@{/layui/css/layui.css}">
     <link th:rel="stylesheet" th:href="@{/css/global.css}">
-    <link rel="stylesheet" href="../../static/css/editormd.preview.css">
+    <link rel="stylesheet" th:href="@{/css/editormd.preview.css}">
     <script th:src="@{/mods/editormd.min.js}"></script>
     <script th:src="@{/editormd/lib/prettify.min.js}"></script>
     <script th:src="@{/editormd/lib/marked.min.js}"></script>
@@ -76,111 +76,11 @@
                             <span th:class="|layui-btn layui-btn-xs jie-admin collection ${hasCollection?'layui-bg-red':'layui-bg-green'}|" id="collection">
                   <a th:onclick="|collection(this,${post.id});|" th:text="${hasCollection}? '已藏' : '收藏'" th:class="${hasCollection} ? 'collection' : 'unCollection'"></a>
               </span>
-                            <script>
 
-                                function collection(btn,postId) {
-                                    if($(btn).hasClass("unCollection"))
-                                    {
-                                        // 收藏
-                                        $.post(
-                                            Context_Path + "/collection",
-                                            {"postId": postId},
-                                            function (data) {
-                                                data = $.parseJSON(data);
-                                                if (data.code == 0) {
-                                                    // $("#collection").load(location.href + " #collection")
-                                                    window.location.reload();
-                                                    swal("收藏成功","收藏成功","success",{
-                                                        buttons: false,
-                                                        timer: 3000,
-                                                    });
-                                                } else {
-                                                    swal("操作失败","操作失败",{
-                                                        buttons: false,
-                                                        timer: 3000,
-                                                    });
-                                                }
-                                            }
-                                        );
-                                    }else {
-                                        //取消收藏
-                                        $.post(
-                                            Context_Path + "/collection",
-                                            {"postId": postId},
-                                            function (data) {
-                                                data = $.parseJSON(data);
-                                                if (data.code == 0) {
-                                                    // $("#collection").load(location.href + " #collection")
-                                                    window.location.reload();
-                                                    swal("收藏已经取消","收藏已经取消","success",{
-                                                        buttons: false,
-                                                        timer: 3000,
-                                                    });
-                                                } else {
-                                                    swal("操作失败","操作失败",{
-                                                        buttons: false,
-                                                        timer: 3000,
-                                                    });
-                                                }
-                                            }
-                                        );
-                                    }};
-
-                            </script>
                             <span th:class="|layui-btn layui-btn-xs jie-admin like ${hasLike?'layui-bg-red':'layui-bg-green'} |" id="like">
                 <a th:onclick="|like(this,${post.id});|" th:text="${hasLike}? '已赞' : '点赞'" th:class="${hasLike} ? 'like' : 'unLike'"></a>
               </span>
-                            <script>
-                                function like(btn,postId) {
-                                    if($(btn).hasClass("unLike"))
-                                    {
-                                        // 点赞
-                                        $.post(
-                                            Context_Path + "/likePost",
-                                            {"postId": postId},
-                                            function (data) {
-                                                data = $.parseJSON(data);
-                                                if (data.code == 0) {
-                                                    // $("#like").load(location.href + " #like")
-                                                    window.location.reload();
-                                                    swal("点赞成功","点赞成功","success",{
-                                                        buttons: false,
-                                                        timer: 3000,
-                                                    });
-                                                } else {
-                                                    // alert(data.msg);
-                                                    swal("操作失败","操作失败",{
-                                                        buttons: false,
-                                                        timer: 3000,
-                                                    });
-                                                }
-                                            }
-                                        );
-                                    }else {
-                                        //取消收藏
-                                        $.post(
-                                            Context_Path + "/likePost",
-                                            {"postId": postId},
-                                            function (data) {
-                                                data = $.parseJSON(data);
-                                                if (data.code == 0) {
-                                                    // $("#like").load(location.href + " #like")
-                                                    window.location.reload();
-                                                    swal("点赞已取消","点赞已取消","success",{
-                                                        buttons: false,
-                                                        timer: 3000,
-                                                    });
-                                                } else {
-                                                    // alert(data.msg);
-                                                    swal("操作失败","操作失败",{
-                                                        buttons: false,
-                                                        timer: 3000,
-                                                    });
-                                                }
-                                            }
-                                        );
-                                    }};
-                            </script>
+
                         </div>
                     </th:block>
 

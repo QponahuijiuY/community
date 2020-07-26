@@ -29,4 +29,12 @@ public class MessageService {
     public List<Message> selectMessageByToId(int id) {
         return messageMapper.selectMessageByToId(id);
     }
+
+    public int deleteCommentById(int id, int i) {
+        return messageMapper.updateStatusByid(id,i);
+    }
+
+    public int deleteCommentAll(int toId,int i) {
+        return messageMapper.updateStatusByToId(toId, i);
+    }
 }

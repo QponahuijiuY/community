@@ -23,5 +23,7 @@ public interface MessageMapper {
 
     List<Message> selectMessageByToId(@Param("toId") int toId);
 
-    void updateStatusByid(@Param("id") int id);
+    int updateStatusByid(@Param("id") int id,@Param("status") int status);
+
+    int updateStatusByToId(@Param("toId") int toId,@Param("status") int status);
 }

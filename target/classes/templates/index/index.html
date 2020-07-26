@@ -14,6 +14,7 @@
   <link rel="stylesheet" th:href="@{/css/global.css}">
   <link rel="stylesheet" th:href="@{/css/community.css}">
   <script th:src="@{/mods/index.js}"></script>
+  <script th:src="@{/mods/detail.js}"></script>
   <script th:src="@{/mods/sweetalert.min.js}"></script>
 </head>
 <body>
@@ -136,7 +137,7 @@
           <i class="fly-mid"></i>
           <a href="javascript:;" class="fly-link"  id="LAY_signinHelp">关于我</a>
           <i class="fly-mid"></i>
-          <a href="javascript:;" class="fly-link" id="LAY_signinTop">活跃榜<span class="layui-badge-dot"></span></a>
+          <a onclick="deve()" class="fly-link" id="LAY_signinTop">活跃榜<span class="layui-badge-dot"></span></a>
 
         </div>
         <div class="fly-panel-main fly-signin-main">
