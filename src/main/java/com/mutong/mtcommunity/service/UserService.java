@@ -43,6 +43,8 @@ public class UserService extends RedisKeyUtil {
     private LoginTicketMapper loginTicketMapper;
     @Resource
     private RedisTemplate redisTemplate;
+    @Resource
+    private MessageService messageService;
     /**
      * 用户注册
      * @param user
@@ -137,6 +139,7 @@ public class UserService extends RedisKeyUtil {
 
         //修改登陆时间
         userMapper.updateLoginTime(user.getId(),new Date());
+
         return map;
     }
 

@@ -1,6 +1,9 @@
 package com.mutong.mtcommunity.service;
 
-import com.mutong.mtcommunity.mapper.PostMapper;
+import com.mutong.mtcommunity.kafka.EventProducer;
+import com.mutong.mtcommunity.model.Event;
+import com.mutong.mtcommunity.utils.CommunityConstant;
+import com.mutong.mtcommunity.utils.HostHolder;
 import com.mutong.mtcommunity.utils.RedisKeyUtil;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
@@ -13,12 +16,15 @@ import javax.annotation.Resource;
  * @Date: 2020-07-11 16:02
  */
 @Service
-public class CollectionService extends RedisKeyUtil {
+public class CollectionService extends RedisKeyUtil implements CommunityConstant {
     @Resource
     private RedisTemplate redisTemplate;
     @Resource
-    private PostMapper postMapper;
-
+    private HostHolder hostHolder;
+    @Resource
+    private PostService postService;
+    @Resource
+    private EventProducer eventProducer;
     /**
      * 收藏 or 未收藏
      * @param userId
@@ -35,6 +41,14 @@ public class CollectionService extends RedisKeyUtil {
             // collection:user:userid
             //把postid放到这个set集合里面
             redisTemplate.opsForSet().add(collectionUserKey,postId);
+            Event event = new Event();
+            event.setTopic(TOPIC_COLLECTION);
+            //收藏帖子
+            event.setEntityType(1);
+            event.setUserId(hostHolder.getUser().getId());
+            event.setEntityId(postId);
+            event.setEntityUserId(postService.findPostById(postId).getUserId());
+            eventProducer.fireEvent(event);
         }
     }
 

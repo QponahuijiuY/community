@@ -59,18 +59,22 @@
 	    <div  id="LAY_minemsg" style="margin-top: 10px;">
         <!--<div class="fly-none">您暂时没有最新消息</div>-->
         <ul class="mine-msg">
-          <li data-id="123">
+          <li data-id="123" th:each="message:${list}">
             <blockquote class="layui-elem-quote">
-              <a href="/jump?username=Absolutely" target="_blank"><cite>Absolutely</cite></a>回答了您的求解<a target="_blank" href="/jie/8153.html/page/0/#item-1489505778669"><cite>layui后台框架</cite></a>
+              <a target="_blank" th:href="@{|/user/${message.fromUser.id}|}"><cite th:text="${message.fromUser.nickname}">Absolutely</cite></a>
+              <i th:if="${message.topic == 'like'}" style="color: black;">点赞</i>
+              <i th:if="${message.topic == 'comment'}" style="color: black;">评论</i>
+              <i th:if="${message.topic == 'collection'}" style="color: black;">收藏</i>
+              了您的
+              <i th:if="${message.content == 1}" style="color: black;">帖子</i>
+              <a th:if="${message.content == 1}" target="_blank" th:href="@{|/detail/${message.post.id}|}" th:text="${message.post.title}"></a>
+
+              <i th:if="${message.content == 2}" style="color: black;">评论</i>
+              <a th:if="${message.content == 2}" target="_blank" th:href="@{|/detail/${message.comment.id}|}" th:text="${message.comment.content}"></a>
             </blockquote>
-            <p><span>1小时前</span><a href="javascript:;" class="layui-btn layui-btn-small layui-btn-danger fly-delete">删除</a></p>
+            <p><span th:text="${#dates.format(message.createTime,'yyyy-MM-dd HH:mm')}">1小时前</span><a href="javascript:;" class="layui-btn layui-btn-small layui-btn-danger fly-delete" th:onclick="|delete1(this,${message.id});|">删除</a></p>
           </li>
-          <li data-id="123">
-            <blockquote class="layui-elem-quote">
-              系统消息：欢迎使用 layui
-            </blockquote>
-            <p><span>1小时前</span><a href="javascript:;" class="layui-btn layui-btn-small layui-btn-danger fly-delete">删除</a></p>
-          </li>
+
         </ul>
       </div>
 	  </div>

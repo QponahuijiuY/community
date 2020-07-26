@@ -1,6 +1,7 @@
 package com.mutong.mtcommunity.controller;
 
 import com.mutong.mtcommunity.model.User;
+import com.mutong.mtcommunity.service.CommentService;
 import com.mutong.mtcommunity.service.LikeService;
 import com.mutong.mtcommunity.utils.CommunityUtil;
 import com.mutong.mtcommunity.utils.HostHolder;
@@ -21,6 +22,8 @@ public class LikeController {
     private HostHolder hostHolder;
     @Resource
     private LikeService likeService;
+    @Resource
+    private CommentService commentService;
     /**
      * @param postId
      * @return

@@ -91,13 +91,7 @@ public class UserController extends RedisKeyUtil {
 
         return "user/set";
     }
-    @GetMapping("/message")
-    public String message(Model model){
-        User user = hostHolder.getUser();
-        model.addAttribute("user",user);
 
-        return "user/message";
-    }
 
     @PostMapping("/user/update")
     public String updateUser(String email,String nickname,String city,String signature){

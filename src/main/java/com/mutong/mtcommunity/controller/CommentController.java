@@ -1,6 +1,8 @@
 package com.mutong.mtcommunity.controller;
 
+import com.mutong.mtcommunity.kafka.EventProducer;
 import com.mutong.mtcommunity.model.Comment;
+import com.mutong.mtcommunity.model.Event;
 import com.mutong.mtcommunity.model.Post;
 import com.mutong.mtcommunity.service.CommentService;
 import com.mutong.mtcommunity.service.PostService;
@@ -30,15 +32,24 @@ public class CommentController implements CommunityConstant {
     private CommentService commentService;
     @Resource
     private PostService postService;
+    @Resource
+    private EventProducer eventProducer;
+
     @PostMapping(value = "/comment/add/{postId}")
     public String addComment(@PathVariable("postId")int postId, Comment comment) {
         comment.setUserId(hostHolder.getUser().getId());
         comment.setStatus(0);
         comment.setCreateTime(new Date());
-
+        comment.setLikeCount(0);
         commentService.addComment(comment);
         //触发评论事件
-
+        Event event = new Event();
+        event.setTopic(TOPIC_COMMENT);
+        event.setEntityType(1);
+        event.setUserId(hostHolder.getUser().getId());
+        event.setEntityId(postId);
+        event.setEntityUserId(postService.findPostById(postId).getUserId());
+        eventProducer.fireEvent(event);
         if (comment.getEntityType() == ENTITY_TYPE_POST) {
             Post target = postService.findPostById(comment.getEntityId());
 //            event.setEntityUserId(target.getUserId());
@@ -48,9 +59,6 @@ public class CommentController implements CommunityConstant {
         }
 //        eventProducer.fireEvent(event);
 
-        if (comment.getEntityType() == ENTITY_TYPE_POST) {
-
-        }
 
         return "redirect:/detail/" + postId +"#comment";
     }

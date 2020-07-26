@@ -24,4 +24,11 @@ public interface CommentMapper {
     Comment selectCommentById(@Param("id") int id);
 
     int updateStatusById(@Param("id") int id,@Param("status") int status);
+
+    void updateLikeCountById(@Param("id") int id, @Param("i") int i);
+
+    void increaseLikeCount(@Param("id") int id, @Param("i") int i);
+
+    void decreaseLikeCount(@Param("id") int id, @Param("i") int i);
+
 }

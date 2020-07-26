@@ -2,68 +2,67 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="43828271-bdc9-4bde-a3de-1bf027e30423" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/kafka/EventConsumer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/kafka/EventProducer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/model/Event.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/model/Message.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/service/ElasticSearchService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/service/MessageService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/controller/MessageController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/mapper/MessageMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/MessageMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/controller/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/controller/CommentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/controller/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/controller/IndexController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/controller/LikeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/controller/LikeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/controller/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/controller/PostController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/interceptor/LoginTicketInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/interceptor/LoginTicketInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/kafka/EventConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/kafka/EventConsumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/kafka/EventProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/kafka/EventProducer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/mapper/CommentMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/mapper/CommentMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/model/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/model/Comment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/model/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/model/Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/service/CollectionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/service/CollectionService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/service/CommentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/service/CommentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/service/ElasticSearchService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/service/ElasticSearchService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/service/LikeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/service/LikeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/utils/CommunityConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/utils/CommunityConstant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/utils/RedisKeyUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/utils/RedisKeyUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/service/MessageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/service/MessageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/service/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application-develop.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-develop.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application-produce.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-produce.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/CommentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/CommentMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/global.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/global.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/mods/detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/mods/detail.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/catalog.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index/catalog.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/common/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/common/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/jie/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/jie/detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user/message.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/user/message.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application-develop.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application-develop.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application-produce.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application-produce.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/MtcommunityApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/MtcommunityApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/advice/ExceptionAdvice.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/advice/ExceptionAdvice.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/config/RedisConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/config/RedisConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/config/WebMvcConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/config/WebMvcConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/controller/CollectionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/controller/CollectionController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/controller/CommentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/controller/CommentController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/controller/FileController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/controller/FileController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/controller/IndexController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/controller/IndexController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/controller/LikeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/controller/LikeController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/controller/LoginController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/controller/PostController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/controller/PostController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/dto/ResultTypeDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/dto/ResultTypeDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/enums/CustomizeErrorCode.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/enums/CustomizeErrorCode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/enums/ScoreType.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/enums/ScoreType.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/interceptor/LoginTicketInterceptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/interceptor/LoginTicketInterceptor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/mapper/ColumnMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/mapper/ColumnMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/kafka/EventConsumer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/kafka/EventConsumer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/kafka/EventProducer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/kafka/EventProducer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/mapper/CommentMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/mapper/CommentMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/mapper/LoginTicketMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/mapper/LoginTicketMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/mapper/PostMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/mapper/PostMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/mapper/UserMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/mapper/UserMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/model/Column.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/model/Column.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/model/Comment.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/model/Comment.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/model/FileMessage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/model/FileMessage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/model/LoginTicket.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/model/LoginTicket.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/model/Post.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/model/Post.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/model/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/provide/AliCloudProvide.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/provide/AliCloudProvide.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/model/Message.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/model/Message.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/service/CollectionService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/service/CollectionService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/service/ColumnService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/service/ColumnService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/service/CommentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/service/CommentService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/service/ElasticSearchService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/service/ElasticSearchService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/service/LikeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/service/LikeService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/service/PostService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/service/PostService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/service/SignInService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/service/SignInService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/service/MessageService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/service/MessageService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/utils/CommunityUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/utils/CommunityUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/utils/CookieUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/utils/CookieUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/utils/HTMLUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/utils/HTMLUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/utils/HostHolder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/utils/HostHolder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/utils/MailClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/utils/MailClient.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/utils/Page.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/utils/Page.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/utils/RedisKeyUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/utils/RedisKeyUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/utils/SensitiveFilter$TrieNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/utils/SensitiveFilter$TrieNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/utils/SensitiveFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/utils/SensitiveFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/CommentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/CommentMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/global.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/global.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/mods/detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/mods/detail.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/catalog.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/common/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/common/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/jie/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/jie/detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/user/message.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/user/message.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -80,7 +79,7 @@
     <option name="MAKE_PROJECT_ON_SAVE" value="true" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/mtcommunity$MtcommunityApplication.ic" NAME="MtcommunityApplication Coverage Results" MODIFIED="1595429416695" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/mtcommunity$MtcommunityApplication.ic" NAME="MtcommunityApplication Coverage Results" MODIFIED="1595692449350" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -102,7 +101,8 @@
         <counts>
           <entry key="project.closed" value="31" />
           <entry key="project.open.time.1" value="1" />
-          <entry key="project.open.time.11" value="1" />
+          <entry key="project.open.time.10" value="2" />
+          <entry key="project.open.time.11" value="2" />
           <entry key="project.open.time.12" value="6" />
           <entry key="project.open.time.13" value="4" />
           <entry key="project.open.time.14" value="2" />
@@ -116,75 +116,75 @@
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.8" value="2" />
-          <entry key="project.opened" value="32" />
+          <entry key="project.opened" value="35" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="Dockerfile" value="3" />
-          <entry key="class" value="122" />
+          <entry key="class" value="151" />
           <entry key="cmd" value="2" />
-          <entry key="css" value="25" />
+          <entry key="css" value="27" />
           <entry key="gitignore" value="1" />
-          <entry key="html" value="269" />
-          <entry key="java" value="538" />
+          <entry key="html" value="288" />
+          <entry key="java" value="672" />
           <entry key="jpg" value="6" />
-          <entry key="js" value="37" />
-          <entry key="md" value="22" />
+          <entry key="js" value="40" />
+          <entry key="md" value="24" />
           <entry key="mvnw" value="1" />
           <entry key="png" value="15" />
           <entry key="pom" value="1" />
-          <entry key="properties" value="39" />
+          <entry key="properties" value="42" />
           <entry key="ts" value="1" />
           <entry key="txt" value="2" />
-          <entry key="xml" value="85" />
+          <entry key="xml" value="98" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="122" />
-          <entry key="CSS" value="25" />
+          <entry key="CLASS" value="151" />
+          <entry key="CSS" value="27" />
           <entry key="Dockerfile" value="3" />
           <entry key="Enforced Plain Text" value="3" />
-          <entry key="HTML" value="266" />
+          <entry key="HTML" value="285" />
           <entry key="Image" value="21" />
-          <entry key="JAVA" value="538" />
-          <entry key="JavaScript" value="37" />
-          <entry key="Markdown" value="22" />
+          <entry key="JAVA" value="672" />
+          <entry key="JavaScript" value="40" />
+          <entry key="Markdown" value="24" />
           <entry key="PLAIN_TEXT" value="6" />
-          <entry key="Properties" value="39" />
+          <entry key="Properties" value="42" />
           <entry key="TypeScript" value="1" />
-          <entry key="XML" value="86" />
+          <entry key="XML" value="99" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Dockerfile" value="113" />
           <entry key="class" value="6" />
-          <entry key="css" value="94" />
+          <entry key="css" value="136" />
           <entry key="dummy" value="12" />
-          <entry key="html" value="7908" />
-          <entry key="java" value="19151" />
-          <entry key="js" value="101" />
-          <entry key="md" value="1439" />
-          <entry key="properties" value="516" />
-          <entry key="xml" value="3449" />
+          <entry key="html" value="8738" />
+          <entry key="java" value="21422" />
+          <entry key="js" value="235" />
+          <entry key="md" value="1890" />
+          <entry key="properties" value="567" />
+          <entry key="xml" value="3917" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CLASS" value="6" />
-          <entry key="CSS" value="94" />
+          <entry key="CSS" value="136" />
           <entry key="Dockerfile" value="113" />
-          <entry key="HTML" value="7905" />
-          <entry key="JAVA" value="19151" />
-          <entry key="JavaScript" value="101" />
-          <entry key="Markdown" value="1439" />
+          <entry key="HTML" value="8735" />
+          <entry key="JAVA" value="21422" />
+          <entry key="JavaScript" value="235" />
+          <entry key="Markdown" value="1890" />
           <entry key="PLAIN_TEXT" value="12" />
-          <entry key="Properties" value="516" />
+          <entry key="Properties" value="567" />
           <entry key="SQL" value="159" />
           <entry key="ThymeleafExpressions" value="3" />
-          <entry key="XML" value="3290" />
+          <entry key="XML" value="3758" />
         </counts>
       </usages-collector>
     </session>
@@ -195,94 +195,26 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/service/CommentService.java">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/application-develop.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="837">
-              <caret line="65" selection-start-line="65" selection-end-line="65" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="560">
-                <caret line="80" column="12" selection-start-line="80" selection-start-column="12" selection-end-line="80" selection-end-column="12" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/controller/CollectionController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="533">
-              <caret line="36" column="31" lean-forward="true" selection-start-line="36" selection-start-column="31" selection-end-line="36" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/service/CollectionService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="700">
-              <caret line="30" column="27" lean-forward="true" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/kafka/EventConsumer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-654">
-              <caret line="29" column="13" lean-forward="true" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/controller/LikeController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="589">
-              <caret line="33" column="23" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/service/LikeService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="421">
-              <caret line="45" column="35" lean-forward="true" selection-start-line="45" selection-start-column="35" selection-end-line="45" selection-end-column="35" />
+            <state relative-caret-position="130">
+              <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/model/Event.java">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/user/message.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="392">
-              <caret line="14" column="38" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
+            <state relative-caret-position="280">
+              <caret line="74" column="218" selection-start-line="74" selection-start-column="218" selection-end-line="74" selection-end-column="218" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="n#style#0;n#i#0;n#blockquote#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#i#1;n#blockquote#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#i#2;n#blockquote#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#i#3;n#blockquote#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#i#4;n#blockquote#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/utils/RedisKeyUtil.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="813">
-              <caret line="40" selection-start-line="40" selection-end-line="40" />
             </state>
           </provider>
         </entry>
@@ -290,8 +222,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/jie/detail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="753">
-              <caret line="140" column="69" selection-start-line="140" selection-start-column="69" selection-end-line="140" selection-end-column="69" />
+            <state relative-caret-position="280">
+              <caret line="130" column="19" lean-forward="true" selection-start-line="130" selection-start-column="19" selection-end-line="130" selection-end-column="56" />
               <folding>
                 <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#textarea#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -324,13 +256,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>class=&quot;|</find>
-      <find>selectPostRows</find>
-      <find>签到</find>
-      <find>.appendChild</find>
-      <find>编辑此</find>
-      <find>user_id</find>
-      <find>LAY_signin</find>
       <find>/signIn</find>
       <find>sigIned</find>
       <find>signin</find>
@@ -345,15 +270,22 @@
       <find>configure</find>
       <find>web</find>
       <find>form</find>
-      <find>&lt;form</find>
       <find>insertComment</find>
       <find>insertFields</find>
       <find>post</find>
       <find>selectCommentsByEntity</find>
       <find>编辑</find>
-      <find>删除</find>
       <find>delete</find>
       <find>qi</find>
+      <find>&lt;form</find>
+      <find>increaseLikeCount</find>
+      <find>insertMassage</find>
+      <find>updateStatusByid</find>
+      <find>回复</find>
+      <find>#</find>
+      <find>format</find>
+      <find>删除</find>
+      <find>onclick</find>
     </findStrings>
     <replaceStrings>
       <replace>static</replace>
@@ -374,16 +306,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/controller/FileController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/common/footer.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/user/collection.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/common/column.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/utils/CustomizeErrorCode.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/dto/ResultTypeDTO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/enums/CustomizeErrorCode.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/enums/ScoreType.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/model/User.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/mapper/UserMapper.java" />
         <option value="$PROJECT_DIR$/src/main/resources/static/mods/editormd.min.js" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/jie/edit.html" />
@@ -391,40 +313,50 @@
         <option value="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/service/SignInService.java" />
         <option value="$PROJECT_DIR$/src/main/resources/static/mods/index.js" />
         <option value="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/controller/SignInController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/service/UserService.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/user/index.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/controller/UserController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/jie/add.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/user/home.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/index.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/controller/IndexController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/service/CollectionService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/SpringBootApplicationWar.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/model/Comment.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/service/PostService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/mapper/PostMapper.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/PostMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/utils/CommunityConstant.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/model/Event.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/utils/RedisKeyUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/service/ElasticSearchService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/kafka/EventProducer.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/application-produce.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/model/Comment.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/css/global.css" />
         <option value="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/controller/PostController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/controller/LikeController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/CommentMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/mapper/CommentMapper.java" />
         <option value="$PROJECT_DIR$/src/main/resources/static/mods/detail.js" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/controller/CommentController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/service/CommentService.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/application-produce.properties" />
-        <option value="$PROJECT_DIR$/src/main/resources/application-develop.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/kafka/EventProducer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/utils/CommunityConstant.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/service/UserService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/controller/LoginController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/common/header.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/model/Message.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/service/MessageService.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/controller/CommentController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/kafka/EventConsumer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/service/ElasticSearchService.java" />
-        <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/utils/RedisKeyUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/jie/detail.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/controller/LikeController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/service/LikeService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/model/Event.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/service/CollectionService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/service/MessageService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/mapper/MessageMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/jie/detail.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/MessageMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/controller/MessageController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/config/WebMvcConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/index/catalog.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/controller/IndexController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/application-develop.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/interceptor/LoginTicketInterceptor.java" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/user/message.html" />
       </list>
     </option>
   </component>
@@ -474,9 +406,9 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="539" />
-    <option name="y" value="26" />
-    <option name="width" value="1936" />
+    <option name="x" value="394" />
+    <option name="y" value="45" />
+    <option name="width" value="1934" />
     <option name="height" value="1021" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -510,7 +442,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -551,6 +482,24 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="mtcommunity" type="462c0819:PsiDirectoryNode" />
+              <item name="advice" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mtcommunity" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mtcommunity" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="mtcommunity" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mtcommunity" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mtcommunity" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="mtcommunity" type="462c0819:PsiDirectoryNode" />
               <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -560,16 +509,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="mtcommunity" type="462c0819:PsiDirectoryNode" />
-              <item name="kafka" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mtcommunity" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mtcommunity" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="mtcommunity" type="462c0819:PsiDirectoryNode" />
-              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+              <item name="interceptor" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="mtcommunity" type="b2602c69:ProjectViewProjectNode" />
@@ -585,24 +525,6 @@
               <item name="mtcommunity" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="mtcommunity" type="462c0819:PsiDirectoryNode" />
-              <item name="provide" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mtcommunity" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mtcommunity" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="mtcommunity" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mtcommunity" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mtcommunity" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -611,7 +533,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="mtcommunity" type="b2602c69:ProjectViewProjectNode" />
@@ -619,18 +541,14 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="jie" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mtcommunity" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mtcommunity" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="mods" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -640,10 +558,10 @@
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
-    <property name="SearchEverywhereHistoryKey" value="comment&#9;FILE&#9;file://D:/workspace/IDEA-works/mtcommunity/src/main/resources/mapper/CommentMapper.xml&#10;index.&#9;FILE&#9;file://D:/workspace/IDEA-works/mtcommunity/src/main/resources/templates/index.html&#10;co&#9;FILE&#9;file://D:/workspace/IDEA-works/mtcommunity/src/main/resources/mapper/CommentMapper.xml&#10;index&#9;FILE&#9;file://D:/workspace/IDEA-works/mtcommunity/src/main/java/com/mutong/mtcommunity/controller/IndexController.java&#10;user&#9;FILE&#9;file://D:/workspace/IDEA-works/mtcommunity/src/main/resources/mapper/UserMapper.xml&#10;comm&#9;FILE&#9;file://D:/workspace/IDEA-works/mtcommunity/src/main/resources/mapper/CommentMapper.xml&#10;de&#9;FILE&#9;file://D:/workspace/IDEA-works/mtcommunity/src/main/resources/templates/jie/detail.html&#10;commentc&#9;FILE&#9;file://D:/workspace/IDEA-works/mtcommunity/src/main/java/com/mutong/mtcommunity/controller/CommentController.java&#10;postm&#9;FILE&#9;file://D:/workspace/IDEA-works/mtcommunity/src/main/resources/mapper/PostMapper.xml&#10;upload&#9;FILE&#9;file://D:/workspace/IDEA-works/mtcommunity/src/main/resources/static/layui/lay/modules/upload.js&#10;add&#9;FILE&#9;file://D:/workspace/IDEA-works/mtcommunity/src/main/resources/templates/jie/add.html" />
+    <property name="SearchEverywhereHistoryKey" value="detail.&#9;FILE&#9;file://D:/workspace/IDEA-works/mtcommunity/src/main/resources/templates/jie/detail.html&#10;comm&#9;FILE&#9;file://D:/workspace/IDEA-works/mtcommunity/src/main/resources/mapper/CommentMapper.xml&#10;detailjs&#9;FILE&#9;file://D:/workspace/IDEA-works/mtcommunity/src/main/resources/static/mods/detail.js&#10;comment&#9;FILE&#9;file://D:/workspace/IDEA-works/mtcommunity/src/main/resources/mapper/CommentMapper.xml&#10;index.&#9;FILE&#9;file://D:/workspace/IDEA-works/mtcommunity/src/main/resources/templates/index.html&#10;co&#9;FILE&#9;file://D:/workspace/IDEA-works/mtcommunity/src/main/resources/mapper/CommentMapper.xml&#10;index&#9;FILE&#9;file://D:/workspace/IDEA-works/mtcommunity/src/main/java/com/mutong/mtcommunity/controller/IndexController.java&#10;user&#9;FILE&#9;file://D:/workspace/IDEA-works/mtcommunity/src/main/resources/mapper/UserMapper.xml&#10;de&#9;FILE&#9;file://D:/workspace/IDEA-works/mtcommunity/src/main/resources/templates/jie/detail.html&#10;commentc&#9;FILE&#9;file://D:/workspace/IDEA-works/mtcommunity/src/main/java/com/mutong/mtcommunity/controller/CommentController.java&#10;postm&#9;FILE&#9;file://D:/workspace/IDEA-works/mtcommunity/src/main/resources/mapper/PostMapper.xml&#10;upload&#9;FILE&#9;file://D:/workspace/IDEA-works/mtcommunity/src/main/resources/static/layui/lay/modules/upload.js&#10;add&#9;FILE&#9;file://D:/workspace/IDEA-works/mtcommunity/src/main/resources/templates/jie/add.html" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1595638414364" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1595730083668" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../jcommunity" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -658,10 +576,10 @@
       <recent name="com.mutong.mtcommunity.utils" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\workspace\IDEA-works\mtcommunity\src\main\resources\mapper" />
       <recent name="D:\workspace\IDEA-works\mtcommunity\src\main\resources\templates\jie" />
       <recent name="D:\workspace\IDEA-works\mtcommunity\src\main\resources" />
       <recent name="D:\workspace\IDEA-works\mtcommunity\src\main\resources\static\mods" />
-      <recent name="D:\workspace\IDEA-works\mtcommunity\src\main\resources\mapper" />
       <recent name="D:\workspace\IDEA-works\mtcommunity\src\main\resources\static\css" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -669,11 +587,11 @@
       <recent name="com.mutong.mtcommunity.utils" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\workspace\IDEA-works\mtcommunity\src\main\resources\templates\index" />
       <recent name="D:\workspace\IDEA-works\mtcommunity\src\main\resources\templates\other" />
       <recent name="D:\workspace\IDEA-works\mtcommunity\src\main\resources\templates" />
       <recent name="D:\workspace\IDEA-works\mtcommunity\src\main\resources\static\editormd\" />
       <recent name="D:\workspace\IDEA-works\mtcommunity\src\main\resources\static" />
-      <recent name="D:\workspace\IDEA-works\mtcommunity\src\main\resources\static\images" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -805,12 +723,15 @@
       <workItem from="1594981116352" duration="767000" />
       <workItem from="1595424471194" duration="13347000" />
       <workItem from="1595553115113" duration="21509000" />
-      <workItem from="1595594054208" duration="3089000" />
+      <workItem from="1595594054208" duration="13667000" />
+      <workItem from="1595656721266" duration="11180000" />
+      <workItem from="1595671822621" duration="5035000" />
+      <workItem from="1595689547048" duration="9306000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="404681000" />
+    <option name="totallyTimeSpent" value="440780000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -825,7 +746,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.9251627" visible="true" weight="0.18923241" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.9251627" visible="true" weight="0.195629" />
       <window_info id="Structure" order="1" sideWeight="0.088757396" side_tool="true" weight="0.17430703" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -835,17 +756,17 @@
       <window_info id="Web" order="7" sideWeight="0.5005959" side_tool="true" weight="0.22974414" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.02603037" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4989339" weight="0.329718" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.5759219" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4989339" weight="0.32919955" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.329718" />
-      <window_info anchor="bottom" id="Spring" order="7" weight="0.329718" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49946696" weight="0.13866967" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32919955" />
+      <window_info anchor="bottom" id="Spring" order="7" weight="0.32919955" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49946696" weight="0.32919955" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5010661" side_tool="true" weight="0.6475054" />
-      <window_info anchor="bottom" id="Problems" order="11" weight="0.329718" />
-      <window_info anchor="bottom" id="Java Enterprise" order="12" weight="0.329718" />
+      <window_info anchor="bottom" id="Problems" order="11" weight="0.32919955" />
+      <window_info anchor="bottom" id="Java Enterprise" order="12" weight="0.32919955" />
       <window_info anchor="bottom" id="JProfiler" order="13" />
       <window_info anchor="bottom" id="Database Changes" order="14" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="15" show_stripe_button="false" />
@@ -923,15 +844,10 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/service/CommentService.java</url>
-          <line>42</line>
+          <url>file://$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/kafka/EventConsumer.java</url>
+          <line>58</line>
           <properties />
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/main/resources/static/mods/detail.js</url>
-          <line>6</line>
-          <option name="timeStamp" value="22" />
+          <option name="timeStamp" value="39" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
@@ -944,6 +860,7 @@
         <watch expression="fileMessage" />
         <watch expression="((BindingException)((MyBatisSystemException)e).cause).detailMessage" custom="org.apache.ibatis.binding.BindingException,org.mybatis.spring.MyBatisSystemException" />
         <watch expression="((BadSqlGrammarException)((InvocationTargetException)ex).target).detailMessage" custom="java.lang.reflect.InvocationTargetException,org.springframework.jdbc.BadSqlGrammarException" />
+        <watch expression="list" />
       </configuration>
     </watches-manager>
   </component>
@@ -952,63 +869,183 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/model/Post.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/kafka/EventProducer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="33" column="20" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="20" />
+        <state relative-caret-position="526">
+          <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/SpringBootApplicationWar.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/CommentMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        <state relative-caret-position="760">
+          <caret line="29" column="39" selection-start-line="29" selection-start-column="39" selection-end-line="29" selection-end-column="39" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/model/Comment.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="19" selection-start-column="19" selection-end-column="19" />
+        <state relative-caret-position="-1344">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/controller/PostController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-269">
+          <caret line="131" column="33" selection-start-line="131" selection-start-column="22" selection-end-line="131" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/model/Message.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="448">
+          <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/model/User.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/service/LikeService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="25" column="28" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="28" />
+        <state relative-caret-position="98">
+          <caret line="54" column="16" selection-start-line="54" selection-start-column="16" selection-end-line="54" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/ColumnMapper.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/user/login.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/service/PostService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/service/MessageService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
-          <caret line="98" column="29" selection-start-line="98" selection-start-column="29" selection-end-line="98" selection-end-column="29" />
+        <state relative-caret-position="532">
+          <caret line="29" column="53" selection-start-line="29" selection-start-column="53" selection-end-line="29" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#700#701#0" expanded="true" />
+            <element signature="e#760#761#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/mapper/PostMapper.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/model/Comment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="631">
-          <caret line="42" column="27" selection-start-line="42" selection-start-column="9" selection-end-line="42" selection-end-column="27" />
+        <state relative-caret-position="448">
+          <caret line="18" column="26" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/PostMapper.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/model/Post.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="655">
-          <caret line="107" column="19" lean-forward="true" selection-start-line="107" selection-start-column="19" selection-end-line="107" selection-end-column="19" />
+        <state relative-caret-position="423">
+          <caret line="23" column="24" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/common/footer.html">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1904">
+          <caret line="93" selection-start-line="93" selection-end-line="93" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/common/header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="335">
+          <caret line="60" column="50" selection-start-line="60" selection-start-column="50" selection-end-line="60" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/MessageMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="22" column="92" selection-start-line="22" selection-start-column="92" selection-end-line="22" selection-end-column="92" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/mapper/MessageMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="15" column="11" lean-forward="true" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-websocket/9.0.35/tomcat-embed-websocket-9.0.35.jar!/org/apache/tomcat/websocket/server/WsFilter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="48" selection-start-line="48" selection-end-line="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.2.6.RELEASE/spring-web-5.2.6.RELEASE.jar!/org/springframework/web/filter/FormContentFilter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="59" selection-start-line="59" selection-end-line="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.2.6.RELEASE/spring-web-5.2.6.RELEASE.jar!/org/springframework/web/filter/CharacterEncodingFilter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="86" selection-start-line="86" selection-end-line="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/9.0.35/tomcat-embed-core-9.0.35.jar!/org/apache/catalina/core/StandardContextValve.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="48" selection-start-line="48" selection-end-line="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/9.0.35/tomcat-embed-core-9.0.35.jar!/org/apache/catalina/authenticator/AuthenticatorBase.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="351" selection-start-line="351" selection-end-line="351" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/9.0.35/tomcat-embed-core-9.0.35.jar!/org/apache/catalina/core/StandardHostValve.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="38" column="22" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/9.0.35/tomcat-embed-core-9.0.35.jar!/org/apache/catalina/valves/ErrorReportValve.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="67" selection-start-line="67" selection-end-line="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/9.0.35/tomcat-embed-core-9.0.35.jar!/org/apache/catalina/core/StandardEngineValve.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/9.0.35/tomcat-embed-core-9.0.35.jar!/org/apache/catalina/connector/CoyoteAdapter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="436" selection-start-line="436" selection-end-line="436" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/9.0.35/tomcat-embed-core-9.0.35.jar!/org/apache/coyote/http11/Http11Processor.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="224" selection-start-line="224" selection-end-line="224" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/controller/FileController.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1017,257 +1054,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.2.6.RELEASE/spring-webmvc-5.2.6.RELEASE.jar!/org/springframework/web/servlet/mvc/method/annotation/RequestMappingHandlerAdapter.class">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/controller/MessageController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="505" column="27" selection-start-line="505" selection-start-column="27" selection-end-line="505" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.2.6.RELEASE/spring-webmvc-5.2.6.RELEASE.jar!/org/springframework/web/servlet/DispatcherServlet.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="516" selection-start-line="516" selection-end-line="516" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/5.2.6.RELEASE/spring-core-5.2.6.RELEASE.jar!/org/springframework/cglib/proxy/MethodProxy.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="101">
-          <caret line="103" selection-start-line="103" selection-end-line="103" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/5.2.6.RELEASE/spring-aop-5.2.6.RELEASE.jar!/org/springframework/aop/framework/CglibAopProxy.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="97">
-          <caret line="446" selection-start-line="446" selection-end-line="446" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/5.2.6.RELEASE/spring-aop-5.2.6.RELEASE.jar!/org/springframework/aop/framework/ReflectiveMethodInvocation.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="69" selection-start-line="69" selection-end-line="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/controller/PostController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-517">
-          <caret line="129" column="37" selection-start-line="129" selection-start-column="37" selection-end-line="129" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="75" column="66" lean-forward="true" selection-start-line="75" selection-start-column="8" selection-end-line="75" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/controller/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="58" column="23" selection-start-line="58" selection-start-column="18" selection-end-line="58" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/controller/IndexController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1545">
-          <caret line="42" column="31" selection-start-line="42" selection-start-column="26" selection-end-line="42" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.2.6.RELEASE/spring-web-5.2.6.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="55">
-          <caret line="101" selection-start-line="101" selection-end-line="101" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="16" column="42" lean-forward="true" selection-start-line="16" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/interceptor/LoginTicketInterceptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/mapper/CommentMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
+        <state relative-caret-position="1149">
+          <caret line="67" column="31" selection-start-line="67" selection-start-column="21" selection-end-line="67" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application-produce.properties">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/controller/LikeController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1344">
-          <caret line="48" column="45" selection-start-line="48" selection-start-column="45" selection-end-line="48" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/CommentMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1260">
-          <caret line="45" column="40" selection-start-line="45" selection-start-column="34" selection-end-line="45" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/controller/CommentController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1288">
-          <caret line="59" column="42" selection-start-line="59" selection-start-column="42" selection-end-line="59" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/utils/CommunityUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1036">
-          <caret line="44" column="25" selection-start-line="44" selection-start-column="25" selection-end-line="44" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/mods/detail.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="10" column="39" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application-develop.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="50" selection-start-line="50" selection-end-line="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/kafka/spring-kafka/2.5.0.RELEASE/spring-kafka-2.5.0.RELEASE.jar!/org/springframework/kafka/core/KafkaTemplate.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="210" column="46" selection-start-line="210" selection-start-column="46" selection-end-line="210" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/utils/CommunityConstant.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="63" column="27" selection-start-line="63" selection-start-column="11" selection-end-line="63" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/kafka/EventProducer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="515">
-          <caret line="21" column="41" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#306#307#0" expanded="true" />
-            <element signature="e#390#391#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/model/Message.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/service/MessageService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/advice/ExceptionAdvice.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-80">
-          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/config/FileSizeConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/config/KaptchaConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/config/RedisConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/config/WebMvcConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="27" column="62" selection-start-line="27" selection-start-column="62" selection-end-line="27" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/service/ElasticSearchService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/service/CommentService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="837">
-          <caret line="65" selection-start-line="65" selection-end-line="65" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="560">
-            <caret line="80" column="12" selection-start-line="80" selection-start-column="12" selection-end-line="80" selection-end-column="12" />
-          </first_editor>
-          <second_editor />
+        <state relative-caret-position="589">
+          <caret line="44" column="29" selection-start-line="44" selection-start-column="29" selection-end-line="44" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -1278,27 +1078,152 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/service/CollectionService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/advice/ExceptionAdvice.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="700">
-          <caret line="30" column="27" lean-forward="true" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="27" />
+        <state relative-caret-position="280">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/kafka/EventConsumer.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/controller/LoginController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-654">
-          <caret line="29" column="13" lean-forward="true" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
+        <state relative-caret-position="1143">
+          <caret line="77" column="26" lean-forward="true" selection-start-line="77" selection-start-column="26" selection-end-line="77" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/controller/CommentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="393">
+          <caret line="49" column="34" lean-forward="true" selection-start-line="49" selection-start-column="34" selection-end-line="49" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/lang/Exception.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="44" column="13" selection-start-line="44" selection-start-column="13" selection-end-line="44" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.2.6.RELEASE/spring-webmvc-5.2.6.RELEASE.jar!/org/springframework/web/servlet/FrameworkServlet.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="402">
+          <caret line="518" selection-start-line="518" selection-end-line="518" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.2.6.RELEASE/spring-web-5.2.6.RELEASE.jar!/org/springframework/web/filter/RequestContextFilter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="49" selection-start-line="49" selection-end-line="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.2.6.RELEASE/spring-web-5.2.6.RELEASE.jar!/org/springframework/web/filter/OncePerRequestFilter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="23" column="22" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/9.0.35/tomcat-embed-core-9.0.35.jar!/org/apache/catalina/core/ApplicationFilterChain.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="95" selection-start-line="95" selection-end-line="95" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/9.0.35/tomcat-embed-core-9.0.35.jar!/org/apache/catalina/core/StandardWrapperValve.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="187" selection-start-line="187" selection-end-line="187" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.2.6.RELEASE/spring-webmvc-5.2.6.RELEASE.jar!/org/springframework/web/servlet/DispatcherServlet.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="515" selection-start-line="515" selection-end-line="515" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/utils/CookieUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application-develop.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.2.6.RELEASE/spring-webmvc-5.2.6.RELEASE.jar!/org/springframework/web/servlet/HandlerExecutionChain.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="559">
+          <caret line="93" column="17" lean-forward="true" selection-start-line="93" selection-start-column="17" selection-end-line="93" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index/catalog.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/config/WebMvcConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="17" column="26" lean-forward="true" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.2.6.RELEASE/spring-webmvc-5.2.6.RELEASE.jar!/org/springframework/web/servlet/HandlerInterceptor.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="16" column="27" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/interceptor/LoginTicketInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-76">
+          <caret line="39" selection-start-line="39" selection-end-line="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/controller/IndexController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="463">
+          <caret line="106" selection-start-line="106" selection-end-line="106" />
+          <folding>
+            <element signature="e#1321#1322#0" expanded="true" />
+            <element signature="e#1361#1362#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="2366">
+            <caret line="127" column="37" lean-forward="true" selection-start-line="127" selection-start-column="37" selection-end-line="127" selection-end-column="37" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/mods/detail.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/jie/detail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="753">
-          <caret line="140" column="69" selection-start-line="140" selection-start-column="69" selection-end-line="140" selection-end-column="69" />
+        <state relative-caret-position="280">
+          <caret line="130" column="19" lean-forward="true" selection-start-line="130" selection-start-column="19" selection-end-line="130" selection-end-column="56" />
           <folding>
             <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#textarea#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1315,33 +1240,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/utils/RedisKeyUtil.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/user/message.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="813">
-          <caret line="40" selection-start-line="40" selection-end-line="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/controller/LikeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="589">
-          <caret line="33" column="23" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/service/LikeService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="421">
-          <caret line="45" column="35" lean-forward="true" selection-start-line="45" selection-start-column="35" selection-end-line="45" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/model/Event.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="14" column="38" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
+        <state relative-caret-position="280">
+          <caret line="74" column="218" selection-start-line="74" selection-start-column="218" selection-end-line="74" selection-end-column="218" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#blockquote#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#1;n#blockquote#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#2;n#blockquote#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#3;n#blockquote#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#4;n#blockquote#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

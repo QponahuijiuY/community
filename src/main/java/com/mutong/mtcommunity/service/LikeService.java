@@ -24,8 +24,6 @@ public class LikeService extends RedisKeyUtil implements CommunityConstant {
     @Resource
     private HostHolder hostHolder;
     @Resource
-    private UserService userService;
-    @Resource
     private PostService postService;
     @Resource
     private EventProducer eventProducer;
@@ -45,6 +43,7 @@ public class LikeService extends RedisKeyUtil implements CommunityConstant {
             redisTemplate.opsForSet().add(likePostKey,userId);
             Event event = new Event();
             event.setTopic(TOPIC_LIKE);
+            //点赞帖子
             event.setEntityType(1);
             event.setUserId(hostHolder.getUser().getId());
             event.setEntityId(postId);
@@ -58,10 +57,13 @@ public class LikeService extends RedisKeyUtil implements CommunityConstant {
         Boolean member = redisTemplate.opsForSet().isMember(likeCommentKey, userId);
         if (member){
             redisTemplate.opsForSet().remove(likeCommentKey,userId);
+            commentService.decreaseLikeCount(commentId,1);
         }else{
             redisTemplate.opsForSet().add(likeCommentKey,userId);
+            commentService.increaseLikeCount(commentId,1);
             Event event = new Event();
             event.setTopic(TOPIC_LIKE);
+            //点赞评论
             event.setEntityType(2);
             event.setUserId(hostHolder.getUser().getId());
             event.setEntityId(commentId);

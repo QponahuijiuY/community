@@ -2,6 +2,7 @@ package com.mutong.mtcommunity.controller;
 
 import com.google.code.kaptcha.Producer;
 import com.mutong.mtcommunity.model.User;
+import com.mutong.mtcommunity.service.MessageService;
 import com.mutong.mtcommunity.service.UserService;
 import com.mutong.mtcommunity.utils.CommunityConstant;
 import org.apache.maven.surefire.shade.org.apache.commons.lang3.StringUtils;
@@ -16,6 +17,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import javax.annotation.Resource;
 import javax.imageio.ImageIO;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletResponse;
@@ -42,6 +44,8 @@ public class LoginController implements CommunityConstant {
     private Producer kaptchaProducer;
     @Value("${server.servlet.context-path}")
     private String contextPath;
+    @Resource
+    private MessageService messageService;
 
     /**
      * 跳转到注册页面

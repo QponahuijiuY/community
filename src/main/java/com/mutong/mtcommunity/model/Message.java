@@ -14,9 +14,10 @@ public class Message {
     private int id;
     private int fromId;
     private int toId;
-    private String conversationId;
-    private String content;
-    //已读,未读,删除
+    private int content;
+    //已读1,未读0 ,删除 2
     private int status;
+    private String topic;
     private Date createTime;
+    private int entityId;
 }

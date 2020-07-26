@@ -2,6 +2,7 @@ package com.mutong.mtcommunity.interceptor;
 
 import com.mutong.mtcommunity.model.LoginTicket;
 import com.mutong.mtcommunity.model.User;
+import com.mutong.mtcommunity.service.MessageService;
 import com.mutong.mtcommunity.service.UserService;
 import com.mutong.mtcommunity.utils.CookieUtil;
 import com.mutong.mtcommunity.utils.HostHolder;
@@ -25,9 +26,17 @@ public class LoginTicketInterceptor implements HandlerInterceptor {
     private UserService userService;
     @Resource
     private HostHolder hostHolder;
+    @Resource
+    private MessageService messageService;
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         // 从cookie中获取凭证
+
+        String urlString = request.getRequestURI();
+//        if (urlString.endsWith("")) {
+//
+//
+//        }
         String ticket = CookieUtil.getValue(request, "ticket");
         if (ticket != null) {
             // 查询凭证
@@ -48,7 +57,12 @@ public class LoginTicketInterceptor implements HandlerInterceptor {
     @Override
     public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView) throws Exception {
         User user = hostHolder.getUser();
+        int count = 0;
+        if (user != null){
+            count = messageService.selectMessageCountByToId(user.getId());
+        }
         if (user != null && modelAndView != null) {
+            modelAndView.addObject("unReadcount",count);
             modelAndView.addObject("loginUser", user);
         }
     }

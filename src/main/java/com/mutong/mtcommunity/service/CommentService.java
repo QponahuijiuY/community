@@ -63,7 +63,15 @@ public class CommentService implements CommunityConstant {
     }
 
     public int deleteCommentById(int id,int status) {
-
         return commentMapper.updateStatusById(id,status);
+    }
+
+    public void increaseLikeCount(int commentId, int i) {
+        commentMapper.increaseLikeCount(commentId,i);
+    }
+
+    public void decreaseLikeCount(int commentId, int i) {
+
+        commentMapper.decreaseLikeCount(commentId,i);
     }
 }

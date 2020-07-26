@@ -32,7 +32,7 @@
       <th:block th:if="${loginUser==null}">
       <!-- 未登入的状态 -->
       <li class="layui-nav-item">
-        <a class="iconfont icon-touxiang layui-hide-xs" href="../user/login.html"></a>
+        <a class="iconfont icon-touxiang layui-hide-xs" th:href="@{/login}"></a>
       </li>
       <li class="layui-nav-item">
         <a th:href="@{/login}">登入</a>
@@ -51,6 +51,12 @@
 
       <!-- 登入后的状态 -->
       <th:block th:if="${loginUser!=null}">
+        <li class="layui-nav-item" style="margin-right: 20px" th:if="${unReadcount != 0}">
+          <a href="/message">
+            <span class="layui-hide-xs">有新消息</span>
+            <span class="layui-badge" th:text="${unReadcount}"></span>
+          </a>
+        </li>
         <li class="layui-nav-item" >
           <a class="fly-nav-avatar" th:href="@{/user}">
             <cite th:text="${loginUser.nickname}" >贤心</cite>

@@ -6,11 +6,11 @@
 
 
     <sql id="insertFields">
-        user_id, entity_type, entity_id,target_id,content,status,create_time
+        user_id, entity_type, entity_id,target_id,content,status,create_time,like_count
     </sql>
 
     <sql id="selectFields">
-        id , user_id, entity_type, entity_id,target_id,content,status,create_time
+        id , user_id, entity_type, entity_id,target_id,content,status,create_time,like_count
     </sql>
 
     <select id="selectCommentsByEntity" resultType="Comment">
@@ -33,7 +33,7 @@
 
     <insert id="insertComment" parameterType="Comment" keyProperty="id">
         insert into comment (<include refid="insertFields"></include>)
-        values (#{userId},#{entityType},#{entityId},#{targetId},#{content},#{status},#{createTime})
+        values (#{userId},#{entityType},#{entityId},#{targetId},#{content},#{status},#{createTime},#{likeCount})
     </insert>
 
     <select id="selectCommentById" resultType="Comment">
@@ -44,5 +44,13 @@
 
     <update id="updateStatusById" parameterType="Integer">
     update comment set status = #{status} where id = #{id}
+    </update>
+
+    <update id="increaseLikeCount" parameterType="Integer">
+        update comment set like_count = like_count + #{i} where id = #{id}
+    </update>
+
+    <update id="decreaseLikeCount" parameterType="Integer">
+        update comment set like_count = like_count - #{i} where id = #{id}
     </update>
 </mapper>

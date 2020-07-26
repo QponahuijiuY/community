@@ -9,6 +9,8 @@ import com.mutong.mtcommunity.service.*;
 import com.mutong.mtcommunity.utils.CommunityConstant;
 import com.mutong.mtcommunity.utils.HostHolder;
 import com.mutong.mtcommunity.utils.Page;
+import com.mutong.mtcommunity.utils.RedisKeyUtil;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.Model;
@@ -27,26 +29,23 @@ import java.util.*;
  * @Date: 2020-06-22 16:16
  */
 @Controller
-public class PostController implements CommunityConstant {
+public class PostController extends RedisKeyUtil implements CommunityConstant {
     @Resource
     private HostHolder hostHolder;
-
     @Resource
     private CommentService commentService;
-
     @Resource
     private PostService postService;
-
     @Resource
     private ColumnService columnService;
-
     @Resource
     private CollectionService collectionService;
     @Resource
     private LikeService likeService;
-
     @Resource
     private UserService userService;
+    @Resource
+    private RedisTemplate redisTemplate;
     @GetMapping("/add")
     public String getAddPage(Model model){
         User user = hostHolder.getUser();
@@ -136,6 +135,10 @@ public class PostController implements CommunityConstant {
             for (Comment comment : commentList) {
                 Map<String,Object> commentVo = new HashMap<>();
                 //获取评论信息
+                String likeCommentKey = getLikeCommentKey(comment.getId());
+                boolean hasLikeComment = false;
+                hasLikeComment = redisTemplate.opsForSet().isMember(likeCommentKey, hostHolder.getUser().getId());
+                commentVo.put("hasLikeComment",hasLikeComment);
                 commentVo.put("comment",comment);
                 //获取评论作者
                 User commentUser = userService.findUserById(comment.getUserId());

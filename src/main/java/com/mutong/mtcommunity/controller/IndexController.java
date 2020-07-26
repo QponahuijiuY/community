@@ -17,7 +17,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * @description: 主页显示controller
@@ -101,7 +104,7 @@ public class IndexController {
         model.addAttribute("specialColumn",specialColumn);
 
 
-        return "index";
+        return "index/index";
     }
 
     @GetMapping("/errer")

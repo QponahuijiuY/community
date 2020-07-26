@@ -90,9 +90,15 @@
                                                 if (data.code == 0) {
                                                     // $("#collection").load(location.href + " #collection")
                                                     window.location.reload();
-                                                    $(btn).text(data)
+                                                    swal("收藏成功","收藏成功","success",{
+                                                        buttons: false,
+                                                        timer: 3000,
+                                                    });
                                                 } else {
-                                                    alert(data.msg);
+                                                    swal("操作失败","操作失败",{
+                                                        buttons: false,
+                                                        timer: 3000,
+                                                    });
                                                 }
                                             }
                                         );
@@ -106,8 +112,15 @@
                                                 if (data.code == 0) {
                                                     // $("#collection").load(location.href + " #collection")
                                                     window.location.reload();
+                                                    swal("收藏已经取消","收藏已经取消","success",{
+                                                        buttons: false,
+                                                        timer: 3000,
+                                                    });
                                                 } else {
-                                                    alert(data.msg);
+                                                    swal("操作失败","操作失败",{
+                                                        buttons: false,
+                                                        timer: 3000,
+                                                    });
                                                 }
                                             }
                                         );
@@ -130,8 +143,16 @@
                                                 if (data.code == 0) {
                                                     // $("#like").load(location.href + " #like")
                                                     window.location.reload();
+                                                    swal("点赞成功","点赞成功","success",{
+                                                        buttons: false,
+                                                        timer: 3000,
+                                                    });
                                                 } else {
-                                                    alert(data.msg);
+                                                    // alert(data.msg);
+                                                    swal("操作失败","操作失败",{
+                                                        buttons: false,
+                                                        timer: 3000,
+                                                    });
                                                 }
                                             }
                                         );
@@ -145,8 +166,16 @@
                                                 if (data.code == 0) {
                                                     // $("#like").load(location.href + " #like")
                                                     window.location.reload();
+                                                    swal("点赞已取消","点赞已取消","success",{
+                                                        buttons: false,
+                                                        timer: 3000,
+                                                    });
                                                 } else {
-                                                    alert(data.msg);
+                                                    // alert(data.msg);
+                                                    swal("操作失败","操作失败",{
+                                                        buttons: false,
+                                                        timer: 3000,
+                                                    });
                                                 }
                                             }
                                         );
@@ -199,14 +228,15 @@
                         </div>
                         <div class="jieda-reply">
               <span class="jieda-zan zanok" type="zan">
-                <i class="iconfont icon-zan"></i>
-                <em>66</em>
+                <i th:class="|iconfont icon-zan  ${cvo.hasLikeComment ? 'deeppink' : 'darkgray' } |" th:onclick="|likeComment(this,${cvo.comment.id})|"></i>
+                <em th:text="${cvo.comment.likeCount}" >66</em>
               </span>
-                            <span type="reply">
-                <i class="iconfont icon-svgmoban53"></i>
-                回复
-              </span>
-                            <div class="jieda-admin">
+
+                            <!--<span type="reply">-->
+                <!--<i class="iconfont icon-svgmoban53"></i>-->
+                <!--回复-->
+              <!--</span>-->
+                            <div class="jieda-admin" th:if="${cvo.comment.userId == loginUser.id}">
                                 <span type="del" th:onclick="|delete1(this,${cvo.comment.id});|" >删除</span>
                             </div>
 
@@ -232,7 +262,7 @@
                                 <input type="hidden" name="entityType" value="1">
                                 <input type="hidden" name="entityId" th:value="${post.id}">
 
-                                <button class="layui-btn" lay-filter="*" lay-submit>提交回复</button>
+                                <button class="layui-btn" lay-filter="*" lay-submit onmouseup="submit1()">提交回复</button>
                             </div>
                         </form>
                     </div>
