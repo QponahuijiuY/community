@@ -3,26 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="43828271-bdc9-4bde-a3de-1bf027e30423" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/controller/MessageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/controller/MessageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/mapper/MessageMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/mapper/MessageMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/service/MessageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/service/MessageService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/MessageMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/MessageMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/mods/detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/mods/detail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/mods/message.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/mods/message.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/common/column.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/common/column.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/common/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/common/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application-develop.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-develop.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application-produce.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-produce.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/jie/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/jie/detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/user/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/user/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user/message.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/user/message.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user/set.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/user/set.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/controller/MessageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/controller/MessageController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/mapper/MessageMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/mapper/MessageMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/service/MessageService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mutong/mtcommunity/service/MessageService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/MessageMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/MessageMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/mods/detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/mods/detail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/jie/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/jie/detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/user/message.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/user/message.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -86,15 +70,15 @@
           <entry key="cmd" value="2" />
           <entry key="css" value="28" />
           <entry key="gitignore" value="1" />
-          <entry key="html" value="301" />
-          <entry key="java" value="683" />
+          <entry key="html" value="308" />
+          <entry key="java" value="685" />
           <entry key="jpg" value="6" />
           <entry key="js" value="54" />
           <entry key="md" value="26" />
           <entry key="mvnw" value="1" />
           <entry key="png" value="15" />
           <entry key="pom" value="1" />
-          <entry key="properties" value="43" />
+          <entry key="properties" value="47" />
           <entry key="ts" value="1" />
           <entry key="txt" value="2" />
           <entry key="xml" value="102" />
@@ -106,13 +90,13 @@
           <entry key="CSS" value="28" />
           <entry key="Dockerfile" value="3" />
           <entry key="Enforced Plain Text" value="3" />
-          <entry key="HTML" value="298" />
+          <entry key="HTML" value="305" />
           <entry key="Image" value="21" />
-          <entry key="JAVA" value="683" />
+          <entry key="JAVA" value="685" />
           <entry key="JavaScript" value="54" />
           <entry key="Markdown" value="26" />
           <entry key="PLAIN_TEXT" value="6" />
-          <entry key="Properties" value="43" />
+          <entry key="Properties" value="47" />
           <entry key="TypeScript" value="1" />
           <entry key="XML" value="103" />
         </counts>
@@ -123,11 +107,11 @@
           <entry key="class" value="6" />
           <entry key="css" value="136" />
           <entry key="dummy" value="12" />
-          <entry key="html" value="8990" />
-          <entry key="java" value="21758" />
+          <entry key="html" value="9025" />
+          <entry key="java" value="21787" />
           <entry key="js" value="764" />
           <entry key="md" value="1890" />
-          <entry key="properties" value="567" />
+          <entry key="properties" value="601" />
           <entry key="xml" value="3990" />
         </counts>
       </usages-collector>
@@ -136,12 +120,12 @@
           <entry key="CLASS" value="6" />
           <entry key="CSS" value="136" />
           <entry key="Dockerfile" value="113" />
-          <entry key="HTML" value="8987" />
-          <entry key="JAVA" value="21758" />
+          <entry key="HTML" value="9022" />
+          <entry key="JAVA" value="21787" />
           <entry key="JavaScript" value="764" />
           <entry key="Markdown" value="1890" />
           <entry key="PLAIN_TEXT" value="12" />
-          <entry key="Properties" value="567" />
+          <entry key="Properties" value="601" />
           <entry key="SQL" value="162" />
           <entry key="ThymeleafExpressions" value="3" />
           <entry key="XML" value="3828" />
@@ -155,34 +139,35 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/static/mods/detail.js">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/controller/MessageController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="208" column="19" lean-forward="true" selection-start-line="208" selection-start-column="19" selection-end-line="208" selection-end-column="19" />
+            <state relative-caret-position="26">
+              <caret line="50" column="33" selection-start-line="50" selection-start-column="28" selection-end-line="50" selection-end-column="33" />
               <folding>
-                <element signature="n#!!block;n#collection#0" />
-                <element signature="n#!!block;n#like#0" />
-                <element signature="n#!!block;n#delete1#0" />
-                <element signature="n#!!block;n#likeComment#0" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/static/editormd/lib/codemirror/mode/q/q.js">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/application-develop.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="16" column="213" selection-start-line="16" selection-start-column="213" selection-end-line="16" selection-end-column="213" />
+            <state relative-caret-position="101">
+              <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/user/login.html">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="56" column="81" lean-forward="true" selection-start-line="56" selection-start-column="81" selection-end-line="56" selection-end-column="81" />
+            <state relative-caret-position="532">
+              <caret line="55" column="27" selection-start-line="55" selection-start-column="27" selection-end-line="55" selection-end-column="27" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -191,7 +176,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/jie/detail.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="224">
-              <caret line="17" column="39" selection-start-line="17" selection-end-line="18" />
+              <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="18" selection-end-column="57" />
               <folding>
                 <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#textarea#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -210,53 +195,27 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/common/column.html">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/user/message.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="9" column="32" selection-start-line="9" selection-end-line="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/common/header.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="588">
-              <caret line="51" column="18" selection-start-line="51" selection-start-column="18" selection-end-line="51" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="17" column="2" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="55" />
+            <state relative-caret-position="150">
+              <caret line="68" column="46" selection-start-line="68" selection-start-column="46" selection-end-line="68" selection-end-column="46" />
               <folding>
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#i#0;n#blockquote#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#i#1;n#blockquote#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#i#2;n#blockquote#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#i#3;n#blockquote#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#i#4;n#blockquote#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/user/home.html">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/jie/add.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1079">
-              <caret line="95" column="103" selection-start-line="95" selection-start-column="103" selection-end-line="95" selection-end-column="103" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#ul#0;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/user/set.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="164" column="88" selection-start-line="164" selection-start-column="88" selection-end-line="164" selection-end-column="88" />
+            <state relative-caret-position="41">
+              <caret line="77" column="22" lean-forward="true" selection-start-line="77" selection-start-column="22" selection-end-line="77" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -264,11 +223,32 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/jie/edit.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1862">
-              <caret line="83" column="42" selection-start-line="79" selection-start-column="32" selection-end-line="89" selection-end-column="38" />
+            <state relative-caret-position="336">
+              <caret line="12" column="34" lean-forward="true" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
               <folding>
                 <element signature="n#div#2;n#div#2;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/jie/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1176" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/mail/activation.html">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/model/LoginTicket.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="364">
+              <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -288,7 +268,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>signin</find>
       <find>swal</find>
       <find>increaseScore</find>
       <find>signIn</find>
@@ -318,6 +297,7 @@
       <find>删除</find>
       <find>updateStatusById</find>
       <find>updateStatusByToId</find>
+      <find>count</find>
     </findStrings>
     <replaceStrings>
       <replace>static</replace>
@@ -351,7 +331,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/utils/RedisKeyUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/service/ElasticSearchService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/kafka/EventProducer.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/application-produce.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/model/Comment.java" />
         <option value="$PROJECT_DIR$/src/main/resources/static/css/global.css" />
         <option value="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/controller/PostController.java" />
@@ -370,25 +349,26 @@
         <option value="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/config/WebMvcConfig.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/index/catalog.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/controller/IndexController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/application-develop.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/interceptor/LoginTicketInterceptor.java" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/main/resources/static/mods/message.js" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/controller/MessageController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/service/MessageService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/mapper/MessageMapper.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/MessageMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/user/message.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/jie/detail.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/jie/edit.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/jie/add.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/common/column.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/index/index.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/user/home.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/user/set.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/common/header.html" />
         <option value="$PROJECT_DIR$/src/main/resources/static/mods/detail.js" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/user/login.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/common/header.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/application-produce.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/controller/MessageController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/user/message.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/application-develop.properties" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/index/index.html" />
       </list>
     </option>
   </component>
@@ -646,7 +626,7 @@
     <property name="SearchEverywhereHistoryKey" value="mess&#9;FILE&#9;file://D:/workspace/IDEA-works/mtcommunity/src/main/resources/mapper/MessageMapper.xml&#10;message&#9;FILE&#9;file://D:/workspace/IDEA-works/mtcommunity/src/main/resources/static/mods/message.js&#10;etail&#9;FILE&#9;file://D:/workspace/IDEA-works/mtcommunity/src/main/resources/templates/jie/detail.html&#10;comm&#9;PSI&#9;JAVA://com.mutong.mtcommunity.mapper.CommentMapper&#10;comment&#9;FILE&#9;file://D:/workspace/IDEA-works/mtcommunity/src/main/resources/mapper/CommentMapper.xml&#10;detail.&#9;FILE&#9;file://D:/workspace/IDEA-works/mtcommunity/src/main/resources/templates/jie/detail.html&#10;detailjs&#9;FILE&#9;file://D:/workspace/IDEA-works/mtcommunity/src/main/resources/static/mods/detail.js&#10;index.&#9;FILE&#9;file://D:/workspace/IDEA-works/mtcommunity/src/main/resources/templates/index.html&#10;co&#9;FILE&#9;file://D:/workspace/IDEA-works/mtcommunity/src/main/resources/mapper/CommentMapper.xml&#10;index&#9;FILE&#9;file://D:/workspace/IDEA-works/mtcommunity/src/main/java/com/mutong/mtcommunity/controller/IndexController.java&#10;user&#9;FILE&#9;file://D:/workspace/IDEA-works/mtcommunity/src/main/resources/mapper/UserMapper.xml&#10;de&#9;FILE&#9;file://D:/workspace/IDEA-works/mtcommunity/src/main/resources/templates/jie/detail.html&#10;commentc&#9;FILE&#9;file://D:/workspace/IDEA-works/mtcommunity/src/main/java/com/mutong/mtcommunity/controller/CommentController.java&#10;postm&#9;FILE&#9;file://D:/workspace/IDEA-works/mtcommunity/src/main/resources/mapper/PostMapper.xml&#10;upload&#9;FILE&#9;file://D:/workspace/IDEA-works/mtcommunity/src/main/resources/static/layui/lay/modules/upload.js&#10;add&#9;FILE&#9;file://D:/workspace/IDEA-works/mtcommunity/src/main/resources/templates/jie/add.html" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1595745728483" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1595747408663" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../NiterForum" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -811,12 +791,12 @@
       <workItem from="1595594054208" duration="13667000" />
       <workItem from="1595656721266" duration="11180000" />
       <workItem from="1595671822621" duration="5035000" />
-      <workItem from="1595689547048" duration="19934000" />
+      <workItem from="1595689547048" duration="21809000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="451408000" />
+    <option name="totallyTimeSpent" value="453283000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -831,7 +811,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.9251627" visible="true" weight="0.195629" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.9251627" visible="true" weight="0.195629" />
       <window_info id="Structure" order="1" sideWeight="0.088757396" side_tool="true" weight="0.17430703" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -842,12 +822,12 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.02603037" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4989339" weight="0.8741866" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.0" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32919955" />
       <window_info anchor="bottom" id="Spring" order="7" weight="0.32919955" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49946696" weight="0.62906724" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49946696" weight="0.0" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5010661" side_tool="true" weight="0.6475054" />
       <window_info anchor="bottom" id="Problems" order="11" weight="0.32919955" />
@@ -954,41 +934,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/advice/ExceptionAdvice.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/controller/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1143">
-          <caret line="77" column="26" lean-forward="true" selection-start-line="77" selection-start-column="26" selection-end-line="77" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/lang/Exception.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="44" column="13" selection-start-line="44" selection-start-column="13" selection-end-line="44" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.2.6.RELEASE/spring-webmvc-5.2.6.RELEASE.jar!/org/springframework/web/servlet/FrameworkServlet.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="518" selection-start-line="518" selection-end-line="518" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.2.6.RELEASE/spring-web-5.2.6.RELEASE.jar!/org/springframework/web/filter/RequestContextFilter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="49" selection-start-line="49" selection-end-line="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.2.6.RELEASE/spring-web-5.2.6.RELEASE.jar!/org/springframework/web/filter/OncePerRequestFilter.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -1201,16 +1146,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/controller/MessageController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
-          <caret line="93" column="45" lean-forward="true" selection-start-line="93" selection-start-column="45" selection-end-line="93" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.2.6.RELEASE/spring-web-5.2.6.RELEASE.jar!/org/springframework/web/bind/annotation/PathVariable.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
@@ -1218,43 +1153,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/user/message.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="79" lean-forward="true" selection-start-line="79" selection-end-line="79" />
-          <folding>
-            <element signature="n#style#0;n#i#0;n#blockquote#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#1;n#blockquote#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#2;n#blockquote#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#3;n#blockquote#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#4;n#blockquote#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/jie/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2688" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/controller/PostController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="526">
           <caret line="193" column="24" selection-start-line="193" selection-start-column="20" selection-end-line="193" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application-develop.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56">
-          <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/jie/add.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="41">
-          <caret line="77" column="22" lean-forward="true" selection-start-line="77" selection-start-column="22" selection-end-line="77" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -1275,36 +1177,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/jie/edit.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1862">
-          <caret line="83" column="42" selection-start-line="79" selection-start-column="32" selection-end-line="89" selection-end-column="38" />
-          <folding>
-            <element signature="n#div#2;n#div#2;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/jie/detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="17" column="39" selection-start-line="17" selection-end-line="18" />
-          <folding>
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#textarea#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#fieldset#0;n#div#1;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#textarea#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#1;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#1;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/user/home.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1079">
@@ -1315,35 +1187,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="17" column="2" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="55" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/user/set.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="224">
           <caret line="164" column="88" selection-start-line="164" selection-start-column="88" selection-end-line="164" selection-end-column="88" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/common/column.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="9" column="32" selection-start-line="9" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/common/header.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="588">
-          <caret line="51" column="18" selection-start-line="51" selection-start-column="18" selection-end-line="51" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -1362,8 +1209,130 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/user/login.html">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="60" column="28" selection-start-line="60" selection-start-column="28" selection-end-line="60" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/common/header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="53">
+          <caret line="51" column="18" selection-start-line="51" selection-start-column="18" selection-end-line="51" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application-produce.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1596">
+          <caret line="57" selection-start-line="57" selection-end-line="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/common/column.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="9" column="32" selection-start-line="9" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/common/filter.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/jie/add.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="41">
+          <caret line="77" column="22" lean-forward="true" selection-start-line="77" selection-start-column="22" selection-end-line="77" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/jie/edit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="12" column="34" lean-forward="true" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
+          <folding>
+            <element signature="n#div#2;n#div#2;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/jie/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1176" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/mail/activation.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/model/LoginTicket.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/user/message.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="68" column="46" selection-start-line="68" selection-start-column="46" selection-end-line="68" selection-end-column="46" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#blockquote#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#1;n#blockquote#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#2;n#blockquote#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#3;n#blockquote#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#4;n#blockquote#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/jie/detail.html">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="224">
-          <caret line="56" column="81" lean-forward="true" selection-start-line="56" selection-start-column="81" selection-end-line="56" selection-end-column="81" />
+          <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="18" selection-end-column="57" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#textarea#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#fieldset#0;n#div#1;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#textarea#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#1;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#1;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mutong/mtcommunity/controller/MessageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="26">
+          <caret line="50" column="33" selection-start-line="50" selection-start-column="28" selection-end-line="50" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application-develop.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="101">
+          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="55" column="27" selection-start-line="55" selection-start-column="27" selection-end-line="55" selection-end-column="27" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

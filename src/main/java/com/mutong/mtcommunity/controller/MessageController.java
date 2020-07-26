@@ -48,6 +48,7 @@ public class MessageController {
     public String message(Model model){
         User user = hostHolder.getUser();
         List<Message> lists = messageService.selectMessageByToId(user.getId());
+        model.addAttribute("count",lists.size());
         List<Map<String,Object>> list = new ArrayList<>();
 
         for (Message message : lists) {
