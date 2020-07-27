@@ -53,8 +53,8 @@ public class PostService {
         return postMapper.selectPosts(userId, offset, limit,orderModel,specialColumn);
     }
 
-    public List<Post> findPostByUserId(int userId){
-        return postMapper.selectPostByUserId(userId);
+    public List<Post> findPostByUserId(int userId,int offset, int limit){
+        return postMapper.selectPostByUserId(userId,offset,limit);
     }
 
     public Post findPostById(int postId) {
@@ -87,8 +87,8 @@ public class PostService {
         postMapper.updatePost(postId,title,content,specialColumn);
     }
 
-    public List<Post> findPostByType(int type) {
-        return postMapper.selectPostByType(type);
+    public List<Post> findPostByType(int type,int offset,int limit) {
+        return postMapper.selectPostByType(type,offset,limit);
     }
 
     public List<Post> findPostByComment() {

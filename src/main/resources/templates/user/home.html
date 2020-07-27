@@ -11,6 +11,7 @@
   <link rel="stylesheet" th:href="@{/css/global.css}">
   <script th:src="@{/mods/detail.js}"></script>
   <script th:src="@{/mods/sweetalert.min.js}"></script>
+  <link rel="stylesheet" th:href="@{/css/community.css}">
 </head>
 <body style="margin-top: 65px;">
 
@@ -57,11 +58,21 @@
             <span class="fly-jing" th:if="${post.type == 1}">精</span>
             <a th:href="|/detail/${post.id}|" class="jie-title" th:text="${post.title}"></a>
             <i th:text="${post.modTime}">刚刚</i>
-            <em class="layui-hide-xs"><i th:text="${post.commentCount}"></i>阅</em>
+            <em class="layui-hide-xs"><i th:text="${post.commentCount}"></i>评</em>
           </li>
+          <div style="text-align: center" th:if="${postCount >= 10}">
+            <!-- 分页 -->
+            <div class="laypage-main" th:if="${page.rows>0}" th:fragment="pagination">
+              <a class="" th:href="@{${page.path}(current=1)}">首页</a>
+              <a th:class=" ${ page.current == 1? ' disabled':''}" th:href="@{${page.path}(current=${page.current-1})}">上一页</a></li>
+              <a th:class=" ${ i==page.current?'active':''}" th:href="@{${page.path}(current=${i})}" th:text="${i}" th:each="i:${#numbers.sequence(page.from,page.to)}">1</a>
+              <a th:class="${ page.current == page.total? 'disabled':''}" th:href="@{${page.path}(current=${page.current+1})}">下一页</a>
+              <a class="" th:href="@{${page.path}(current=${page.total})}">末页</a>
 
+            </div>
+          </div>
 
-          <!-- <div class="fly-none" style="min-height: 50px; padding:30px 0; height:auto;"><i style="font-size:14px;">没有发表任何求解</i></div> -->
+           <div th:if="${postCount == 0}" class="fly-none" style="min-height: 50px; padding:30px 0; height:auto;"><i style="font-size:14px;">没有发表任何求解</i></div>
         </ul>
       </div>
     </div>

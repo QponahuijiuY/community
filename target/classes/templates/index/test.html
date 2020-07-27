@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="laypage-main" >
+    <!-- 分页 -->
+    <div class="laypage-main" th:if="${page.rows>0}" th:fragment="pagination">
+        <ul style="display:-webkit-box;display:-ms-flexbox;display:flex;padding-left:0;list-style:none;border-radius:.25rem">
+            <li class="" >
+                <a class="" th:href="@{${page.path}(current=1)}">首页</a>
+            </li>
+            <li th:class="| ${page.current==1?'disabled':''}|" >
+                <a class="page-link" th:href="@{${page.path}(current=${page.current-1})}">上一页</a></li>
+            <li th:class="| ${i==page.current?'active':''}|" th:each="i:${#numbers.sequence(page.from,page.to)}" >
+                <a class="page-link" th:href="@{${page.path}(current=${i})}" th:text="${i}">1</a>
+            </li>
+            <li th:class="| ${page.current == page.total ? 'disabled':''}|" >
+                <a class="page-link" th:href="@{${page.path}(current=${page.current+1})}">下一页</a>
+            </li>
+            <li class="" style="float: left;  ">
+                <a class="" th:href="@{${page.path}(current=${page.total})}">末页</a>
+            </li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>

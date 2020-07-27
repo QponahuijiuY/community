@@ -34,9 +34,9 @@ public interface PostMapper {
 
     void updatePost(@Param("postId") int postId, @Param("title") String title, @Param("content") String content, @Param("specialColumn") Integer specialColumn);
 
-    List<Post> selectPostByUserId(@Param("userId") int userId);
+    List<Post> selectPostByUserId(@Param("userId") int userId,@Param("offset") int offset,@Param("limit") int limit);
 
-    List<Post> selectPostByType(@Param("type") int type);
+    List<Post> selectPostByType(@Param("type") int type,@Param("offset") int offset,@Param("limit") int limit);
 
     List<Post> selectPostByComment();
 

@@ -10,7 +10,7 @@ public class Page {
     //当前页码
     private int current = 1;
     //页码上限
-    private int limit = 12;
+    private int limit = 10;
     //数据总量
     private int rows;
     //查询路径
@@ -21,6 +21,7 @@ public class Page {
     }
 
     public void setCurrent(int current) {
+
         if (current >= 1){
             this.current = current;
         }

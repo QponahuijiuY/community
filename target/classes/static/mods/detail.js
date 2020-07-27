@@ -145,14 +145,12 @@ function likeComment(btn,id) {
 
                     window.location.reload();
                     swal("点赞成功,点赞消息通知会发送给对方","Thumb up success！","success",{
-                        timer: 5000,
-                        buttons: {
-                            confirm: true
-                        }
+                        timer: 3000,
+
                     });
                 } else {
                     // alert(data.msg);
-                    swal("操作失败","operation failure~","error",{
+                    swal("操作失败,请确认是否已经登陆，或联系网站管理员","operation failure~","error",{
                         buttons: false,
                         timer: 3000
                     });
@@ -170,10 +168,8 @@ function likeComment(btn,id) {
                     // $("#like").load(location.href + " #like")
                     window.location.reload();
                     swal("点赞已取消","Thumb up to cancel！","success",{
-                        timer: 5000,
-                        buttons: {
-                            confirm: true,
-                        }
+                        timer: 3000,
+
                     });
                 } else {
                     // alert(data.msg);

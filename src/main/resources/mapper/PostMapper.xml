@@ -53,6 +53,7 @@
     </insert>
     <select id="selectPostByUserId" resultType="com.mutong.mtcommunity.model.Post">
         select * from post where user_id = #{userId}
+        limit #{offset},#{limit}
     </select>
 
     <select id="selectPostById" resultType="com.mutong.mtcommunity.model.Post">
@@ -98,7 +99,7 @@
         select * from post
         where status != 0 and type  = #{type}
         order by create_time desc
-        limit 0,5;
+        limit #{offset},#{limit}
     </select>
 
     <select id="selectPostByComment" resultType="com.mutong.mtcommunity.model.Post">

@@ -98,9 +98,9 @@ kafka消费者处于监听的状态，他会监听特定的主题，当监听到
 
 拦截器里面的方法，如果prehandler方法报错就不会执行controller，posthandler方法报错不会返回modelandview，而是会无线循环 这个拦截器方法。也就是说posthandler方法报错会执行prehandler方法，从而造成无线循环。
 
-
+#### 7.27 分页功能
     
-
+编写Page相关代码，在首页，评论，收藏，发帖等的功能上，添加分页功能功能。
 ### 🎓帮助文档
 
 [1.0 Spring Boot整合 kaptcha 实现验证码的功能 ](https://blog.csdn.net/weixin_34221276/article/details/89657736)

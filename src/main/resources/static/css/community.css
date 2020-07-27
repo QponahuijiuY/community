@@ -17,3 +17,10 @@
     border-radius:35px;
 
 }
+.disabled{
+    pointer-events: none;
+    pointer-events: none;!important;
+}
+.active{
+    background-color: #4CA;
+}

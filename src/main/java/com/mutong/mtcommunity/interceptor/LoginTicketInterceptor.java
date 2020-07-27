@@ -65,6 +65,7 @@ public class LoginTicketInterceptor implements HandlerInterceptor {
             modelAndView.addObject("unReadcount",count);
             modelAndView.addObject("loginUser", user);
         }
+
     }
 
     @Override

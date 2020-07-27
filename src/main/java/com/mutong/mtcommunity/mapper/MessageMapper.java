@@ -21,7 +21,7 @@ public interface MessageMapper {
 
     int selectMessageCountByToId(@Param("toId") int toId);
 
-    List<Message> selectMessageByToId(@Param("toId") int toId);
+    List<Message> selectMessageByToId(@Param("toId") int toId,@Param("offset") int offset,@Param("limit") int limit);
 
     int updateStatusByid(@Param("id") int id,@Param("status") int status);
 

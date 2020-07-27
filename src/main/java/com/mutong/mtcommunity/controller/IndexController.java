@@ -36,9 +36,7 @@ public class IndexController {
     private ColumnService columnService;
     @Resource
     private SignInService signInService;
-    public static void main(String[] args) {
 
-    }
     @Resource
     private UserService userService;
     @RequestMapping("/")
@@ -60,11 +58,13 @@ public class IndexController {
      * @return
      */
     @GetMapping("/index")
-    public String getIndexPage(HttpServletRequest request, Model model ,@RequestParam(value = "pageId",defaultValue = "1") String pageId, Page page, @RequestParam(name = "orderModel", defaultValue = "0") int orderModel, @RequestParam(value = "specialColumn",defaultValue = "0")Integer specialColumn/*,@RequestParam("key") String key*/){
+    public String getIndexPage(HttpServletRequest request, Model model, Page page, @RequestParam(name = "orderModel", defaultValue = "0") int orderModel, @RequestParam(value = "specialColumn",defaultValue = "0")Integer specialColumn/*,@RequestParam("key") String key*/){
         //方法调用之前,SpringMVC会自动实例化Model和Page,并且将page自动注入给Model
         //所以在thymeleaf中可以直接访问Page对象中的数据.
         page.setRows(postService.findPostRows(0));
-        page.setPath("/index?orderModel="+orderModel+"&current=" + specialColumn);
+        page.setPath("/index?orderModel="+orderModel+"&specialColumn=" + specialColumn);
+        System.out.println("total"+page.getTotal());
+        System.out.println("cur"+page.getCurrent());
 
         //list返回一个查询列表
         List<Post> orderModelList = postService.findAllPosts(0, page.getOffset(), page.getLimit(),orderModel,specialColumn);
@@ -84,13 +84,9 @@ public class IndexController {
                 posts.add(map);
             }
         }
-        List<Post> topPost = postService.findPostByType(2);
+        List<Post> topPost = postService.findPostByType(2,0,5);
         List<User> lastActivityUserList = userService.findUserByTime(0, 12);
-        if (lastActivityUserList != null){
-            for (User user : lastActivityUserList) {
 
-            }
-        }
 
         boolean sigined = false;
         if (hostHolder.getUser() != null){
@@ -102,8 +98,6 @@ public class IndexController {
         model.addAttribute("posts",posts);
         model.addAttribute("orderModel",orderModel);
         model.addAttribute("specialColumn",specialColumn);
-
-
         return "index/index";
     }
 
@@ -111,6 +105,5 @@ public class IndexController {
     public String getErrorPage(){
         return "other/404";
     }
-
 
 }

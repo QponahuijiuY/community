@@ -10,6 +10,7 @@ import com.mutong.mtcommunity.service.PostService;
 import com.mutong.mtcommunity.service.UserService;
 import com.mutong.mtcommunity.utils.CommunityUtil;
 import com.mutong.mtcommunity.utils.HostHolder;
+import com.mutong.mtcommunity.utils.Page;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -45,10 +46,15 @@ public class MessageController {
 
 
     @GetMapping("/message")
-    public String message(Model model){
+    public String message(Model model, Page page){
         User user = hostHolder.getUser();
-        List<Message> lists = messageService.selectMessageByToId(user.getId());
-        model.addAttribute("count",lists.size());
+        page.setLimit(5);
+        page.setPath("/message");
+        int rows = messageService.selectMessageCountByToId(user.getId());
+
+        page.setRows(rows);
+        List<Message> lists = messageService.selectMessageByToId(user.getId(),page.getOffset(),page.getLimit());
+        model.addAttribute("rows",rows);
         List<Map<String,Object>> list = new ArrayList<>();
 
         for (Message message : lists) {
@@ -62,11 +68,9 @@ public class MessageController {
             map.put("content",content);
             //帖子
             if (content == 1){
-//                int postId = message.getEntityId();
                 Post post = postService.findPostById(message.getEntityId());
                 map.put("post",post);
             }else {
-//                int commentId = message.getEntityId();
                 Comment comment = commentService.findCommentById(message.getEntityId());
                 map.put("comment",comment);
             }

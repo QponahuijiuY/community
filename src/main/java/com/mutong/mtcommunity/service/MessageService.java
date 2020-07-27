@@ -26,8 +26,8 @@ public class MessageService {
     }
 
 
-    public List<Message> selectMessageByToId(int id) {
-        return messageMapper.selectMessageByToId(id);
+    public List<Message> selectMessageByToId(int id,int offset,int limit) {
+        return messageMapper.selectMessageByToId(id,offset,limit);
     }
 
     public int deleteCommentById(int id, int i) {

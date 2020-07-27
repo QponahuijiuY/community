@@ -87,36 +87,23 @@
           </li>
         </ul>
         <div style="text-align: center">
+          <!-- 分页 -->
+          <div class="laypage-main" th:if="${page.rows>0}" th:fragment="pagination">
+              <a class="" th:href="@{${page.path}(current=1)}">首页</a>
+              <a th:class=" ${ page.current == 1? ' disabled':''}" th:href="@{${page.path}(current=${page.current-1})}">上一页</a></li>
+              <a th:class=" ${ i==page.current?'active':''}" th:href="@{${page.path}(current=${i})}" th:text="${i}" th:each="i:${#numbers.sequence(page.from,page.to)}">1</a>
+              <a th:class="${ page.current == page.total? 'disabled':''}" th:href="@{${page.path}(current=${page.current+1})}">下一页</a>
+              <a class="" th:href="@{${page.path}(current=${page.total})}">末页</a>
 
-          <div class="laypage-main">
-            <ul class="flow-default" id="LAY_demo2">更多帖子</ul>
           </div>
-
-          <script>
-              layui.use('flow', function(){
-                  var flow = layui.flow;
-                  flow.load({
-                      elem: '#LAY_demo2' //流加载容器
-                      ,scrollElem: '#LAY_demo2' //滚动条所在元素，一般不用填，此处只是演示需要。
-                      ,isAuto: false
-                      ,isLazyimg: true
-                      ,done: function(page, next){ //加载下一页
-                          //模拟插入
-                          setTimeout(function(){
-                              var lis = [];
-                              for(var i = 0; i < 6; i++){
-                                  lis.push('123'+ ( (page-1)*6 + i + 1 ) +'"></li>')
-                              }
-                              next(lis.join(''), page < 6); //假设总页数为 6
-                          }, 500);
-                      }
-                  });
-              });
-          </script>
         </div>
+
 
       </div>
     </div>
+
+
+
     <!--右侧导航-->
     <div class="layui-col-md4">
       <!--温馨通道-->
@@ -137,7 +124,7 @@
           <i class="fly-mid"></i>
           <a href="javascript:;" class="fly-link"  id="LAY_signinHelp">关于我</a>
           <i class="fly-mid"></i>
-          <a onclick="deve()" class="fly-link" id="LAY_signinTop">活跃榜<span class="layui-badge-dot"></span></a>
+          <a onclick="deve()" class="fly-link">活跃榜<span class="layui-badge-dot"></span></a>
 
         </div>
         <div class="fly-panel-main fly-signin-main">

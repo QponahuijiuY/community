@@ -110,6 +110,7 @@ public class PostController extends RedisKeyUtil implements CommunityConstant {
     @GetMapping("/detail/{postId}")
     public String getPost(@PathVariable("postId") int postId, Model model, Page page){
 
+
         //访问量加一
         postService.increasePageView(postId);
         //获取帖子信息
@@ -127,7 +128,7 @@ public class PostController extends RedisKeyUtil implements CommunityConstant {
 
         List<Post> topCommentPost = postService.findPostByComment();
         page.setLimit(5);
-        page.setPath("/discuss/detail/" + postId);
+        page.setPath("/detail/" + postId);
         page.setRows(post.getCommentCount());
         List<Comment> commentList = commentService.findCommentByEntity(ENTITY_TYPE_POST, post.getId(), page.getOffset(), page.getLimit());
         List<Map<String,Object>> commentVoList = new ArrayList<>();
@@ -137,7 +138,9 @@ public class PostController extends RedisKeyUtil implements CommunityConstant {
                 //获取评论信息
                 String likeCommentKey = getLikeCommentKey(comment.getId());
                 boolean hasLikeComment = false;
-                hasLikeComment = redisTemplate.opsForSet().isMember(likeCommentKey, hostHolder.getUser().getId());
+                if (hostHolder.getUser() != null){
+                    hasLikeComment = redisTemplate.opsForSet().isMember(likeCommentKey, hostHolder.getUser().getId());
+                }
                 commentVo.put("hasLikeComment",hasLikeComment);
                 commentVo.put("comment",comment);
                 //获取评论作者

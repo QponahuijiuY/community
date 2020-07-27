@@ -21,6 +21,7 @@
     </select>
     <select id="selectMessageByToId" parameterType="Integer" resultType="com.mutong.mtcommunity.model.Message">
         select * from message where to_id = #{toId} and status = 0 order by create_time desc
+        limit #{offset},#{limit}
     </select>
     <update id="updateStatusByid" parameterType="Integer">
       update message set status = #{status} where id = #{id}

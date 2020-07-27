@@ -64,9 +64,9 @@
   
   <div class="fly-panel fly-panel-user" pad20>
 	  <div class="layui-tab layui-tab-brief" lay-filter="user" id="LAY_msg" style="margin-top: 15px;">
-	    <button th:if="${count != 0 }" class="layui-btn layui-btn-danger" id="LAY_delallmsg" th:onclick="|readAll1(this,${user.id});|">清空全部消息</button>
+	    <button th:if="${rows != 0 }" class="layui-btn layui-btn-danger" id="LAY_delallmsg" th:onclick="|readAll1(this,${user.id});|">清空全部消息</button>
 	    <div  id="LAY_minemsg" style="margin-top: 10px;">
-        <div class="fly-none" th:if="${count == 0 }">您暂时没有最新消息</div>
+        <div class="fly-none" th:if="${rows == 0 }">您暂时没有最新消息</div>
         <ul class="mine-msg">
           <li data-id="123" th:each="message:${list}">
             <blockquote class="layui-elem-quote">
@@ -88,6 +88,17 @@
             </p>
           </li>
 
+          <div style="text-align: center" th:if="${rows >= 5}">
+            <!-- 分页 -->
+            <div class="laypage-main" th:if="${page.rows>0}" th:fragment="pagination">
+              <a class="" th:href="@{${page.path}(current=1)}">首页</a>
+              <a th:class=" ${ page.current == 1? ' disabled':''}" th:href="@{${page.path}(current=${page.current-1})}">上一页</a></li>
+              <a th:class=" ${ i==page.current?'active':''}" th:href="@{${page.path}(current=${i})}" th:text="${i}" th:each="i:${#numbers.sequence(page.from,page.to)}">1</a>
+              <a th:class="${ page.current == page.total? 'disabled':''}" th:href="@{${page.path}(current=${page.current+1})}">下一页</a>
+              <a class="" th:href="@{${page.path}(current=${page.total})}">末页</a>
+
+            </div>
+          </div>
         </ul>
       </div>
 	  </div>

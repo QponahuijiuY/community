@@ -76,6 +76,18 @@
               <i th:text="${#dates.format(post.modTime,'yyyy-MM-dd HH:mm')}">2017/3/14 上午8:30:00</i>
               <em><i th:text="${post.pageView}">661</i>阅 &nbsp;/&nbsp; <i th:text="${post.commentCount}">10</i>答</em>
             </li>
+
+            <div style="text-align: center" th:if="${rows >= 10}">
+              <!-- 分页 -->
+              <div class="laypage-main" th:if="${page.rows>0}" th:fragment="pagination">
+                <a class="" th:href="@{${page.path}(current=1)}">首页</a>
+                <a th:class=" ${ page.current == 1? ' disabled':''}" th:href="@{${page.path}(current=${page.current-1})}">上一页</a></li>
+                <a th:class=" ${ i==page.current?'active':''}" th:href="@{${page.path}(current=${i})}" th:text="${i}" th:each="i:${#numbers.sequence(page.from,page.to)}">1</a>
+                <a th:class="${ page.current == page.total? 'disabled':''}" th:href="@{${page.path}(current=${page.current+1})}">下一页</a>
+                <a class="" th:href="@{${page.path}(current=${page.total})}">末页</a>
+
+              </div>
+            </div>
           </ul>
           <div id="LAY_page"></div>
         </div>

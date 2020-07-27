@@ -5,6 +5,7 @@ import com.mutong.mtcommunity.model.User;
 import com.mutong.mtcommunity.service.PostService;
 import com.mutong.mtcommunity.service.UserService;
 import com.mutong.mtcommunity.utils.HostHolder;
+import com.mutong.mtcommunity.utils.Page;
 import com.mutong.mtcommunity.utils.RedisKeyUtil;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Controller;
@@ -34,22 +35,32 @@ public class UserController extends RedisKeyUtil {
     @Resource
     private RedisTemplate redisTemplate;
     @GetMapping("/user/{userId}")
-    public String detail(@PathVariable("userId")Integer userId, Model model, HttpServletRequest request){
+    public String detail(@PathVariable("userId")Integer userId, Model model, Page page, HttpServletRequest request){
         User user = userService.findUserById(userId);
         if (user == null){
             throw new RuntimeException("该用户不存在");
         }
-        List<Post> posts = postService.findPostByUserId(userId);
+
+        page.setLimit(10);
+        page.setPath("/user/" + userId);
+        page.setRows(postService.findPostRows(userId));
+
+        List<Post> posts = postService.findPostByUserId(userId,page.getOffset(),page.getLimit());
         model.addAttribute("user",user);
         model.addAttribute("posts",posts);
+        model.addAttribute("postCount",posts.size());
+
         return "user/home";
     }
     @GetMapping("/user")
-    public String index(Model model){
+    public String index(Model model,Page page){
         User user = hostHolder.getUser();
         if (user != null){
-            List<Post> posts = postService.findAllPosts(user.getId(), 0, 15, 0, 0);
+            page.setLimit(10);
+            List<Post> posts = postService.findAllPosts(user.getId(), page.getOffset(), page.getLimit(), 0, 0);
             int rows = postService.findPostRows(user.getId());
+            page.setPath("/user");
+            page.setRows(rows);
             String collectionUserKey = getCollectionUserKey(user.getId());
             Long size = redisTemplate.opsForSet().size(collectionUserKey);
             model.addAttribute("size",size);
@@ -62,11 +73,12 @@ public class UserController extends RedisKeyUtil {
         return "redirect:/";
     }
     @GetMapping("/user/collection")
-    public String collection(Model model){
+    public String collection(Model model,Page page){
         User user = hostHolder.getUser();
         if(user != null){
             String collectionUserKey = getCollectionUserKey(user.getId());
             Long size = redisTemplate.opsForSet().size(collectionUserKey);
+
             Set<Integer> postIds = redisTemplate.opsForSet().members(collectionUserKey);
             List<Post> lists = new ArrayList<>();
             for (Integer postId : postIds) {

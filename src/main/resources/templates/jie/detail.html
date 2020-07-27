@@ -86,7 +86,7 @@
 
                 </div>
 
-                <div class="detail-body photos" id="content-view">
+                <div class="detail-body photos" id="content-view" style="height: auto;width: auto">
                     <textarea style="display:none;" th:text="${post.content}">### Hello world!</textarea>
                 </div>
                 <script type="text/javascript">
@@ -136,21 +136,33 @@
                 <!--<i class="iconfont icon-svgmoban53"></i>-->
                 <!--回复-->
               <!--</span>-->
-                            <div class="jieda-admin" th:if="${cvo.comment.userId == loginUser.id}">
-                                <span type="del" th:onclick="|delete1(this,${cvo.comment.id});|" >删除</span>
-                            </div>
+                            <th:block th:if="${loginUser != null}">
+                                <div class="jieda-admin" th:if="${cvo.comment.userId == loginUser.id}">
+                                    <span type="del" th:onclick="|delete1(this,${cvo.comment.id});|" >删除</span>
+                                </div>
+                        </th:block>
+
 
                         </div>
                     </li>
 
-
                     <!-- 无数据时 -->
                     <li th:if="${comments == 0}" class="fly-none">消灭零回复</li>
+                    <div th:if="${comments != 0}" style="text-align: center">
+                        <!-- 分页 -->
+                        <div class="laypage-main" th:if="${page.rows>0}" th:fragment="pagination">
+                            <a class="" th:href="@{${page.path}(current=1)}">首页</a>
+                            <a th:class=" ${ page.current == 1? ' disabled':''}" th:href="@{${page.path}(current=${page.current-1})}">上一页</a></li>
+                            <a th:class=" ${ i==page.current?'active':''}" th:href="@{${page.path}(current=${i})}" th:text="${i}" th:each="i:${#numbers.sequence(page.from,page.to)}">1</a>
+                            <a th:class="${ page.current == page.total? 'disabled':''}" th:href="@{${page.path}(current=${page.current+1})}">下一页</a>
+                            <a class="" th:href="@{${page.path}(current=${page.total})}">末页</a>
 
+                        </div>
+                    </div>
                 </ul>
 
 
-                    <div th:if="${loginUser != null}" class="layui-form layui-form-pane">
+                <div th:if="${loginUser != null}" class="layui-form layui-form-pane">
                         <form th:action="@{|/comment/add/${post.id}|}" method="post">
                             <div class="layui-form-item layui-form-text">
                                 <a name="comment"></a>
@@ -166,7 +178,9 @@
                             </div>
                         </form>
                     </div>
+
                 <div th:if="${loginUser == null}" class="layui-form layui-form-pane">
+                    <br>
                     <div style=" text-align: center">
                         <span style="color: chocolate">你还没有登陆，请点击这里登陆</span>
                         <a th:href="@{/login}" style="color: cadetblue" >登陆</a>
