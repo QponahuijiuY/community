@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mutong.mtcommunity.mapper.NewsMapper">
+    <sql id="selectFields">
+        id, tag, title, date, key_words,image,brief,url
+    </sql>
+    <sql id="insertFields">
+        tag, title, date, key_words,image,brief,url
+    </sql>
+    <select id="selectColumnById" parameterType="Integer" resultType="com.mutong.mtcommunity.model.Column">
+      select * from `column` where id = #{id}
+</select>
+    <insert id="" parameterType="com.mutong.mtcommunity.model.News" keyProperty="id">
+        insert into news (<include refid="insertFields"></include>)
+        values(#{tag}, #{title}, #{date}, #{keyWords},#{image},#{brief},#{url})
+    </insert>
+
+</mapper>

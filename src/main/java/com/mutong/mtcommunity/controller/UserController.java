@@ -100,7 +100,6 @@ public class UserController extends RedisKeyUtil {
     public String setting(Model model){
         User user = hostHolder.getUser();
         model.addAttribute("user",user);
-
         return "user/set";
     }
 
@@ -125,7 +124,7 @@ public class UserController extends RedisKeyUtil {
         Map<String,Object> map = new HashMap<>();
         User user = hostHolder.getUser();
         int i = userService.updateHeaderUrl(user.getId(), header);
-        if(i==1) {
+        if(i == 1) {
             map.put("code",200);
             map.put("msg","恭喜您，头像修改成功！！！");
         }

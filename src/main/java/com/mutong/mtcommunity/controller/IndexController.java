@@ -45,9 +45,9 @@ public class IndexController {
     }
     @Resource
     private HostHolder hostHolder;
-    @GetMapping("/case")
+    @GetMapping("/news")
     public String example(){
-        return "case/case";
+        return "news/news";
     }
 
     /**
