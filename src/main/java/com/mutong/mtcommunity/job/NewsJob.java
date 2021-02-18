@@ -10,6 +10,9 @@ import com.mutong.mtcommunity.enums.NewsTag;
 import com.mutong.mtcommunity.mapper.NewsMapper;
 import com.mutong.mtcommunity.model.News;
 import com.mutong.mtcommunity.utils.CommonResult;
+import org.quartz.Job;
+import org.quartz.JobExecutionContext;
+import org.quartz.JobExecutionException;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
@@ -19,7 +22,8 @@ import java.io.IOException;
  * 新闻资讯job
  */
 @Component
-public class NewsJob {
+public class NewsJob implements Job
+{
     @Resource
     private NewsMapper newsMapper;
     public static void main(String[] args) throws IOException {
@@ -31,6 +35,7 @@ public class NewsJob {
 //       new NewsJob().GetSocietyNews("tech");
 //       new NewsJob().GetSocietyNews("life");
     }
+
 
     /**
      * 拉取新闻资讯
@@ -61,5 +66,10 @@ public class NewsJob {
             }
         }
         return new CommonResult().success();
+    }
+
+    @Override
+    public void execute(JobExecutionContext context) throws JobExecutionException {
+
     }
 }
